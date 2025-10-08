@@ -1,5 +1,19 @@
 'use client';
 import { useEffect, useState, useRef, useMemo } from 'react';
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+} from 'chart.js';
+import { Pie, Bar } from 'react-chartjs-2';
+
+ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, PointElement, LineElement);
 
 interface CrimeEntry {
   reported: string;
@@ -32,9 +46,7 @@ export default function Home() {
   }, []);
 
   // Status list
-  const statuses = useMemo(() => {
-    return Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
-  }, [data]);
+  const statuses = useMemo(() => Array.from(new Set(data.map(d => d.disposition).filter(Boolean))), [data]);
 
   // Sorting
   const sortedData = useMemo(() => {
@@ -73,7 +85,6 @@ export default function Home() {
       if (entries[0].isIntersecting)
         setVisibleCount(prev => Math.min(prev + 50, filteredData.length));
     });
-
     const current = loaderRef.current;
     if (current) observer.observe(current);
     return () => {
@@ -113,6 +124,50 @@ export default function Home() {
     }).length;
   }, [data]);
 
+  // Chart data
+  const crimeTypeData = useMemo(() => {
+    const grouped = data.reduce((acc, curr) => {
+      const key = curr.nature || 'Unknown';
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    return {
+      labels: Object.keys(grouped),
+      datasets: [
+        {
+          label: 'Incidents',
+          data: Object.values(grouped),
+          backgroundColor: ['#f87171', '#60a5fa', '#facc15', '#34d399', '#a78bfa', '#fb923c'],
+        },
+      ],
+    };
+  }, [data]);
+
+  const monthlyTrendData = useMemo(() => {
+    const grouped = data.reduce((acc, curr) => {
+      const date = new Date(curr.reported);
+      if (!isNaN(date.getTime())) {
+        const label = `${date.getFullYear()}-${date.getMonth() + 1}`;
+        acc[label] = (acc[label] || 0) + 1;
+      }
+      return acc;
+    }, {} as Record<string, number>);
+    const sortedLabels = Object.keys(grouped).sort();
+    return {
+      labels: sortedLabels.map(l => {
+        const [y, m] = l.split('-');
+        return `${new Date(Number(y), Number(m) - 1).toLocaleString('default', { month: 'short' })} ${y}`;
+      }),
+      datasets: [
+        {
+          label: 'Incidents per Month',
+          data: sortedLabels.map(k => grouped[k]),
+          backgroundColor: '#f97316',
+        },
+      ],
+    };
+  }, [data]);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
       <style>{`
@@ -129,7 +184,7 @@ export default function Home() {
       <div className="mb-6">
         <h1 className="text-4xl font-bold tracking-tight mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-400">
-          Last updated: {new Date().toLocaleString()} • This site is unofficial and for informational purposes only.
+          Last updated: {new Date().toLocaleString()} • Unofficial data summary.  
         </p>
         <p className="text-sm text-gray-500 mt-1">
           Data pulled from{' '}
@@ -160,6 +215,22 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Charts */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+          <h3 className="text-sm text-gray-400 mb-2">Incident Types</h3>
+          <Pie data={crimeTypeData} options={{ plugins: { legend: { display: false } } }} />
+        </div>
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+          <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
+          <Bar data={monthlyTrendData} options={{ plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }} />
+        </div>
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+          <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
+          <p className="text-gray-500 text-sm italic">Location visualization coming soon.</p>
+        </div>
+      </div>
+
       {/* Search + Filters */}
       <div className="flex flex-col gap-3 mb-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
@@ -185,7 +256,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Collapsible Filter Menu */}
         <div
           className={`overflow-hidden transition-[max-height,opacity] duration-500 ${
             filtersOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
@@ -265,7 +335,6 @@ export default function Home() {
             ))}
           </tbody>
         </table>
-
         {visibleCount < filteredData.length && (
           <div ref={loaderRef} className="text-center py-4 text-gray-400 text-sm">
             Loading more incidents...
