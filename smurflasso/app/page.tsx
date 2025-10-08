@@ -1,22 +1,22 @@
-"use client";
+'use client';
+import { useEffect, useState } from 'react';
 
-import { useEffect, useState } from "react";
+interface CrimeEntry {
+  date: string;
+  type: string;
+  location: string;
+  time: string;
+  status: string;
+}
 
 export default function Home() {
-  const [crimeData, setCrimeData] = useState([]);
-  const [lastUpdated, setLastUpdated] = useState("");
+  const [data, setData] = useState<CrimeEntry[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("/crime-data.json?_t=" + new Date().getTime()); // Bypass cache
-      const data = await res.json();
-      setCrimeData(data);
-      setLastUpdated(new Date().toLocaleString());
-    };
-
-    fetchData();
-    const interval = setInterval(fetchData, 5 * 60 * 1000); // Refresh every 5 min
-    return () => clearInterval(interval);
+    fetch('/crime-data.json')
+      .then(res => res.json())
+      .then(setData)
+      .catch(console.error);
   }, []);
 
   return (
@@ -25,8 +25,8 @@ export default function Home() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-gray-800 p-4 rounded-lg">Total Incidents This Month: {crimeData.length}</div>
-        <div className="bg-gray-800 p-4 rounded-lg col-span-2">This Week's Summary (AI)</div>
+        <div className="bg-gray-800 p-4 rounded-lg">Total Incidents This Month</div>
+        <div className="bg-gray-800 p-4 rounded-lg col-span-2">This Week&apos;s Summary (AI)</div>
       </div>
 
       {/* Charts Grid */}
@@ -40,18 +40,18 @@ export default function Home() {
       <div className="bg-gray-800 p-4 rounded-lg mb-8">
         <h2 className="text-xl font-semibold mb-4">Incident Log</h2>
         <p className="text-sm text-gray-400 mb-2">Date | Type | Location | Time | Status</p>
-        <div className="space-y-1 text-sm">
-          {crimeData.map((entry, index) => (
-            <div key={index} className="text-gray-300">
+        <div className="space-y-1">
+          {data.map((entry, idx) => (
+            <p key={idx} className="text-sm">
               {entry.date} | {entry.type} | {entry.location} | {entry.time} | {entry.status}
-            </div>
+            </p>
           ))}
         </div>
       </div>
 
       {/* Footer */}
       <footer className="text-sm text-gray-500 text-center pt-6 border-t border-gray-700">
-        <p>Last updated: {lastUpdated}</p>
+        <p>Last updated: {new Date().toLocaleString()}</p>
         <p>This information may not be 100% accurate. Always refer to official sources.</p>
       </footer>
     </main>

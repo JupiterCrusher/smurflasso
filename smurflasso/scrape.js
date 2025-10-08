@@ -1,35 +1,38 @@
-import axios from "axios";
-import * as cheerio from "cheerio";
-import { writeFileSync } from "fs";
+const fs = require("fs");
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 const URL = "https://www.boisestate.edu/publicsafety-security/campus-crime/campus-crime-log/";
 
-async function scrapeCrimeLog() {
-  const { data } = await axios.get(URL);
-  const $ = cheerio.load(data);
+async function scrape() {
+  const { data: html } = await axios.get(URL);
+  const $ = cheerio.load(html);
 
-  const entries = [];
+  const rows = $("table tbody tr");
+  const output = [];
 
-  $("table tbody tr").each((i, row) => {
-    const cols = $(row).find("td").map((_, td) => $(td).text().trim()).get();
+  rows.each((i, row) => {
+    const cells = $(row).find("td").map((_, el) => $(el).text().trim()).get();
+    if (cells.length < 10) return;
 
-    if (cols.length >= 5) {
-      entries.push({
-        reported: cols[0],
-        start_date: cols[1],
-        start_time: cols[2],
-        end_date: cols[3],
-        end_time: cols[4],
-        location: cols[5],
-        case_number: cols[6],
-        nature: cols[7],
-        disposition: cols[9] // skip 8 (Hate Crime), 10 (Include in log?)
-      });
-    }
+    output.push({
+      date: cells[0],
+      type: cells[7],
+      location: cells[5],
+      time: `${cells[2]} - ${cells[4]}`,
+      status: cells[9],
+    });
   });
 
-  writeFileSync("crime-data.json", JSON.stringify(entries, null, 2));
-  console.log(`✅ Saved ${entries.length} entries to crime-data.json`);
+  const existing = JSON.parse(fs.readFileSync("public/crime-data.json", "utf8"));
+  const changed = JSON.stringify(output) !== JSON.stringify(existing);
+
+  if (changed) {
+    fs.writeFileSync("public/crime-data.json", JSON.stringify(output, null, 2));
+    console.log("Crime data updated.");
+  } else {
+    console.log("No changes to crime data.");
+  }
 }
 
-scrapeCrimeLog();
+scrape();
