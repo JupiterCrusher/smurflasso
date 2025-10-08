@@ -3,10 +3,8 @@ import { useEffect, useState, useRef, useMemo } from 'react';
 
 interface CrimeEntry {
   reported: string;
-  start_date: string;
-  start_time: string;
-  end_date: string;
-  end_time: string;
+  start: string;
+  end: string;
   location: string;
   case_number: string;
   nature: string;
@@ -32,7 +30,7 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  // Get unique status list dynamically
+  // Get unique statuses dynamically
   const statuses = useMemo(() => {
     const unique = Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
     return ['All', ...unique];
@@ -44,7 +42,7 @@ export default function Home() {
       const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
       const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
 
-      if (sortKey === 'reported' || sortKey.includes('date')) {
+      if (sortKey === 'reported') {
         const dateA = new Date(aVal);
         const dateB = new Date(bVal);
         return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
@@ -71,7 +69,7 @@ export default function Home() {
 
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // ✅ Fixed lazy loading cleanup
+  // Lazy loading
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -189,8 +187,8 @@ export default function Home() {
                 { key: 'reported', label: 'Reported' },
                 { key: 'nature', label: 'Crime' },
                 { key: 'location', label: 'Location' },
-                { key: 'start_time', label: 'Start' },
-                { key: 'end_time', label: 'End' },
+                { key: 'start', label: 'Start' },
+                { key: 'end', label: 'End' },
                 { key: 'disposition', label: 'Status' },
                 { key: 'case_number', label: 'Case #' },
               ].map(({ key, label }) => (
@@ -215,8 +213,8 @@ export default function Home() {
                 <td className="px-3 py-2">{entry.reported || '—'}</td>
                 <td className="px-3 py-2">{entry.nature || '—'}</td>
                 <td className="px-3 py-2">{entry.location || '—'}</td>
-                <td className="px-3 py-2">{entry.start_time || '—'}</td>
-                <td className="px-3 py-2">{entry.end_time || '—'}</td>
+                <td className="px-3 py-2">{entry.start || '—'}</td>
+                <td className="px-3 py-2">{entry.end || '—'}</td>
                 <td className="px-3 py-2">
                   <span
                     className={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium text-white rounded-full ${getStatusColor(

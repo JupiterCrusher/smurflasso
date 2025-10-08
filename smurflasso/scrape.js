@@ -11,25 +11,31 @@ async function scrape() {
   const rows = $("table tbody tr");
   const output = [];
 
-  rows.each((i, row) => {
+  rows.each((_, row) => {
     const cells = $(row).find("td").map((_, el) => $(el).text().trim()).get();
     if (cells.length < 10) return;
 
     output.push({
-      date: cells[0],
-      type: cells[7],
+      reported: cells[0],
+      start: `${cells[1]} ${cells[2]}`,
+      end: `${cells[3]} ${cells[4]}`,
       location: cells[5],
-      time: `${cells[2]} - ${cells[4]}`,
-      status: cells[9],
+      case_number: cells[6],
+      nature: cells[7],
+      disposition: cells[9],
     });
   });
 
-  const existing = JSON.parse(fs.readFileSync("public/crime-data.json", "utf8"));
+  const filePath = "public/crime-data.json";
+  const existing = fs.existsSync(filePath)
+    ? JSON.parse(fs.readFileSync(filePath, "utf8"))
+    : [];
+
   const changed = JSON.stringify(output) !== JSON.stringify(existing);
 
   if (changed) {
-    fs.writeFileSync("public/crime-data.json", JSON.stringify(output, null, 2));
-    console.log("Crime data updated.");
+    fs.writeFileSync(filePath, JSON.stringify(output, null, 2));
+    console.log("✅ Crime data updated.");
   } else {
     console.log("No changes to crime data.");
   }
