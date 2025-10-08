@@ -9,8 +9,12 @@ interface CrimeEntry {
   status: string;
 }
 
+type SortKey = keyof CrimeEntry;
+
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
+  const [sortKey, setSortKey] = useState<SortKey>('date');
+  const [sortAsc, setSortAsc] = useState(true);
 
   useEffect(() => {
     fetch('/crime-data.json')
@@ -18,6 +22,21 @@ export default function Home() {
       .then(setData)
       .catch(console.error);
   }, []);
+
+  const sortedData = [...data].sort((a, b) => {
+    const aVal = a[sortKey].toLowerCase();
+    const bVal = b[sortKey].toLowerCase();
+    return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+  });
+
+  const toggleSort = (key: SortKey) => {
+    if (key === sortKey) {
+      setSortAsc(!sortAsc);
+    } else {
+      setSortKey(key);
+      setSortAsc(true);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-gray-900 text-white px-6 py-8">
@@ -37,16 +56,35 @@ export default function Home() {
       </div>
 
       {/* Table */}
-      <div className="bg-gray-800 p-4 rounded-lg mb-8">
+      <div className="bg-gray-800 p-4 rounded-lg mb-8 overflow-x-auto">
         <h2 className="text-xl font-semibold mb-4">Incident Log</h2>
-        <p className="text-sm text-gray-400 mb-2">Date | Type | Location | Time | Status</p>
-        <div className="space-y-1">
-          {data.map((entry, idx) => (
-            <p key={idx} className="text-sm">
-              {entry.date} | {entry.type} | {entry.location} | {entry.time} | {entry.status}
-            </p>
-          ))}
-        </div>
+        <table className="w-full text-sm text-left">
+          <thead className="text-gray-400">
+            <tr>
+              {['date', 'type', 'location', 'time', 'status'].map((key) => (
+                <th
+                  key={key}
+                  onClick={() => toggleSort(key as SortKey)}
+                  className="cursor-pointer px-2 py-1 hover:text-white"
+                >
+                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                  {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {sortedData.map((entry, idx) => (
+              <tr key={idx} className="border-t border-gray-700">
+                <td className="px-2 py-1">{entry.date}</td>
+                <td className="px-2 py-1">{entry.type}</td>
+                <td className="px-2 py-1">{entry.location}</td>
+                <td className="px-2 py-1">{entry.time}</td>
+                <td className="px-2 py-1">{entry.status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
 
       {/* Footer */}
