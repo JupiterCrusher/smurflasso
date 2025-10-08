@@ -15,11 +15,15 @@ async function scrapeCrimeLog() {
 
     if (cols.length >= 5) {
       entries.push({
-        date: cols[0],
-        time: cols[1],
-        type: cols[2],
-        location: cols[3],
-        status: cols[4],
+        reported: cols[0],
+        start_date: cols[1],
+        start_time: cols[2],
+        end_date: cols[3],
+        end_time: cols[4],
+        location: cols[5],
+        case_number: cols[6],
+        nature: cols[7],
+        disposition: cols[9] // skip 8 (Hate Crime), 10 (Include in log?)
       });
     }
   });
