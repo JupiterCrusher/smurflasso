@@ -2,18 +2,22 @@
 import { useEffect, useState, useRef } from 'react';
 
 interface CrimeEntry {
-  date: string;
-  type: string;
+  reported: string;
+  start_date: string;
+  start_time: string;
+  end_date: string;
+  end_time: string;
   location: string;
-  time: string;
-  status: string;
+  case_number: string;
+  nature: string;
+  disposition: string;
 }
 
 type SortKey = keyof CrimeEntry;
 
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
-  const [sortKey, setSortKey] = useState<SortKey>('date');
+  const [sortKey, setSortKey] = useState<SortKey>('reported');
   const [sortAsc, setSortAsc] = useState(true);
   const [visibleCount, setVisibleCount] = useState(50);
   const loaderRef = useRef<HTMLDivElement | null>(null);
@@ -42,12 +46,11 @@ export default function Home() {
     }
   };
 
-  // Lazy loading: load more when user scrolls near bottom
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         if (entries[0].isIntersecting) {
-          setVisibleCount((prev) => Math.min(prev + 50, data.length));
+          setVisibleCount(prev => Math.min(prev + 50, data.length));
         }
       },
       { threshold: 1.0 }
@@ -84,13 +87,21 @@ export default function Home() {
         <table className="w-full text-sm text-left border-collapse">
           <thead className="text-gray-400">
             <tr>
-              {['date', 'type', 'location', 'time', 'status'].map((key) => (
+              {[
+                { key: 'reported', label: 'Date Reported' },
+                { key: 'nature', label: 'Crime' },
+                { key: 'location', label: 'Location' },
+                { key: 'start_time', label: 'Start Time' },
+                { key: 'end_time', label: 'End Time' },
+                { key: 'disposition', label: 'Status' },
+                { key: 'case_number', label: 'Case #' },
+              ].map(({ key, label }) => (
                 <th
                   key={key}
                   onClick={() => toggleSort(key as SortKey)}
                   className="cursor-pointer px-3 py-2 hover:text-white whitespace-nowrap"
                 >
-                  {key.charAt(0).toUpperCase() + key.slice(1)}
+                  {label}
                   {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
                 </th>
               ))}
@@ -99,11 +110,13 @@ export default function Home() {
           <tbody>
             {visibleData.map((entry, idx) => (
               <tr key={idx} className="border-t border-gray-700 hover:bg-gray-750">
-                <td className="px-3 py-2">{entry.date || '—'}</td>
-                <td className="px-3 py-2">{entry.type || '—'}</td>
+                <td className="px-3 py-2">{entry.reported || '—'}</td>
+                <td className="px-3 py-2">{entry.nature || '—'}</td>
                 <td className="px-3 py-2">{entry.location || '—'}</td>
-                <td className="px-3 py-2">{entry.time || '—'}</td>
-                <td className="px-3 py-2">{entry.status || '—'}</td>
+                <td className="px-3 py-2">{entry.start_time || '—'}</td>
+                <td className="px-3 py-2">{entry.end_time || '—'}</td>
+                <td className="px-3 py-2">{entry.disposition || '—'}</td>
+                <td className="px-3 py-2">{entry.case_number || '—'}</td>
               </tr>
             ))}
           </tbody>
