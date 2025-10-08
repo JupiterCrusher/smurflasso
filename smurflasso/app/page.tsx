@@ -6,7 +6,7 @@ export default function Home() {
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div className="bg-gray-800 p-4 rounded-lg">Total Incidents This Month</div>
-        <div className="bg-gray-800 p-4 rounded-lg col-span-2">This Week's Summary (AI)</div>
+        <div className="bg-gray-800 p-4 rounded-lg col-span-2">This Week&apos;s Summary (AI)</div>
       </div>
 
       {/* Charts Grid */}
