@@ -18,7 +18,7 @@ type SortKey = keyof CrimeEntry;
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
   const [sortKey, setSortKey] = useState<SortKey>('reported');
-  const [sortAsc, setSortAsc] = useState(false);
+  const [sortAsc, setSortAsc] = useState(false); // start with most recent
   const [visibleCount, setVisibleCount] = useState(50);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
@@ -33,17 +33,16 @@ export default function Home() {
   }, []);
 
   const sortedData = [...data].sort((a, b) => {
-  const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
-  const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
+    const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
+    const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
 
-  // Handle date sorting correctly
-  if (sortKey === 'reported' || sortKey.includes('date')) {
-    const dateA = new Date(aVal);
-    const dateB = new Date(bVal);
-    return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
-  }
+    if (sortKey === 'reported' || sortKey.includes('date')) {
+      const dateA = new Date(aVal);
+      const dateB = new Date(bVal);
+      return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
+    }
 
-  return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
   });
 
   const toggleSort = (key: SortKey) => {
@@ -63,7 +62,6 @@ export default function Home() {
       },
       { threshold: 1.0 }
     );
-
     if (loaderRef.current) observer.observe(loaderRef.current);
     return () => {
       if (loaderRef.current) observer.unobserve(loaderRef.current);
@@ -72,9 +70,22 @@ export default function Home() {
 
   const visibleData = sortedData.slice(0, visibleCount);
 
+  const getStatusColor = (status: string) => {
+    if (!status) return 'bg-gray-600';
+    const lower = status.toLowerCase();
+    if (lower.includes('open')) return 'bg-red-600';
+    if (lower.includes('closed')) return 'bg-green-600';
+    return 'bg-gray-600';
+  };
+
   return (
     <main className="min-h-screen bg-gray-900 text-white px-6 py-8">
-      <h1 className="text-3xl font-bold mb-6">Boise State Crime Tracker</h1>
+      <div className="mb-2">
+        <h1 className="text-3xl font-bold mb-1">Boise State Crime Tracker</h1>
+        <p className="text-sm text-gray-500">
+          Last updated: {new Date().toLocaleString()} | This information may not be 100% accurate. Always refer to official sources.
+        </p>
+      </div>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -92,22 +103,23 @@ export default function Home() {
       {/* Table */}
       <div className="bg-gray-800 p-4 rounded-lg mb-8 overflow-x-auto">
         <h2 className="text-xl font-semibold mb-4">Incident Log</h2>
-        <table className="w-full text-sm text-left border-collapse">
-          <thead className="text-gray-400">
+        <table className="w-full text-sm text-left border-collapse table-fixed">
+          <thead className="text-gray-400 border-b border-gray-700">
             <tr>
               {[
-                { key: 'reported', label: 'Date Reported' },
-                { key: 'nature', label: 'Crime' },
-                { key: 'location', label: 'Location' },
-                { key: 'start_time', label: 'Start Time' },
-                { key: 'end_time', label: 'End Time' },
-                { key: 'disposition', label: 'Status' },
-                { key: 'case_number', label: 'Case #' },
-              ].map(({ key, label }) => (
+                { key: 'reported', label: 'Date Reported', width: '12%' },
+                { key: 'nature', label: 'Crime', width: '20%' },
+                { key: 'location', label: 'Location', width: '20%' },
+                { key: 'start_time', label: 'Start Time', width: '10%' },
+                { key: 'end_time', label: 'End Time', width: '10%' },
+                { key: 'disposition', label: 'Status', width: '15%' },
+                { key: 'case_number', label: 'Case #', width: '13%' },
+              ].map(({ key, label, width }) => (
                 <th
                   key={key}
                   onClick={() => toggleSort(key as SortKey)}
-                  className="cursor-pointer px-3 py-2 hover:text-white whitespace-nowrap"
+                  style={{ width }}
+                  className="cursor-pointer px-3 py-2 hover:text-white whitespace-nowrap select-none"
                 >
                   {label}
                   {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
@@ -123,26 +135,27 @@ export default function Home() {
                 <td className="px-3 py-2">{entry.location || '—'}</td>
                 <td className="px-3 py-2">{entry.start_time || '—'}</td>
                 <td className="px-3 py-2">{entry.end_time || '—'}</td>
-                <td className="px-3 py-2">{entry.disposition || '—'}</td>
+                <td className="px-3 py-2">
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                      entry.disposition
+                    )}`}
+                  >
+                    {entry.disposition || '—'}
+                  </span>
+                </td>
                 <td className="px-3 py-2">{entry.case_number || '—'}</td>
               </tr>
             ))}
           </tbody>
         </table>
 
-        {/* Lazy Load Trigger */}
         {visibleCount < data.length && (
           <div ref={loaderRef} className="text-center py-4 text-gray-400">
             Loading more incidents...
           </div>
         )}
       </div>
-
-      {/* Footer */}
-      <footer className="text-sm text-gray-500 text-center pt-6 border-t border-gray-700">
-        <p>Last updated: {new Date().toLocaleString()}</p>
-        <p>This information may not be 100% accurate. Always refer to official sources.</p>
-      </footer>
     </main>
   );
 }
