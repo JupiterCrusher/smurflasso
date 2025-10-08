@@ -20,9 +20,10 @@ export default function Home() {
   const [visibleCount, setVisibleCount] = useState(50);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('All');
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
-  // Fetch data
+  // Load data
   useEffect(() => {
     fetch('/crime-data.json')
       .then(res => res.json())
@@ -30,7 +31,7 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  // Unique status list
+  // Status list
   const statuses = useMemo(() => {
     const unique = Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
     return ['All', ...unique];
@@ -41,19 +42,17 @@ export default function Home() {
     const sorted = [...data].sort((a, b) => {
       const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
       const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
-
       if (sortKey === 'reported') {
         const dateA = new Date(aVal);
         const dateB = new Date(bVal);
         return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
       }
-
       return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
     });
     return sorted;
   }, [data, sortKey, sortAsc]);
 
-  // Filtering + search
+  // Search + Filter
   const filteredData = useMemo(() => {
     return sortedData.filter(entry => {
       const matchesSearch =
@@ -69,7 +68,7 @@ export default function Home() {
 
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // Lazy loading
+  // Lazy load
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting)
@@ -124,12 +123,12 @@ export default function Home() {
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
           <p className="text-3xl font-bold text-orange-400">{data.length}</p>
         </div>
-        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
           <p className="text-3xl font-bold text-orange-400">
             {
@@ -141,35 +140,51 @@ export default function Home() {
             }
           </p>
         </div>
-        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
           <p className="text-orange-400/60 italic">Coming soon...</p>
         </div>
       </div>
 
-      {/* Search + Filters */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-5">
-        <input
-          type="text"
-          placeholder="Search by location, crime, or case #..."
-          value={searchTerm}
-          onChange={e => setSearchTerm(e.target.value)}
-          className="w-full md:w-2/3 bg-gray-800/80 border border-gray-700 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-orange-400/40 placeholder-gray-500"
-        />
-        <div className="flex flex-wrap gap-2 justify-end">
-          {statuses.map(s => (
-            <button
-              key={s}
-              onClick={() => setStatusFilter(s)}
-              className={`px-3 py-1 rounded-full text-sm border transition-all ${
-                statusFilter === s
-                  ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
-                  : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/70'
-              }`}
-            >
-              {s}
-            </button>
-          ))}
+      {/* Search + Filter */}
+      <div className="flex flex-col gap-3 mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+          <input
+            type="text"
+            placeholder="Search by location, crime, or case #..."
+            value={searchTerm}
+            onChange={e => setSearchTerm(e.target.value)}
+            className="w-full md:w-2/3 bg-gray-800/80 border border-gray-700 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-orange-400/40 placeholder-gray-500"
+          />
+          <button
+            onClick={() => setFiltersOpen(prev => !prev)}
+            className="px-4 py-2 bg-gray-800/80 border border-gray-700 text-sm rounded-md hover:bg-gray-700/80 transition"
+          >
+            {filtersOpen ? 'Hide Filters ▲' : 'Show Filters ▼'}
+          </button>
+        </div>
+
+        {/* Collapsible Filter Menu */}
+        <div
+          className={`overflow-hidden transition-[max-height] duration-500 ${
+            filtersOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex flex-wrap gap-2 mt-3 justify-center md:justify-start">
+            {statuses.map(s => (
+              <button
+                key={s}
+                onClick={() => setStatusFilter(s)}
+                className={`px-3 py-1 rounded-full text-sm border transition-all ${
+                  statusFilter === s
+                    ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
+                    : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/70'
+                }`}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -202,10 +217,7 @@ export default function Home() {
           </thead>
           <tbody>
             {visibleData.map((entry, idx) => (
-              <tr
-                key={idx}
-                className="border-t border-gray-700 hover:bg-gray-700/40 transition-colors"
-              >
+              <tr key={idx} className="border-t border-gray-700 hover:bg-gray-700/40 transition-colors">
                 <td className="px-3 py-2">{entry.reported || '—'}</td>
                 <td className="px-3 py-2 truncate">{entry.nature || '—'}</td>
                 <td className="px-3 py-2 truncate">{entry.location || '—'}</td>
@@ -225,6 +237,7 @@ export default function Home() {
             ))}
           </tbody>
         </table>
+
         {visibleCount < filteredData.length && (
           <div ref={loaderRef} className="text-center py-4 text-gray-400 text-sm">
             Loading more incidents...
