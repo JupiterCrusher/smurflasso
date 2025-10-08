@@ -12,8 +12,19 @@ import {
   LineElement,
 } from 'chart.js';
 import { Pie, Bar } from 'react-chartjs-2';
+import trendlinePlugin from 'chartjs-plugin-trendline';
 
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, BarElement, PointElement, LineElement);
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  PointElement,
+  LineElement,
+  trendlinePlugin
+);
 
 interface CrimeEntry {
   reported: string;
@@ -105,7 +116,7 @@ export default function Home() {
   const getStatusColor = (status: string) => {
     if (!status) return 'bg-gray-600/60 text-gray-300';
     const lower = status.toLowerCase();
-    if (lower.includes('open')) return 'bg-red-600/80 text-white animate-pulse border border-red-500/50';
+    if (lower.includes('open')) return 'bg-red-600/80 text-white border border-red-500/50';
     if (lower.includes('closed')) return 'bg-green-600/60 text-white border border-green-400/40';
     if (lower.includes('referred')) return 'bg-blue-600/60 text-white border border-blue-400/40';
     if (lower.includes('pending')) return 'bg-yellow-600/60 text-white border border-yellow-400/40';
@@ -124,7 +135,7 @@ export default function Home() {
     }).length;
   }, [data]);
 
-  // Chart data
+  // Pie chart
   const crimeTypeData = useMemo(() => {
     const grouped = data.reduce((acc, curr) => {
       const key = curr.nature || 'Unknown';
@@ -143,11 +154,9 @@ export default function Home() {
     };
   }, [data]);
 
-  // 🔸 Monthly trend comparison (current month vs same month last year)
+  // Monthly trend chart with trendline
   const monthlyTrendData = useMemo(() => {
     const grouped: Record<string, number> = {};
-    const now = new Date();
-
     data.forEach(entry => {
       const date = new Date(entry.reported);
       if (isNaN(date.getTime())) return;
@@ -161,25 +170,20 @@ export default function Home() {
       return `${new Date(year, month).toLocaleString('default', { month: 'short' })} ${year}`;
     });
 
-    const currentKey = `${now.getFullYear()}-${now.getMonth()}`;
-    const lastYearKey = `${now.getFullYear() - 1}-${now.getMonth()}`;
-
     return {
       labels,
       datasets: [
         {
           label: 'Incidents per Month',
           data: sortedKeys.map(k => grouped[k]),
-          backgroundColor: sortedKeys.map(k =>
-            k === currentKey ? '#fb923c' : 'rgba(249,115,22,0.8)'
-          ),
+          backgroundColor: '#fb923c',
           borderRadius: 6,
-        },
-        {
-          label: 'Same Month Last Year',
-          data: sortedKeys.map(k => (k === lastYearKey ? grouped[k] : 0)),
-          backgroundColor: 'rgba(255,255,255,0.2)',
-          borderRadius: 6,
+          trendlineLinear: {
+            colorMin: '#ffffff',
+            colorMax: '#ffffff',
+            lineStyle: 'solid',
+            width: 2,
+          },
         },
       ],
     };
@@ -187,28 +191,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
-      <style>{`
-        @keyframes gradientPulse {
-          0%, 100% { background-color: #dc2626; }
-          50% { background-color: #ef4444; }
-        }
-        .animate-pulse {
-          animation: gradientPulse 2s ease-in-out infinite;
-        }
-        @keyframes barPulse {
-          0%, 100% { box-shadow: 0 0 10px rgba(251,146,60,0.5); }
-          50% { box-shadow: 0 0 20px rgba(251,146,60,0.9); }
-        }
-        .bar-pulse canvas {
-          animation: barPulse 2s infinite ease-in-out;
-        }
-      `}</style>
-
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-4xl font-bold tracking-tight mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-400">
-          Last updated: {new Date().toLocaleString()} • Unofficial data summary.  
+          Last updated: {new Date().toLocaleString()} • Unofficial data summary.
         </p>
         <p className="text-sm text-gray-500 mt-1">
           Data pulled from{' '}
@@ -231,7 +218,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
+          <p className="text-3xl font-bold text-orange-400">{countThisMonth}</p>
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
@@ -245,20 +232,18 @@ export default function Home() {
           <h3 className="text-sm text-gray-400 mb-2">Incident Types</h3>
           <Pie data={crimeTypeData} options={{ plugins: { legend: { display: false } } }} />
         </div>
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 relative">
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
-          <div className="bar-pulse">
-            <Bar
-              data={monthlyTrendData}
-              options={{
-                plugins: { legend: { display: false } },
-                scales: {
-                  y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
-                  x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
-                },
-              }}
-            />
-          </div>
+          <Bar
+            data={monthlyTrendData}
+            options={{
+              plugins: { legend: { display: false } },
+              scales: {
+                y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
+              },
+            }}
+          />
         </div>
         <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
