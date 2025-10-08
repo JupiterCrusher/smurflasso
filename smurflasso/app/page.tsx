@@ -359,54 +359,66 @@ export default function Home() {
       </div>
 
       {/* Table */}
-      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 mb-10 overflow-x-auto backdrop-blur-md">
+      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 mb-10 backdrop-blur-md">
         <h2 className="text-lg font-semibold mb-3 border-l-4 border-orange-500 pl-2">Incident Log</h2>
-        <table className="w-full text-sm text-left border-collapse table-fixed">
-          <thead className="sticky top-0 bg-gray-900/95 text-gray-400 border-b border-gray-700 backdrop-blur-lg">
-            <tr>
-              {[
-                { key: 'reported', label: 'Reported', width: '10%' },
-                { key: 'nature', label: 'Crime', width: '20%' },
-                { key: 'location', label: 'Location', width: '20%' },
-                { key: 'start', label: 'Start', width: '15%' },
-                { key: 'end', label: 'End', width: '15%' },
-                { key: 'disposition', label: 'Status', width: '10%' },
-                { key: 'case_number', label: 'Case #', width: '10%' },
-              ].map(({ key, label, width }) => (
-                <th
-                  key={key}
-                  onClick={() => toggleSort(key as SortKey)}
-                  className="cursor-pointer px-3 py-2 hover:text-white select-none whitespace-nowrap text-xs tracking-wide"
-                  style={{ width }}
-                >
-                  {label}
-                  {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {visibleData.map((entry, idx) => (
-              <tr key={idx} className="border-t border-gray-700 hover:bg-gray-700/40 transition-colors">
-                <td className="px-3 py-2">{entry.reported || '—'}</td>
-                <td className="px-3 py-2 truncate">{entry.nature || '—'}</td>
-                <td className="px-3 py-2 truncate">{entry.location || '—'}</td>
-                <td className="px-3 py-2">{entry.start || '—'}</td>
-                <td className="px-3 py-2">{entry.end || '—'}</td>
-                <td className="px-3 py-2">
-                  <span
-                    className={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(
-                      entry.disposition
-                    )}`}
+
+        {/* Responsive scroll container */}
+        <div className="overflow-x-auto -mx-4 sm:mx-0">
+          <table className="min-w-full text-sm text-left border-collapse">
+            <thead className="sticky top-0 bg-gray-900/95 text-gray-400 border-b border-gray-700 backdrop-blur-lg">
+              <tr>
+                {[
+                  { key: 'reported', label: 'Reported' },
+                  { key: 'nature', label: 'Crime' },
+                  { key: 'location', label: 'Location' },
+                  { key: 'start', label: 'Start' },
+                  { key: 'end', label: 'End' },
+                  { key: 'disposition', label: 'Status' },
+                  { key: 'case_number', label: 'Case #' },
+                ].map(({ key, label }) => (
+                  <th
+                    key={key}
+                    onClick={() => toggleSort(key as SortKey)}
+                    className="cursor-pointer px-3 py-2 hover:text-white select-none whitespace-nowrap text-xs tracking-wide"
                   >
-                    {entry.disposition || '—'}
-                  </span>
-                </td>
-                <td className="px-3 py-2">{entry.case_number || '—'}</td>
+                    {label}
+                    {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
+                  </th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {visibleData.map((entry, idx) => (
+                <tr
+                  key={idx}
+                  className="border-t border-gray-700 hover:bg-gray-700/40 transition-colors"
+                >
+                  <td className="px-3 py-2 whitespace-nowrap">{entry.reported || '—'}</td>
+                  <td className="px-3 py-2 whitespace-nowrap sm:whitespace-normal max-w-[200px] truncate">
+                    {entry.nature || '—'}
+                  </td>
+                  <td className="px-3 py-2 whitespace-nowrap sm:whitespace-normal max-w-[180px] truncate">
+                    {entry.location || '—'}
+                  </td>
+                  <td className="px-3 py-2 whitespace-nowrap">{entry.start || '—'}</td>
+                  <td className="px-3 py-2 whitespace-nowrap">{entry.end || '—'}</td>
+                  <td className="px-3 py-2">
+                    <span
+                      className={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(
+                        entry.disposition
+                      )}`}
+                    >
+                      {entry.disposition || '—'}
+                    </span>
+                  </td>
+                  <td className="px-3 py-2 whitespace-nowrap">{entry.case_number || '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {visibleCount < filteredData.length && (
           <div ref={loaderRef} className="text-center py-4 text-gray-400 text-sm">
             Loading more incidents...
