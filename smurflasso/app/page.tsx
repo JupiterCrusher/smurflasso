@@ -18,7 +18,7 @@ type SortKey = keyof CrimeEntry;
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
   const [sortKey, setSortKey] = useState<SortKey>('reported');
-  const [sortAsc, setSortAsc] = useState(false); // start with most recent
+  const [sortAsc, setSortAsc] = useState(false);
   const [visibleCount, setVisibleCount] = useState(50);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,13 +73,23 @@ export default function Home() {
   const getStatusColor = (status: string) => {
     if (!status) return 'bg-gray-600';
     const lower = status.toLowerCase();
-    if (lower.includes('open')) return 'bg-red-600';
-    if (lower.includes('closed')) return 'bg-green-600';
+    if (lower.includes('open')) return 'bg-red-500 animate-pulse-slow';
+    if (lower.includes('closed')) return 'bg-green-500';
     return 'bg-gray-600';
   };
 
   return (
     <main className="min-h-screen bg-gray-900 text-white px-6 py-8">
+      <style>{`
+        @keyframes pulseSlow {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+          animation: pulseSlow 2.5s ease-in-out infinite;
+        }
+      `}</style>
+
       <div className="mb-2">
         <h1 className="text-3xl font-bold mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-500">
@@ -137,7 +147,7 @@ export default function Home() {
                 <td className="px-3 py-2">{entry.end_time || '—'}</td>
                 <td className="px-3 py-2">
                   <span
-                    className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                    className={`inline-flex items-center justify-center min-w-[80px] px-2 py-1 rounded-full text-xs font-medium leading-tight ${getStatusColor(
                       entry.disposition
                     )}`}
                   >
