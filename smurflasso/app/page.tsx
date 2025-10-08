@@ -259,10 +259,29 @@ export default function Home() {
 
       {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+        {/* Pie chart */}
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 flex flex-col items-center text-center">
           <h3 className="text-sm text-gray-400 mb-2">Incident Categories</h3>
-          <Pie data={crimeTypeData} options={{ plugins: { legend: { display: true, position: 'bottom' } } }} />
+          <div className="w-3/4 md:w-2/3">
+            <Pie
+              data={crimeTypeData}
+              options={{
+                plugins: {
+                  legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: { color: '#d1d5db', boxWidth: 14, font: { size: 11 } },
+                  },
+                },
+              }}
+            />
+          </div>
+          <p className="text-xs text-gray-400 mt-3 max-w-xs leading-relaxed">
+            Each slice represents the proportion of reports by type, grouped into broader categories like Theft, Alcohol, or Vandalism.
+          </p>
         </div>
+
+        {/* Bar chart */}
         <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
           <Bar
@@ -276,9 +295,11 @@ export default function Home() {
             }}
           />
         </div>
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+
+        {/* Placeholder */}
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 flex flex-col justify-center items-center">
           <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
-          <p className="text-gray-500 text-sm italic">Location visualization coming soon.</p>
+          <p className="text-gray-500 text-sm italic text-center">Location visualization coming soon.</p>
         </div>
       </div>
 
