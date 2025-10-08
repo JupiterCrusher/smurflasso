@@ -3,22 +3,22 @@ name: Update Crime Data
 on:
   schedule:
     - cron: '*/15 * * * *'  # Every 15 minutes
-  workflow_dispatch:         # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: .   # ensures node runs in repo root
+        working-directory: smurflasso   # 👈 this is the key change
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0       # ensures full history for diff
+          fetch-depth: 0
 
-      - name: Set up Node.js
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
