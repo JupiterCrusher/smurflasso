@@ -26,6 +26,12 @@ ChartJS.register(
   trendlinePlugin
 );
 
+// Fix missing type declaration
+declare module 'chartjs-plugin-trendline' {
+  const content: any;
+  export default content;
+}
+
 interface CrimeEntry {
   reported: string;
   start: string;
@@ -57,7 +63,10 @@ export default function Home() {
   }, []);
 
   // Status list
-  const statuses = useMemo(() => Array.from(new Set(data.map(d => d.disposition).filter(Boolean))), [data]);
+  const statuses = useMemo(
+    () => Array.from(new Set(data.map(d => d.disposition).filter(Boolean))),
+    [data]
+  );
 
   // Sorting
   const sortedData = useMemo(() => {
@@ -90,7 +99,7 @@ export default function Home() {
 
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // Lazy loading
+  // Lazy load table
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting)
@@ -135,11 +144,35 @@ export default function Home() {
     }).length;
   }, [data]);
 
-  // Pie chart
+  // Categorize natures
+  const categorizeNature = (nature: string): string => {
+    const n = nature.toLowerCase();
+    if (n.includes('alcohol') || n.includes('minor') || n.includes('dui') || n.includes('open container'))
+      return 'Alcohol / DUI';
+    if (n.includes('drug') || n.includes('marijuana') || n.includes('narcotic') || n.includes('paraphernalia') || n.includes('controlled'))
+      return 'Drugs';
+    if (n.includes('assault') || n.includes('battery') || n.includes('violence') || n.includes('fighting'))
+      return 'Assault / Violence';
+    if (n.includes('rape') || n.includes('sexual'))
+      return 'Sexual Assault';
+    if (n.includes('vandalism') || n.includes('graffiti') || n.includes('malicious'))
+      return 'Vandalism / Property Damage';
+    if (n.includes('theft') || n.includes('larceny') || n.includes('burglary'))
+      return 'Theft / Burglary';
+    if (n.includes('hit and run') || n.includes('reckless'))
+      return 'Hit & Run / Vehicle';
+    if (n.includes('trespass') || n.includes('harass') || n.includes('stalk'))
+      return 'Trespassing / Harassment';
+    if (n.includes('weapon') || n.includes('threat') || n.includes('bribery'))
+      return 'Weapons / Threats';
+    return 'Other / Miscellaneous';
+  };
+
+  // Pie chart (categories)
   const crimeTypeData = useMemo(() => {
     const grouped = data.reduce((acc, curr) => {
-      const key = curr.nature || 'Unknown';
-      acc[key] = (acc[key] || 0) + 1;
+      const cat = categorizeNature(curr.nature || 'Unknown');
+      acc[cat] = (acc[cat] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
     return {
@@ -148,13 +181,16 @@ export default function Home() {
         {
           label: 'Incidents',
           data: Object.values(grouped),
-          backgroundColor: ['#f87171', '#60a5fa', '#facc15', '#34d399', '#a78bfa', '#fb923c'],
+          backgroundColor: [
+            '#f87171', '#60a5fa', '#34d399', '#facc15', '#a78bfa',
+            '#fb923c', '#f472b6', '#4ade80', '#94a3b8', '#fcd34d'
+          ],
         },
       ],
     };
   }, [data]);
 
-  // Monthly trend chart with trendline
+  // Monthly trend
   const monthlyTrendData = useMemo(() => {
     const grouped: Record<string, number> = {};
     data.forEach(entry => {
@@ -189,13 +225,14 @@ export default function Home() {
     };
   }, [data]);
 
+  // --- Render ---
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
       {/* Header */}
       <div className="mb-6">
         <h1 className="text-4xl font-bold tracking-tight mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-400">
-          Last updated: {new Date().toLocaleString()} • Unofficial data summary.
+          Last updated: {new Date().toLocaleString()} • Data provided without warranty or guarantee.
         </p>
         <p className="text-sm text-gray-500 mt-1">
           Data pulled from{' '}
@@ -212,15 +249,15 @@ export default function Home() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
           <p className="text-3xl font-bold text-orange-400">{data.length}</p>
         </div>
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-orange-400">{countThisMonth}</p>
+          <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
         </div>
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
+        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
           <p className="text-orange-400/60 italic">Coming soon...</p>
         </div>
@@ -229,8 +266,8 @@ export default function Home() {
       {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
         <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-2">Incident Types</h3>
-          <Pie data={crimeTypeData} options={{ plugins: { legend: { display: false } } }} />
+          <h3 className="text-sm text-gray-400 mb-2">Incident Categories</h3>
+          <Pie data={crimeTypeData} options={{ plugins: { legend: { display: true, position: 'bottom' } } }} />
         </div>
         <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
