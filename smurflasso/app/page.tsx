@@ -19,7 +19,7 @@ export default function Home() {
   const [sortAsc, setSortAsc] = useState(false);
   const [visibleCount, setVisibleCount] = useState(50);
   const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('All');
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
@@ -31,10 +31,9 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  // Status list
+  // Status list (no “All”)
   const statuses = useMemo(() => {
-    const unique = Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
-    return ['All', ...unique];
+    return Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
   }, [data]);
 
   // Sorting
@@ -60,11 +59,11 @@ export default function Home() {
         entry.nature.toLowerCase().includes(searchTerm.toLowerCase()) ||
         entry.case_number.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesStatus =
-        statusFilter === 'All' ||
-        entry.disposition.toLowerCase() === statusFilter.toLowerCase();
+        activeFilters.length === 0 ||
+        activeFilters.some(f => entry.disposition.toLowerCase() === f.toLowerCase());
       return matchesSearch && matchesStatus;
     });
-  }, [sortedData, searchTerm, statusFilter]);
+  }, [sortedData, searchTerm, activeFilters]);
 
   const visibleData = filteredData.slice(0, visibleCount);
 
@@ -102,6 +101,18 @@ export default function Home() {
     return 'bg-gray-700/60 text-gray-200 border border-gray-500/30';
   };
 
+  const countThisMonth = useMemo(() => {
+    const now = new Date();
+    return data.filter(d => {
+      const parsed = new Date(d.reported);
+      return (
+        !isNaN(parsed.getTime()) &&
+        parsed.getMonth() === now.getMonth() &&
+        parsed.getFullYear() === now.getFullYear()
+      );
+    }).length;
+  }, [data]);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
       <style>{`
@@ -118,7 +129,18 @@ export default function Home() {
       <div className="mb-6">
         <h1 className="text-4xl font-bold tracking-tight mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-400">
-          Last updated: {new Date().toLocaleString()} • Data not guaranteed accurate.
+          Last updated: {new Date().toLocaleString()} • This site is unofficial and for informational purposes only.
+        </p>
+        <p className="text-sm text-gray-500 mt-1">
+          Data pulled from{' '}
+          <a
+            href="https://www.boisestate.edu/publicsafety-security/campus-crime/campus-crime-log/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-400 hover:underline hover:text-orange-300 transition"
+          >
+            Boise State University’s official crime log
+          </a>.
         </p>
       </div>
 
@@ -130,15 +152,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-orange-400">
-            {
-              data.filter(d => {
-                const date = new Date(d.reported);
-                const now = new Date();
-                return date.getMonth() === now.getMonth() && date.getFullYear() === now.getFullYear();
-              }).length
-            }
-          </p>
+          <p className="text-3xl font-bold text-orange-400">{countThisMonth}</p>
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
@@ -156,34 +170,49 @@ export default function Home() {
             onChange={e => setSearchTerm(e.target.value)}
             className="w-full md:w-2/3 bg-gray-800/80 border border-gray-700 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-orange-400/40 placeholder-gray-500"
           />
-          <button
-            onClick={() => setFiltersOpen(prev => !prev)}
-            className="px-4 py-2 bg-gray-800/80 border border-gray-700 text-sm rounded-md hover:bg-gray-700/80 transition"
-          >
-            {filtersOpen ? 'Hide Filters ▲' : 'Show Filters ▼'}
-          </button>
+          <div className="flex items-center gap-3">
+            {activeFilters.length > 0 && (
+              <span className="text-xs bg-orange-500/20 text-orange-300 border border-orange-400/40 px-2 py-1 rounded-md">
+                {activeFilters.length} Filter{activeFilters.length > 1 ? 's' : ''} Active
+              </span>
+            )}
+            <button
+              onClick={() => setFiltersOpen(prev => !prev)}
+              className="px-4 py-2 bg-gray-800/80 border border-gray-700 text-sm rounded-md hover:bg-gray-700/80 transition"
+            >
+              {filtersOpen ? 'Hide Filters ▲' : 'Show Filters ▼'}
+            </button>
+          </div>
         </div>
 
         {/* Collapsible Filter Menu */}
         <div
-          className={`overflow-hidden transition-[max-height] duration-500 ${
+          className={`overflow-hidden transition-[max-height,opacity] duration-500 ${
             filtersOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
           <div className="flex flex-wrap gap-2 mt-3 justify-center md:justify-start">
-            {statuses.map(s => (
-              <button
-                key={s}
-                onClick={() => setStatusFilter(s)}
-                className={`px-3 py-1 rounded-full text-sm border transition-all ${
-                  statusFilter === s
-                    ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
-                    : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/70'
-                }`}
-              >
-                {s}
-              </button>
-            ))}
+            {statuses.map(s => {
+              const isActive = activeFilters.includes(s);
+              return (
+                <button
+                  key={s}
+                  onClick={() => {
+                    setActiveFilters(prev =>
+                      isActive ? prev.filter(f => f !== s) : [...prev, s]
+                    );
+                    setFiltersOpen(false);
+                  }}
+                  className={`px-3 py-1 rounded-full text-sm border transition-all ${
+                    isActive
+                      ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
+                      : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/70'
+                  }`}
+                >
+                  {s}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
