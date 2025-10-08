@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 
 interface CrimeEntry {
   reported: string;
@@ -20,6 +20,8 @@ export default function Home() {
   const [sortKey, setSortKey] = useState<SortKey>('reported');
   const [sortAsc, setSortAsc] = useState(false);
   const [visibleCount, setVisibleCount] = useState(50);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState('All');
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -32,18 +34,33 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  const sortedData = [...data].sort((a, b) => {
-    const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
-    const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
+  const sortedData = useMemo(() => {
+    const sorted = [...data].sort((a, b) => {
+      const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
+      const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
 
-    if (sortKey === 'reported' || sortKey.includes('date')) {
-      const dateA = new Date(aVal);
-      const dateB = new Date(bVal);
-      return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
-    }
+      if (sortKey === 'reported' || sortKey.includes('date')) {
+        const dateA = new Date(aVal);
+        const dateB = new Date(bVal);
+        return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
+      }
 
-    return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-  });
+      return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+    });
+    return sorted;
+  }, [data, sortKey, sortAsc]);
+
+  const filteredData = useMemo(() => {
+    return sortedData.filter(entry => {
+      const matchesSearch =
+        entry.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        entry.nature.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        entry.case_number.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesStatus =
+        statusFilter === 'All' || entry.disposition.toLowerCase() === statusFilter.toLowerCase();
+      return matchesSearch && matchesStatus;
+    });
+  }, [sortedData, searchTerm, statusFilter]);
 
   const toggleSort = (key: SortKey) => {
     if (key === sortKey) setSortAsc(!sortAsc);
@@ -57,7 +74,7 @@ export default function Home() {
     const observer = new IntersectionObserver(
       entries => {
         if (entries[0].isIntersecting) {
-          setVisibleCount(prev => Math.min(prev + 50, data.length));
+          setVisibleCount(prev => Math.min(prev + 50, filteredData.length));
         }
       },
       { threshold: 1.0 }
@@ -66,9 +83,9 @@ export default function Home() {
     return () => {
       if (loaderRef.current) observer.unobserve(loaderRef.current);
     };
-  }, [data.length]);
+  }, [filteredData.length]);
 
-  const visibleData = sortedData.slice(0, visibleCount);
+  const visibleData = filteredData.slice(0, visibleCount);
 
   const getStatusColor = (status: string) => {
     if (!status) return 'bg-gray-600';
@@ -82,12 +99,8 @@ export default function Home() {
     <main className="min-h-screen bg-gray-900 text-white px-6 py-8">
       <style>{`
         @keyframes gradientPulse {
-          0%, 100% {
-            background-color: #ef4444; /* red-500 */
-          }
-          50% {
-            background-color: #f87171; /* red-400 */
-          }
+          0%, 100% { background-color: #ef4444; }
+          50% { background-color: #f87171; }
         }
         .bg-gradient-pulse {
           background-color: #ef4444;
@@ -113,6 +126,26 @@ export default function Home() {
         <div className="bg-gray-800 p-4 rounded-lg">Incident Types (Pie Chart)</div>
         <div className="bg-gray-800 p-4 rounded-lg">Monthly Trends (Bar Chart)</div>
         <div className="bg-gray-800 p-4 rounded-lg">Heatmap (Location)</div>
+      </div>
+
+      {/* Filters */}
+      <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-2">
+        <input
+          type="text"
+          placeholder="Search by location, crime, or case number..."
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          className="w-full md:w-2/3 bg-gray-800 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-blue-500"
+        />
+        <select
+          value={statusFilter}
+          onChange={e => setStatusFilter(e.target.value)}
+          className="w-full md:w-1/4 bg-gray-800 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-blue-500"
+        >
+          <option value="All">All Statuses</option>
+          <option value="Open">Open</option>
+          <option value="Closed">Closed</option>
+        </select>
       </div>
 
       {/* Table */}
@@ -165,7 +198,7 @@ export default function Home() {
           </tbody>
         </table>
 
-        {visibleCount < data.length && (
+        {visibleCount < filteredData.length && (
           <div ref={loaderRef} className="text-center py-4 text-gray-400">
             Loading more incidents...
           </div>
