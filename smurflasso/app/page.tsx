@@ -31,7 +31,7 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  // Status list (no “All”)
+  // Status list
   const statuses = useMemo(() => {
     return Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
   }, [data]);
@@ -51,7 +51,7 @@ export default function Home() {
     return sorted;
   }, [data, sortKey, sortAsc]);
 
-  // Search + Filter
+  // Filter + search
   const filteredData = useMemo(() => {
     return sortedData.filter(entry => {
       const matchesSearch =
@@ -67,7 +67,7 @@ export default function Home() {
 
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // Lazy load
+  // Lazy loading
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting)
@@ -160,7 +160,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Search + Filter */}
+      {/* Search + Filters */}
       <div className="flex flex-col gap-3 mb-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
           <input
@@ -197,12 +197,11 @@ export default function Home() {
               return (
                 <button
                   key={s}
-                  onClick={() => {
+                  onClick={() =>
                     setActiveFilters(prev =>
                       isActive ? prev.filter(f => f !== s) : [...prev, s]
-                    );
-                    setFiltersOpen(false);
-                  }}
+                    )
+                  }
                   className={`px-3 py-1 rounded-full text-sm border transition-all ${
                     isActive
                       ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
