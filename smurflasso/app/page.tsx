@@ -18,7 +18,7 @@ type SortKey = keyof CrimeEntry;
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
   const [sortKey, setSortKey] = useState<SortKey>('reported');
-  const [sortAsc, setSortAsc] = useState(true);
+  const [sortAsc, setSortAsc] = useState(false);
   const [visibleCount, setVisibleCount] = useState(50);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
@@ -33,9 +33,17 @@ export default function Home() {
   }, []);
 
   const sortedData = [...data].sort((a, b) => {
-    const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
-    const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
-    return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+  const aVal = (a?.[sortKey] ?? '').toString().toLowerCase();
+  const bVal = (b?.[sortKey] ?? '').toString().toLowerCase();
+
+  // Handle date sorting correctly
+  if (sortKey === 'reported' || sortKey.includes('date')) {
+    const dateA = new Date(aVal);
+    const dateB = new Date(bVal);
+    return sortAsc ? dateA.getTime() - dateB.getTime() : dateB.getTime() - dateA.getTime();
+  }
+
+  return sortAsc ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
   });
 
   const toggleSort = (key: SortKey) => {
