@@ -26,12 +26,6 @@ ChartJS.register(
   trendlinePlugin
 );
 
-// Fix missing type declaration
-declare module 'chartjs-plugin-trendline' {
-  const content: any;
-  export default content;
-}
-
 interface CrimeEntry {
   reported: string;
   start: string;
