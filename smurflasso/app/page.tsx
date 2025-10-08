@@ -22,7 +22,7 @@ export default function Home() {
   const [statusFilter, setStatusFilter] = useState('All');
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
-  // Load data
+  // Fetch data
   useEffect(() => {
     fetch('/crime-data.json')
       .then(res => res.json())
@@ -30,7 +30,7 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  // Get unique statuses dynamically
+  // Unique status list
   const statuses = useMemo(() => {
     const unique = Array.from(new Set(data.map(d => d.disposition).filter(Boolean)));
     return ['All', ...unique];
@@ -53,7 +53,7 @@ export default function Home() {
     return sorted;
   }, [data, sortKey, sortAsc]);
 
-  // Filter + Search
+  // Filtering + search
   const filteredData = useMemo(() => {
     return sortedData.filter(entry => {
       const matchesSearch =
@@ -72,16 +72,14 @@ export default function Home() {
   // Lazy loading
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
+      if (entries[0].isIntersecting)
         setVisibleCount(prev => Math.min(prev + 50, filteredData.length));
-      }
     });
 
-    const currentLoader = loaderRef.current;
-    if (currentLoader) observer.observe(currentLoader);
-
+    const current = loaderRef.current;
+    if (current) observer.observe(current);
     return () => {
-      if (currentLoader) observer.unobserve(currentLoader);
+      if (current) observer.unobserve(current);
       observer.disconnect();
     };
   }, [filteredData.length]);
@@ -96,46 +94,44 @@ export default function Home() {
   };
 
   const getStatusColor = (status: string) => {
-    if (!status) return 'bg-gray-600';
+    if (!status) return 'bg-gray-600/60 text-gray-300';
     const lower = status.toLowerCase();
-    if (lower.includes('open')) return 'bg-gradient-pulse';
-    if (lower.includes('closed')) return 'bg-green-600/50 border border-green-500/50';
-    if (lower.includes('referred')) return 'bg-blue-600/40 border border-blue-400/40';
-    if (lower.includes('pending')) return 'bg-yellow-600/40 border border-yellow-400/40';
-    return 'bg-gray-600/40 border border-gray-400/20';
+    if (lower.includes('open')) return 'bg-red-600/80 text-white animate-pulse border border-red-500/50';
+    if (lower.includes('closed')) return 'bg-green-600/60 text-white border border-green-400/40';
+    if (lower.includes('referred')) return 'bg-blue-600/60 text-white border border-blue-400/40';
+    if (lower.includes('pending')) return 'bg-yellow-600/60 text-white border border-yellow-400/40';
+    return 'bg-gray-700/60 text-gray-200 border border-gray-500/30';
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-800 text-white px-6 py-8">
+    <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
       <style>{`
         @keyframes gradientPulse {
-          0%, 100% { background-color: #ef4444; }
-          50% { background-color: #f87171; }
+          0%, 100% { background-color: #dc2626; }
+          50% { background-color: #ef4444; }
         }
-        .bg-gradient-pulse {
-          background-color: #ef4444;
+        .animate-pulse {
           animation: gradientPulse 2s ease-in-out infinite;
-          border: 1px solid #f87171;
         }
       `}</style>
 
       {/* Header */}
-      <div className="mb-4">
-        <h1 className="text-3xl font-bold mb-1 tracking-tight">Boise State Crime Tracker</h1>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold tracking-tight mb-1">Boise State Crime Tracker</h1>
         <p className="text-sm text-gray-400">
-          Last updated: {new Date().toLocaleString()} • This data may not be 100% accurate.
+          Last updated: {new Date().toLocaleString()} • Data not guaranteed accurate.
         </p>
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg border border-gray-700">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
-          <p className="text-2xl font-semibold text-orange-400">{data.length}</p>
+          <p className="text-3xl font-bold text-orange-400">{data.length}</p>
         </div>
-        <div className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg border border-gray-700">
+        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-2xl font-semibold text-orange-400">
+          <p className="text-3xl font-bold text-orange-400">
             {
               data.filter(d => {
                 const date = new Date(d.reported);
@@ -145,30 +141,30 @@ export default function Home() {
             }
           </p>
         </div>
-        <div className="bg-gray-800/70 backdrop-blur-sm p-4 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-1">AI Summary (Soon)</h3>
+        <div className="bg-gray-800/80 backdrop-blur-md p-5 rounded-lg border border-gray-700">
+          <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
           <p className="text-orange-400/60 italic">Coming soon...</p>
         </div>
       </div>
 
-      {/* Search + Filter */}
-      <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-3">
+      {/* Search + Filters */}
+      <div className="flex flex-col md:flex-row justify-between items-center gap-3 mb-5">
         <input
           type="text"
-          placeholder="Search by location, crime, or case number..."
+          placeholder="Search by location, crime, or case #..."
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
-          className="w-full md:w-2/3 bg-gray-800/70 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-orange-400/50 placeholder-gray-500"
+          className="w-full md:w-2/3 bg-gray-800/80 border border-gray-700 text-white px-3 py-2 rounded-md outline-none focus:ring focus:ring-orange-400/40 placeholder-gray-500"
         />
-        <div className="flex flex-wrap justify-end gap-2">
+        <div className="flex flex-wrap gap-2 justify-end">
           {statuses.map(s => (
             <button
               key={s}
               onClick={() => setStatusFilter(s)}
-              className={`px-3 py-1 rounded-full text-sm transition-all border ${
+              className={`px-3 py-1 rounded-full text-sm border transition-all ${
                 statusFilter === s
                   ? 'bg-orange-500 text-white border-orange-400 shadow-[0_0_8px_rgba(255,165,0,0.6)]'
-                  : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/60'
+                  : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600/70'
               }`}
             >
               {s}
@@ -178,25 +174,25 @@ export default function Home() {
       </div>
 
       {/* Table */}
-      <div className="bg-gray-800/70 p-4 rounded-lg border border-gray-700 mb-8 overflow-x-auto backdrop-blur-sm">
-        <h2 className="text-xl font-semibold mb-4 border-l-4 border-orange-500 pl-2">Incident Log</h2>
+      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 mb-10 overflow-x-auto backdrop-blur-md">
+        <h2 className="text-lg font-semibold mb-3 border-l-4 border-orange-500 pl-2">Incident Log</h2>
         <table className="w-full text-sm text-left border-collapse table-fixed">
-          <thead className="sticky top-0 bg-gray-900/95 text-gray-400 border-b border-gray-700 backdrop-blur-md">
+          <thead className="sticky top-0 bg-gray-900/95 text-gray-400 border-b border-gray-700 backdrop-blur-lg">
             <tr>
               {[
-                { key: 'reported', label: 'Reported' },
-                { key: 'nature', label: 'Crime' },
-                { key: 'location', label: 'Location' },
-                { key: 'start', label: 'Start' },
-                { key: 'end', label: 'End' },
-                { key: 'disposition', label: 'Status' },
-                { key: 'case_number', label: 'Case #' },
-              ].map(({ key, label }) => (
+                { key: 'reported', label: 'Reported', width: '10%' },
+                { key: 'nature', label: 'Crime', width: '20%' },
+                { key: 'location', label: 'Location', width: '20%' },
+                { key: 'start', label: 'Start', width: '15%' },
+                { key: 'end', label: 'End', width: '15%' },
+                { key: 'disposition', label: 'Status', width: '10%' },
+                { key: 'case_number', label: 'Case #', width: '10%' },
+              ].map(({ key, label, width }) => (
                 <th
                   key={key}
                   onClick={() => toggleSort(key as SortKey)}
-                  className="cursor-pointer px-3 py-2 hover:text-white select-none whitespace-nowrap"
-                  style={{ width: '14.28%' }}
+                  className="cursor-pointer px-3 py-2 hover:text-white select-none whitespace-nowrap text-xs tracking-wide"
+                  style={{ width }}
                 >
                   {label}
                   {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
@@ -208,16 +204,16 @@ export default function Home() {
             {visibleData.map((entry, idx) => (
               <tr
                 key={idx}
-                className="border-t border-gray-700 hover:bg-gray-700/40 transition-all"
+                className="border-t border-gray-700 hover:bg-gray-700/40 transition-colors"
               >
                 <td className="px-3 py-2">{entry.reported || '—'}</td>
-                <td className="px-3 py-2">{entry.nature || '—'}</td>
-                <td className="px-3 py-2">{entry.location || '—'}</td>
+                <td className="px-3 py-2 truncate">{entry.nature || '—'}</td>
+                <td className="px-3 py-2 truncate">{entry.location || '—'}</td>
                 <td className="px-3 py-2">{entry.start || '—'}</td>
                 <td className="px-3 py-2">{entry.end || '—'}</td>
                 <td className="px-3 py-2">
                   <span
-                    className={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium text-white rounded-full ${getStatusColor(
+                    className={`inline-flex items-center justify-center px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(
                       entry.disposition
                     )}`}
                   >
@@ -229,9 +225,8 @@ export default function Home() {
             ))}
           </tbody>
         </table>
-
         {visibleCount < filteredData.length && (
-          <div ref={loaderRef} className="text-center py-4 text-gray-400">
+          <div ref={loaderRef} className="text-center py-4 text-gray-400 text-sm">
             Loading more incidents...
           </div>
         )}
