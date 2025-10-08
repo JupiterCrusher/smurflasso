@@ -71,14 +71,21 @@ export default function Home() {
 
   const visibleData = filteredData.slice(0, visibleCount);
 
-  // Lazy loading
+  // ✅ Fixed lazy loading cleanup
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting)
+      if (entries[0].isIntersecting) {
         setVisibleCount(prev => Math.min(prev + 50, filteredData.length));
+      }
     });
-    if (loaderRef.current) observer.observe(loaderRef.current);
-    return () => loaderRef.current && observer.unobserve(loaderRef.current);
+
+    const currentLoader = loaderRef.current;
+    if (currentLoader) observer.observe(currentLoader);
+
+    return () => {
+      if (currentLoader) observer.unobserve(currentLoader);
+      observer.disconnect();
+    };
   }, [filteredData.length]);
 
   // Helpers
@@ -191,6 +198,7 @@ export default function Home() {
                   key={key}
                   onClick={() => toggleSort(key as SortKey)}
                   className="cursor-pointer px-3 py-2 hover:text-white select-none whitespace-nowrap"
+                  style={{ width: '14.28%' }}
                 >
                   {label}
                   {sortKey === key && (sortAsc ? ' ▲' : ' ▼')}
