@@ -73,20 +73,25 @@ export default function Home() {
   const getStatusColor = (status: string) => {
     if (!status) return 'bg-gray-600';
     const lower = status.toLowerCase();
-    if (lower.includes('open')) return 'bg-red-500 animate-pulse-slow';
-    if (lower.includes('closed')) return 'bg-green-500';
+    if (lower.includes('open')) return 'bg-gradient-pulse';
+    if (lower.includes('closed')) return 'bg-green-600';
     return 'bg-gray-600';
   };
 
   return (
     <main className="min-h-screen bg-gray-900 text-white px-6 py-8">
       <style>{`
-        @keyframes pulseSlow {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50% { opacity: 0.7; transform: scale(1.05); }
+        @keyframes gradientPulse {
+          0%, 100% {
+            background-color: #ef4444; /* red-500 */
+          }
+          50% {
+            background-color: #f87171; /* red-400 */
+          }
         }
-        .animate-pulse-slow {
-          animation: pulseSlow 2.5s ease-in-out infinite;
+        .bg-gradient-pulse {
+          background-color: #ef4444;
+          animation: gradientPulse 2s ease-in-out infinite;
         }
       `}</style>
 
@@ -147,7 +152,7 @@ export default function Home() {
                 <td className="px-3 py-2">{entry.end_time || '—'}</td>
                 <td className="px-3 py-2">
                   <span
-                    className={`inline-flex items-center justify-center min-w-[80px] px-2 py-1 rounded-full text-xs font-medium leading-tight ${getStatusColor(
+                    className={`inline-flex items-center justify-center min-w-[80px] px-2 py-1 rounded-full text-xs font-medium text-white leading-tight ${getStatusColor(
                       entry.disposition
                     )}`}
                   >
