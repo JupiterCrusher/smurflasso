@@ -1,12 +1,15 @@
 {
-  "name": "smurflasso",
-  "version": "0.1.0",
+  "name": "boise-state-crime-tracker",
+  "version": "1.0.0",
   "private": true,
+  "description": "Unofficial Boise State University campus crime dashboard that automatically scrapes, visualizes, and summarizes BSU’s public safety data.",
+  "author": "Cole Kreiling",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "chart.js": "^4.5.0",
@@ -16,14 +19,27 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
     "eslint-config-next": "15.5.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "boise state",
+    "crime tracker",
+    "bsu",
+    "dashboard",
+    "public safety",
+    "nextjs",
+    "cole kreiling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/boise-state-crime-tracker"
   }
 }

@@ -143,26 +143,43 @@ export default function Home() {
     };
   }, [data]);
 
+  // 🔸 Monthly trend comparison (current month vs same month last year)
   const monthlyTrendData = useMemo(() => {
-    const grouped = data.reduce((acc, curr) => {
-      const date = new Date(curr.reported);
-      if (!isNaN(date.getTime())) {
-        const label = `${date.getFullYear()}-${date.getMonth() + 1}`;
-        acc[label] = (acc[label] || 0) + 1;
-      }
-      return acc;
-    }, {} as Record<string, number>);
-    const sortedLabels = Object.keys(grouped).sort();
+    const grouped: Record<string, number> = {};
+    const now = new Date();
+
+    data.forEach(entry => {
+      const date = new Date(entry.reported);
+      if (isNaN(date.getTime())) return;
+      const key = `${date.getFullYear()}-${date.getMonth()}`;
+      grouped[key] = (grouped[key] || 0) + 1;
+    });
+
+    const sortedKeys = Object.keys(grouped).sort();
+    const labels = sortedKeys.map(k => {
+      const [year, month] = k.split('-').map(Number);
+      return `${new Date(year, month).toLocaleString('default', { month: 'short' })} ${year}`;
+    });
+
+    const currentKey = `${now.getFullYear()}-${now.getMonth()}`;
+    const lastYearKey = `${now.getFullYear() - 1}-${now.getMonth()}`;
+
     return {
-      labels: sortedLabels.map(l => {
-        const [y, m] = l.split('-');
-        return `${new Date(Number(y), Number(m) - 1).toLocaleString('default', { month: 'short' })} ${y}`;
-      }),
+      labels,
       datasets: [
         {
           label: 'Incidents per Month',
-          data: sortedLabels.map(k => grouped[k]),
-          backgroundColor: '#f97316',
+          data: sortedKeys.map(k => grouped[k]),
+          backgroundColor: sortedKeys.map(k =>
+            k === currentKey ? '#fb923c' : 'rgba(249,115,22,0.8)'
+          ),
+          borderRadius: 6,
+        },
+        {
+          label: 'Same Month Last Year',
+          data: sortedKeys.map(k => (k === lastYearKey ? grouped[k] : 0)),
+          backgroundColor: 'rgba(255,255,255,0.2)',
+          borderRadius: 6,
         },
       ],
     };
@@ -177,6 +194,13 @@ export default function Home() {
         }
         .animate-pulse {
           animation: gradientPulse 2s ease-in-out infinite;
+        }
+        @keyframes barPulse {
+          0%, 100% { box-shadow: 0 0 10px rgba(251,146,60,0.5); }
+          50% { box-shadow: 0 0 20px rgba(251,146,60,0.9); }
+        }
+        .bar-pulse canvas {
+          animation: barPulse 2s infinite ease-in-out;
         }
       `}</style>
 
@@ -207,7 +231,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-orange-400">{countThisMonth}</p>
+          <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 backdrop-blur-md">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
@@ -221,9 +245,20 @@ export default function Home() {
           <h3 className="text-sm text-gray-400 mb-2">Incident Types</h3>
           <Pie data={crimeTypeData} options={{ plugins: { legend: { display: false } } }} />
         </div>
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 relative">
           <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
-          <Bar data={monthlyTrendData} options={{ plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }} />
+          <div className="bar-pulse">
+            <Bar
+              data={monthlyTrendData}
+              options={{
+                plugins: { legend: { display: false } },
+                scales: {
+                  y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+                  x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
+                },
+              }}
+            />
+          </div>
         </div>
         <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
