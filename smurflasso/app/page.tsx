@@ -40,6 +40,7 @@ type SortKey = keyof CrimeEntry;
 
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
+  const [aiSummary, setAiSummary] = useState<string>('Loading...');
   const [sortKey, setSortKey] = useState<SortKey>('reported');
   const [sortAsc, setSortAsc] = useState(false);
   const [visibleCount, setVisibleCount] = useState(50);
@@ -51,11 +52,20 @@ export default function Home() {
   const [categoryOpen, setCategoryOpen] = useState(true);
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
+  // Load data
   useEffect(() => {
     fetch('/crime-data.json')
       .then(res => res.json())
       .then(json => Array.isArray(json) && setData(json))
       .catch(console.error);
+  }, []);
+
+  // Load AI Summary
+  useEffect(() => {
+    fetch('/summary.json')
+      .then(res => res.json())
+      .then(json => setAiSummary(json.summary || 'No summary available.'))
+      .catch(() => setAiSummary('Failed to load summary.'));
   }, []);
 
   const statuses = useMemo(
@@ -262,7 +272,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
           <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
-          <p className="text-orange-400/60 italic">Coming soon...</p>
+          <p className="text-orange-400/80 text-sm whitespace-pre-line">{aiSummary}</p>
         </div>
       </div>
 
