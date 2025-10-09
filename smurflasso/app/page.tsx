@@ -206,7 +206,7 @@ export default function Home() {
     };
   }, [data]);
 
-  const monthlyTrendData = useMemo(() => {
+    const monthlyTrendData = useMemo(() => {
     const grouped: Record<string, number> = {};
     data.forEach(entry => {
       const date = new Date(entry.reported);
@@ -231,10 +231,10 @@ export default function Home() {
           label: 'Incidents per Month',
           data: sortedKeys.map(k => grouped[k]),
           backgroundColor: sortedKeys.map(k =>
-            k === currentKey ? 'rgba(251, 146, 60, 0.9)' : 'rgba(156, 163, 175, 0.7)'
+            k === currentKey ? 'rgba(251, 146, 60, 0.9)' : 'rgba(253, 169, 100, 0.7)'
           ),
           borderColor: sortedKeys.map(k =>
-            k === currentKey ? 'rgba(251, 191, 36, 1)' : 'rgba(0, 0, 0, 0)'
+            k === currentKey ? 'rgba(253, 224, 71, 0.9)' : 'rgba(251, 146, 60, 0)'
           ),
           borderWidth: sortedKeys.map(k => (k === currentKey ? 2 : 0)),
           borderRadius: 6,
