@@ -275,34 +275,59 @@ export default function Home() {
         <p className="text-orange-400/80 text-sm whitespace-pre-line leading-relaxed">{aiSummary}</p>
       </div>
     </div>
-
-      {/* Charts */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 text-center">
-          <h3 className="text-sm text-gray-400 mb-2">Incident Categories</h3>
-          <div className="mx-auto max-w-[240px]">
-            <Pie data={crimeTypeData} options={{ plugins: { legend: { display: true, position: 'bottom', labels: { color: '#d1d5db', font: { size: 10 } } } } }} />
+    {/* Charts */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+      {/* Incident Categories */}
+      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 flex flex-col md:flex-row md:items-center">
+        <div className="md:w-1/2 flex justify-center">
+          <div className="w-[280px] h-[280px]">
+            <Pie
+              data={crimeTypeData}
+              options={{
+                plugins: {
+                  legend: { display: false },
+                },
+              }}
+            />
           </div>
         </div>
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
-          <Bar
-            data={monthlyTrendData}
-            options={{
-              plugins: { legend: { display: false } },
-              scales: {
-                y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
-                x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
-              },
-            }}
-          />
-        </div>
-        <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
-          <p className="text-gray-500 text-sm italic">Location visualization coming soon.</p>
+        <div className="md:w-1/2 mt-4 md:mt-0 md:pl-4 text-left">
+          <h3 className="text-sm text-gray-400 mb-2">Incident Categories</h3>
+          <ul className="space-y-1 text-xs text-gray-300">
+            {crimeTypeData.labels.map((label, idx) => (
+              <li key={idx} className="flex items-center gap-2">
+                <span
+                  className="inline-block w-3 h-3 rounded-sm"
+                  style={{ backgroundColor: crimeTypeData.datasets[0].backgroundColor[idx % crimeTypeData.datasets[0].backgroundColor.length] }}
+                ></span>
+                {label}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
 
+      {/* Monthly Trends */}
+      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+        <h3 className="text-sm text-gray-400 mb-2">Monthly Trends</h3>
+        <Bar
+          data={monthlyTrendData}
+          options={{
+            plugins: { legend: { display: false } },
+            scales: {
+              y: { beginAtZero: true, grid: { color: '#374151' }, ticks: { color: '#9ca3af' } },
+              x: { grid: { display: false }, ticks: { color: '#9ca3af' } },
+            },
+          }}
+        />
+      </div>
+
+      {/* Heatmap */}
+      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+        <h3 className="text-sm text-gray-400 mb-2">Heatmap</h3>
+        <p className="text-gray-500 text-sm italic">Location visualization coming soon.</p>
+      </div>
+    </div>
       {/* Search + Filters */}
       <div className="flex flex-col gap-3 mb-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3">
