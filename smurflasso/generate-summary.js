@@ -15,8 +15,9 @@ async function generateSummary() {
 
   const prompt = `
 You are an analyst summarizing campus crime data for Boise State University.
-Write a short, professional summary of the latest incidents using plain language.
-Avoid redundancy, don't use bullet points, and emphasize notable patterns or changes.
+Write a short, professional summary of the most recent incidents and how they compare to previous months.
+Avoid redundancy, don't use bullet points, and emphasize notable patterns or changes. 
+Only write a few sentences, be concise.
 Here is the latest data:
 ${JSON.stringify(recentCrimes, null, 2)}
 `;
