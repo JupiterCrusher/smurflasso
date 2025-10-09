@@ -38,6 +38,27 @@ interface CrimeEntry {
 
 type SortKey = keyof CrimeEntry;
 
+function useCountUp(target: number, duration = 1500) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const increment = target / (duration / 16); // ~60fps
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(timer);
+      }
+      setCount(Math.floor(start));
+    }, 16);
+    return () => clearInterval(timer);
+  }, [target, duration]);
+
+  return count;
+}
+
+
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
   const [aiSummary, setAiSummary] = useState<string>('Loading...');
@@ -248,6 +269,9 @@ export default function Home() {
     };
   }, [data]);
 
+    const animatedTotal = useCountUp(data.length);
+    const animatedMonth = useCountUp(countThisMonth);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-850 text-white px-6 py-10">
       {/* Header */}
@@ -273,11 +297,11 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
       <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-1">
         <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
-        <p className="text-3xl font-bold text-orange-400">{data.length}</p>
+        <p className="text-3xl font-bold text-orange-400">{animatedTotal.toLocaleString()}</p>
       </div>
       <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-1">
         <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-        <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
+        <p className="text-3xl font-bold text-orange-400 animate-pulse">{animatedMonth.toLocaleString()}</p>
       </div>
       <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-3">
         <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
