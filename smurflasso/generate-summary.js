@@ -13,11 +13,11 @@ async function generateSummary() {
   const crimes = JSON.parse(fs.readFileSync(dataPath, "utf8"));
   const recentCrimes = crimes.slice(0, 30);
 
-  const prompt = `
-You are an analyst summarizing campus crime data for Boise State University.
-Write a short, professional summary of the most recent incidents and how they compare to previous months.
-Avoid redundancy, don't use bullet points, and emphasize notable patterns or changes. 
-Only write a few sentences, be concise.
+const prompt = `
+You are an analyst summarizing recent campus crime data for Boise State University.
+Write a single concise paragraph (2–3 sentences max) highlighting the main incident types and any recent notable trends.
+Avoid redundant or summary-style wrap-up sentences (e.g., "overall" or "in summary").
+Use plain, factual language with no filler or adjectives.
 Here is the latest data:
 ${JSON.stringify(recentCrimes, null, 2)}
 `;
