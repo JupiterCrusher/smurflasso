@@ -261,7 +261,7 @@ export default function Home() {
       </div>
 
     {/* Quick Stats */}
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
       <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-1">
         <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
         <p className="text-3xl font-bold text-orange-400">{data.length}</p>
@@ -270,7 +270,7 @@ export default function Home() {
         <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
         <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
       </div>
-      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-2">
+      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-3">
         <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
         <p className="text-orange-400/80 text-sm whitespace-pre-line leading-relaxed">{aiSummary}</p>
       </div>
