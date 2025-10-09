@@ -260,21 +260,21 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
-          <p className="text-3xl font-bold text-orange-400">{data.length}</p>
-        </div>
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
-          <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
-        </div>
-        <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700">
-          <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
-          <p className="text-orange-400/80 text-sm whitespace-pre-line">{aiSummary}</p>
-        </div>
+    {/* Quick Stats */}
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-1">
+        <h3 className="text-sm text-gray-400 mb-1">Total Incidents</h3>
+        <p className="text-3xl font-bold text-orange-400">{data.length}</p>
       </div>
+      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-1">
+        <h3 className="text-sm text-gray-400 mb-1">This Month</h3>
+        <p className="text-3xl font-bold text-orange-400 animate-pulse">{countThisMonth}</p>
+      </div>
+      <div className="bg-gray-800/80 p-5 rounded-lg border border-gray-700 md:col-span-2">
+        <h3 className="text-sm text-gray-400 mb-1">AI Summary</h3>
+        <p className="text-orange-400/80 text-sm whitespace-pre-line leading-relaxed">{aiSummary}</p>
+      </div>
+    </div>
 
       {/* Charts */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
