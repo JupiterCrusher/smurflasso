@@ -278,32 +278,40 @@ export default function Home() {
     {/* Charts */}
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
       {/* Incident Categories */}
-      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700 flex flex-col md:flex-row md:items-center">
-        <div className="md:w-1/2 flex justify-center">
-          <div className="w-[280px] h-[280px]">
-            <Pie
-              data={crimeTypeData}
-              options={{
-                plugins: {
-                  legend: { display: false },
-                },
-              }}
-            />
+      <div className="bg-gray-800/80 p-4 rounded-lg border border-gray-700">
+        <h3 className="text-sm text-gray-400 mb-3">Incident Categories</h3>
+        <div className="flex flex-col md:flex-row md:items-center">
+          <div className="md:w-1/2 flex justify-center">
+            <div className="w-[230px] h-[230px]">
+              <Pie
+                data={crimeTypeData}
+                options={{
+                  plugins: {
+                    legend: { display: false },
+                  },
+                  maintainAspectRatio: false,
+                }}
+              />
+            </div>
           </div>
-        </div>
-        <div className="md:w-1/2 mt-4 md:mt-0 md:pl-4 text-left">
-          <h3 className="text-sm text-gray-400 mb-2">Incident Categories</h3>
-          <ul className="space-y-1 text-xs text-gray-300">
-            {crimeTypeData.labels.map((label, idx) => (
-              <li key={idx} className="flex items-center gap-2">
-                <span
-                  className="inline-block w-3 h-3 rounded-sm"
-                  style={{ backgroundColor: crimeTypeData.datasets[0].backgroundColor[idx % crimeTypeData.datasets[0].backgroundColor.length] }}
-                ></span>
-                {label}
-              </li>
-            ))}
-          </ul>
+          <div className="md:w-1/2 mt-4 md:mt-0 md:pl-4 text-left">
+            <ul className="space-y-1 text-xs text-gray-300 leading-snug">
+              {crimeTypeData.labels.map((label, idx) => (
+                <li key={idx} className="flex items-center gap-2">
+                  <span
+                    className="inline-block w-3 h-3 rounded-sm flex-shrink-0"
+                    style={{
+                      backgroundColor:
+                        crimeTypeData.datasets[0].backgroundColor[
+                          idx % crimeTypeData.datasets[0].backgroundColor.length
+                        ],
+                    }}
+                  ></span>
+                  {label}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
