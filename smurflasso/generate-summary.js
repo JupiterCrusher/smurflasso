@@ -13,14 +13,14 @@ async function generateSummary() {
   const crimes = JSON.parse(fs.readFileSync(dataPath, "utf8"));
   const recentCrimes = crimes.slice(0, 30);
 
-const prompt = `
-You are an analyst summarizing recent campus crime data for Boise State University.
-Write a single concise paragraph (2–3 sentences max) highlighting the main incident types and any recent notable trends.
-Avoid redundant or summary-style wrap-up sentences (e.g., "overall" or "in summary").
-Use plain, factual language with no filler or adjectives.
-Here is the latest data:
-${JSON.stringify(recentCrimes, null, 2)}
-`;
+  const prompt = `
+  You are an analyst summarizing recent campus crime data for Boise State University.
+  Write a single concise paragraph (2–3 sentences max) highlighting the main incident types and any recent notable trends.
+  Avoid redundant or summary-style wrap-up sentences (e.g., "overall" or "in summary").
+  Use plain, factual language with no filler or adjectives.
+  Here is the latest data:
+  ${JSON.stringify(recentCrimes, null, 2)}
+  `;
 
   console.log("Generating AI summary...");
   try {
