@@ -215,6 +215,9 @@ export default function Home() {
       grouped[key] = (grouped[key] || 0) + 1;
     });
 
+    const now = new Date();
+    const currentKey = `${now.getFullYear()}-${now.getMonth()}`;
+
     const sortedKeys = Object.keys(grouped).sort();
     const labels = sortedKeys.map(k => {
       const [year, month] = k.split('-').map(Number);
@@ -227,7 +230,13 @@ export default function Home() {
         {
           label: 'Incidents per Month',
           data: sortedKeys.map(k => grouped[k]),
-          backgroundColor: '#fb923c',
+          backgroundColor: sortedKeys.map(k =>
+            k === currentKey ? 'rgba(251, 146, 60, 0.9)' : 'rgba(156, 163, 175, 0.7)'
+          ),
+          borderColor: sortedKeys.map(k =>
+            k === currentKey ? 'rgba(251, 191, 36, 1)' : 'rgba(0, 0, 0, 0)'
+          ),
+          borderWidth: sortedKeys.map(k => (k === currentKey ? 2 : 0)),
           borderRadius: 6,
           trendlineLinear: {
             colorMin: '#ffffff',
