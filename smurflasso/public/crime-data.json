@@ -1,5 +1,167 @@
 [
   {
+    "reported": "10/20/25",
+    "start": "10/16/25 1:26:00 PM",
+    "end": "10/16/25 1:36:00 PM",
+    "location": "Boise/Protest",
+    "case_number": "515610",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/19/25",
+    "start": "10/19/25 1:05:00 AM",
+    "end": "10/19/25 1:05:00 AM",
+    "location": "University/Lincoln",
+    "case_number": "515757",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol violations/Possession of Vape",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/16/25 8:44:00 PM",
+    "end": "10/16/25 9:45:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/18/25 1:12:00 PM",
+    "end": "10/18/25 1:15:00 PM",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Battery",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "10/18/25",
+    "start": "10/18/25 3:30:00 PM",
+    "end": "10/18/25 3:56:00 PM",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Trespassing",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "10/16/25",
+    "start": "10/16/25 8:51:00 PM",
+    "end": "10/16/25 9:49:00 PM",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/16/25",
+    "start": "10/16/25 8:51:00 PM",
+    "end": "10/16/25 9:49:00 PM",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/16/25",
+    "start": "10/16/25 8:51:00 PM",
+    "end": "10/16/25 9:49:00 PM",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/16/25",
+    "start": "10/16/25 8:51:00 PM",
+    "end": "10/16/25 9:49:00 PM",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/15/25",
+    "start": "10/12/25 11:25:00 PM",
+    "end": "10/13/25 1:41:00 AM",
+    "location": "Bronco Ln.",
+    "case_number": "515545",
+    "nature": "Theft",
+    "disposition": "Closed"
+  },
+  {
     "reported": "10/13/25",
     "start": "10/7/25 8:00:00 PM",
     "end": "10/8/25 4:50:00 PM",
