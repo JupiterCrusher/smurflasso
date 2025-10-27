@@ -1,5 +1,140 @@
 [
   {
+    "reported": "10/27/25",
+    "start": "10/23/25 2:30:00 PM",
+    "end": "10/23/25 4:00:00 PM",
+    "location": "Library",
+    "case_number": "516052",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/25/25",
+    "start": "10/25/25 1:57:00 AM",
+    "end": "10/25/25 2:54:00 AM",
+    "location": "Garnet",
+    "case_number": "N/A",
+    "nature": "Narcotics Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/25/25",
+    "start": "10/25/25 3:00:00 AM",
+    "end": "10/25/25 6:00:00 AM",
+    "location": "syringa hall",
+    "case_number": "516089",
+    "nature": "Sexual Assault",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/25/25",
+    "start": "10/24/25 10:21:00 PM",
+    "end": "10/24/25 10:22:00 PM",
+    "location": "ExtraMile arena",
+    "case_number": "516100",
+    "nature": "Sexual Battery (Forcible Fondling)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 8:27:00 PM",
+    "end": "10/24/25 8:41:00 PM",
+    "location": "Greenbelt/Syringa",
+    "case_number": "N/A",
+    "nature": "MIC",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 8:27:00 PM",
+    "end": "10/24/25 8:41:00 PM",
+    "location": "Greenbelt/Syringa",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations-MIC",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 8:27:00 PM",
+    "end": "10/24/25 8:41:00 PM",
+    "location": "Greenbelt/Syringa",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations- MIC",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/24/25",
+    "start": "10/24/25 10:56:00 PM",
+    "end": "10/24/25 11:45:00 PM",
+    "location": "Selway",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/23/25",
+    "start": "9/1/25 12:00:00 AM",
+    "end": "10/23/25 4:52:00 PM",
+    "location": "Campus wide",
+    "case_number": "516007",
+    "nature": "Stalking",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/21/25",
+    "start": "10/21/25 10:07:00 AM",
+    "end": "10/21/25 10:07:00 AM",
+    "location": "EMA",
+    "case_number": "515896",
+    "nature": "Hit and Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "10/20/25",
     "start": "10/16/25 1:26:00 PM",
     "end": "10/16/25 1:36:00 PM",
@@ -869,7 +1004,7 @@
     "end": "9/13/25 2:36:00 AM",
     "location": "MCMR",
     "case_number": "5137272",
-    "nature": "Vandalism",
+    "nature": "Vandalsim",
     "disposition": "Open"
   },
   {
@@ -984,7 +1119,7 @@
     "reported": "9/9/25",
     "start": "9/6/25 1:41:00 AM",
     "end": "9/6/25 1:41:00 AM",
-    "location": "Chaffee Hall",
+    "location": "Chafee Hall",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
@@ -1391,7 +1526,7 @@
     "end": "8/28/25 10:15:00 AM",
     "location": "Morrison Center",
     "case_number": "512818",
-    "nature": "Trespassing",
+    "nature": "Trespsassing",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1479,7 +1614,7 @@
     "reported": "8/26/25",
     "start": "8/22/25 11:53:00 PM",
     "end": "8/22/25 11:53:00 PM",
-    "location": "Garnet Hall",
+    "location": "Garnett Hall",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
@@ -2642,7 +2777,7 @@
     "end": "5/6/25 8:45:00 AM",
     "location": "Payette Suites",
     "case_number": "N/A",
-    "nature": "Vandalism",
+    "nature": "Vandlism",
     "disposition": "Closed by Referral to DOS"
   },
   {
@@ -3281,7 +3416,7 @@
     "end": "4/16/25 12:00:00 AM",
     "location": "Selway Suites",
     "case_number": "505545",
-    "nature": "Harassment",
+    "nature": "Harasssment",
     "disposition": "Open"
   },
   {
@@ -3569,7 +3704,7 @@
     "end": "4/3/25 10:02:00 AM",
     "location": "Liberal Arts patio",
     "case_number": "504846",
-    "nature": "Graffiti",
+    "nature": "Graffit",
     "disposition": "Open, Inactive"
   },
   {
@@ -5432,7 +5567,7 @@
     "end": "4/3/25 9:51:00 AM",
     "location": "Liberal Arts",
     "case_number": "504846",
-    "nature": "Graffiti",
+    "nature": "Grafffiti",
     "disposition": "Open"
   },
   {
