@@ -2,7 +2,7 @@ name: Update Crime Data
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes
+    - cron: '0 */12 * * *'  # Every 12 hours
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: smurflasso   # 👈 this is the key change
+        working-directory: smurflasso
 
     steps:
       - name: Checkout repo
