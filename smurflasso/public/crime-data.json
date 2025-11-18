@@ -1,5 +1,77 @@
 [
   {
+    "reported": "11/17/25",
+    "start": "11/14/25 7:26:00 PM",
+    "end": "11/14/25 8:31:00 PM",
+    "location": "Vermont/Beacon",
+    "case_number": "517270",
+    "nature": "DUI/Possession of Marijuana",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/14/25 8:40:00 PM",
+    "end": "11/14/25 8:47:00 PM",
+    "location": "Morrison Center",
+    "case_number": "517271",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/13/25 11:55:00 PM",
+    "end": "11/14/25 12:15:00 AM",
+    "location": "Beacon/Michigan",
+    "case_number": "517221",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/14/25 8:58:00 PM",
+    "end": "11/14/25 9:21:00 PM",
+    "location": "City Center Plaza",
+    "case_number": "517275",
+    "nature": "Battery",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/14/25 11:23:00 PM",
+    "end": "11/14/25 11:57:00 PM",
+    "location": "770 Main",
+    "case_number": "517287",
+    "nature": "Hit and Run/DUI",
+    "disposition": "Closed by Arrest, Closed by Citation"
+  },
+  {
+    "reported": "11/15/25",
+    "start": "11/15/25 11:38:00 PM",
+    "end": "11/15/25 11:50:00 PM",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/14/25",
+    "start": "11/14/25 12:32:00 PM",
+    "end": "11/14/25 1:49:00 PM",
+    "location": "Sawtooth",
+    "case_number": "N/A",
+    "nature": "Weapons Violation, Liquor Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/12/25",
+    "start": "11/11/25 10:00:00 PM",
+    "end": "11/12/25 9:50:00 PM",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/10/25",
     "start": "11/3/25 8:10:00 PM",
     "end": "11/3/25 8:10:00 PM",
@@ -363,7 +435,7 @@
     "reported": "10/25/25",
     "start": "10/25/25 3:00:00 AM",
     "end": "10/25/25 6:00:00 AM",
-    "location": "Syringa hall",
+    "location": "syringa hall",
     "case_number": "516089",
     "nature": "Sexual Assault",
     "disposition": "Open"
@@ -1346,7 +1418,7 @@
     "end": "9/13/25 2:36:00 AM",
     "location": "MCMR",
     "case_number": "5137272",
-    "nature": "Vandalism",
+    "nature": "Vandalsim",
     "disposition": "Open"
   },
   {
@@ -1461,7 +1533,7 @@
     "reported": "9/9/25",
     "start": "9/6/25 1:41:00 AM",
     "end": "9/6/25 1:41:00 AM",
-    "location": "Chaffee Hall",
+    "location": "Chafee Hall",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
@@ -1868,7 +1940,7 @@
     "end": "8/28/25 10:15:00 AM",
     "location": "Morrison Center",
     "case_number": "512818",
-    "nature": "Trespassing",
+    "nature": "Trespsassing",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1956,7 +2028,7 @@
     "reported": "8/26/25",
     "start": "8/22/25 11:53:00 PM",
     "end": "8/22/25 11:53:00 PM",
-    "location": "Garnet Hall",
+    "location": "Garnett Hall",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
@@ -2184,7 +2256,7 @@
     "location": "Student union Grassy area",
     "case_number": "512311",
     "nature": "Harassment / Trespassing",
-    "disposition": "CSA/SW Report only"
+    "disposition": "Closed by Referral to T9"
   },
   {
     "reported": "8/14/25",
@@ -2220,15 +2292,6 @@
     "location": "Hemingway",
     "case_number": "511810",
     "nature": "Hit and Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "8/11/25",
-    "start": "8/8/25 5:00:00 PM",
-    "end": "8/8/25 5:09:00 PM",
-    "location": "1185 Cesar Chavez",
-    "case_number": "511779",
-    "nature": "Trespassing",
     "disposition": "Open"
   },
   {
@@ -3119,7 +3182,7 @@
     "end": "5/6/25 8:45:00 AM",
     "location": "Payette Suites",
     "case_number": "N/A",
-    "nature": "Vandalism",
+    "nature": "Vandlism",
     "disposition": "Closed by Referral to DOS"
   },
   {
@@ -3758,7 +3821,7 @@
     "end": "4/16/25 12:00:00 AM",
     "location": "Selway Suites",
     "case_number": "505545",
-    "nature": "Harassment",
+    "nature": "Harasssment",
     "disposition": "Open"
   },
   {
@@ -4046,7 +4109,7 @@
     "end": "4/3/25 10:02:00 AM",
     "location": "Liberal Arts patio",
     "case_number": "504846",
-    "nature": "Graffiti",
+    "nature": "Graffit",
     "disposition": "Open, Inactive"
   },
   {
@@ -5909,7 +5972,7 @@
     "end": "4/3/25 9:51:00 AM",
     "location": "Liberal Arts",
     "case_number": "504846",
-    "nature": "Graffiti",
+    "nature": "Grafffiti",
     "disposition": "Open"
   },
   {
