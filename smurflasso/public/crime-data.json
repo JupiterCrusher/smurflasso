@@ -1,5 +1,14 @@
 [
   {
+    "reported": "11/18/25",
+    "start": "11/18/25 12:00:00 AM",
+    "end": "11/18/25 12:00:00 AM",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Closed by Referral to T9"
+  },
+  {
     "reported": "11/17/25",
     "start": "11/14/25 7:26:00 PM",
     "end": "11/14/25 8:31:00 PM",
@@ -61,6 +70,15 @@
     "case_number": "N/A",
     "nature": "Weapons Violation, Liquor Violation",
     "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/13/25",
+    "start": "11/13/25 12:00:00 AM",
+    "end": "11/13/25 12:00:00 PM",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral to T9"
   },
   {
     "reported": "11/12/25",
@@ -712,15 +730,6 @@
   },
   {
     "reported": "10/13/25",
-    "start": "10/7/25 8:00:00 PM",
-    "end": "10/8/25 4:50:00 PM",
-    "location": "1879 Belmont",
-    "case_number": "515182",
-    "nature": "Hit and Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "10/13/25",
     "start": "10/9/25 9:09:00 PM",
     "end": "10/9/25 10:36:00 PM",
     "location": "Royal/Capitol",
@@ -804,7 +813,7 @@
     "reported": "10/8/25",
     "start": "9/12/25 11:30:00 AM",
     "end": "10/6/25 10:55:00 PM",
-    "location": "N/A social media",
+    "location": "Main Campus",
     "case_number": "515141",
     "nature": "Violation of Protection Order",
     "disposition": "Open"
@@ -1072,24 +1081,6 @@
   },
   {
     "reported": "9/29/25",
-    "start": "9/28/25 2:47:00 AM",
-    "end": "9/28/25 3:20:00 AM",
-    "location": "199 8th",
-    "case_number": "514566",
-    "nature": "Disturbing the Peace",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "9/29/25",
-    "start": "9/28/25 2:47:00 AM",
-    "end": "9/28/25 3:20:00 AM",
-    "location": "199 8th",
-    "case_number": "514566",
-    "nature": "Disturbing the Peace",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "9/29/25",
     "start": "9/28/25 3:00:00 AM",
     "end": "9/28/25 3:06:00 AM",
     "location": "Front/9",
@@ -1104,7 +1095,7 @@
     "location": "Capitol/Myrtle",
     "case_number": "514504",
     "nature": "Malicious Injury to Property",
-    "disposition": "Closed by Referral for Judicial Review"
+    "disposition": "Closed"
   },
   {
     "reported": "9/29/25",
@@ -1114,15 +1105,6 @@
     "case_number": "514565",
     "nature": "Resist and Obstruct Officers/Aggravated Assault/Fighting",
     "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "9/29/25",
-    "start": "9/28/25 2:15:00 AM",
-    "end": "9/28/25 2:15:00 AM",
-    "location": "Main/8",
-    "case_number": "514565",
-    "nature": "Aggravated Assault/Fighting",
-    "disposition": "Open"
   },
   {
     "reported": "9/29/25",
@@ -1355,7 +1337,7 @@
     "end": "9/16/25 11:30:00 PM",
     "location": "Osprey",
     "case_number": "513942",
-    "nature": "Theft",
+    "nature": "Motor Vehicle Theft (E-scooter)",
     "disposition": "Open"
   },
   {
@@ -1364,7 +1346,7 @@
     "end": "9/17/25 7:30:00 AM",
     "location": "Taylor Hall",
     "case_number": "513948",
-    "nature": "Bike Theft",
+    "nature": "Motor Vehicle Theft (E-Scooter)",
     "disposition": "Open"
   },
   {
@@ -1382,7 +1364,7 @@
     "end": "9/16/25 12:15:00 PM",
     "location": "Lincoln garage",
     "case_number": "513905",
-    "nature": "Theft",
+    "nature": "Theft From a Motor Vehicle",
     "disposition": "Open"
   },
   {
@@ -1428,7 +1410,7 @@
     "location": "Main/8",
     "case_number": "513766",
     "nature": "Alcohol Consumption Under 21/Resist and Obstruct LE/Disturbing the Peace/Tobacco- minor",
-    "disposition": "Closed by Arrest, Closed by Citation, Closed by Referral for Judicial Review"
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "9/12/25",
@@ -1455,7 +1437,7 @@
     "location": "Micron Business & Economics Building",
     "case_number": "513575",
     "nature": "Stalking Second Degree, Assault",
-    "disposition": "Open, Pending"
+    "disposition": "Open, Closed by Referral to T9"
   },
   {
     "reported": "9/10/25",
@@ -1481,7 +1463,7 @@
     "end": "9/10/25 11:15:00 AM",
     "location": "Riverfront Hall",
     "case_number": "513655",
-    "nature": "Theft",
+    "nature": "Motor Vehicle Theft (E-Scooter)",
     "disposition": "Closed"
   },
   {
@@ -1585,20 +1567,11 @@
   },
   {
     "reported": "9/7/25",
-    "start": "9/7/25 2:52:00 AM",
-    "end": "9/7/25 2:52:00 AM",
-    "location": "8/Main",
-    "case_number": "513400",
-    "nature": "Battery",
-    "disposition": "Open"
-  },
-  {
-    "reported": "9/7/25",
     "start": "9/7/25 1:49:00 AM",
     "end": "9/7/25 1:49:00 AM",
     "location": "8/Idaho",
     "case_number": "513397",
-    "nature": "Battery upon LE",
+    "nature": "Battery upon Certain Personnel – Law Enforcement Officer",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1837,15 +1810,6 @@
   },
   {
     "reported": "9/1/25",
-    "start": "8/15/25 8:00:00 PM",
-    "end": "8/29/25 12:41:00 AM",
-    "location": "317 9th",
-    "case_number": "512863",
-    "nature": "Vandalism by Graffiti",
-    "disposition": "Open"
-  },
-  {
-    "reported": "9/1/25",
     "start": "8/29/25 9:15:00 PM",
     "end": "8/29/25 10:55:00 PM",
     "location": "Grove/Capitol",
@@ -1879,6 +1843,15 @@
     "case_number": "512807",
     "nature": "Disturbing the Peace",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/31/25",
+    "start": "8/30/25 1:03:00 AM",
+    "end": "8/30/25 1:08:00 AM",
+    "location": "Health Sciences riverside parking lot",
+    "case_number": "513016",
+    "nature": "Vandalism- Vehicle tires slashed x 2",
+    "disposition": "Open"
   },
   {
     "reported": "8/31/25",
@@ -2091,7 +2064,7 @@
     "reported": "8/25/25",
     "start": "8/20/25 12:00:00 PM",
     "end": "8/22/25 4:28:00 PM",
-    "location": "Chaffee",
+    "location": "Chaffee Hall",
     "case_number": "512520",
     "nature": "Threats",
     "disposition": "Open"
@@ -2346,7 +2319,7 @@
     "location": "Myrtle/Capitol",
     "case_number": "511468",
     "nature": "Resist and Obstructing Officers",
-    "disposition": "Closed by Arrest, Closed by Citation"
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "8/11/25",
@@ -2421,15 +2394,6 @@
     "disposition": "Open"
   },
   {
-    "reported": "8/1/25",
-    "start": "8/1/25 8:14:00 PM",
-    "end": "8/1/25 9:45:00 PM",
-    "location": "Parking Lot N. of 2200 University",
-    "case_number": "511412",
-    "nature": "DUI",
-    "disposition": "Closed by Arrest"
-  },
-  {
     "reported": "7/30/25",
     "start": "7/29/25 8:30:00 PM",
     "end": "7/29/25 8:40:00 PM",
@@ -2462,7 +2426,7 @@
     "end": "7/30/25 9:55:00 PM",
     "location": "Bleymaier Football Center",
     "case_number": "511292",
-    "nature": "Bike Theft",
+    "nature": "Bike Theft (Motor Vehicle Theft)",
     "disposition": "Open"
   },
   {
