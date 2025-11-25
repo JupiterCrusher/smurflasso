@@ -1,5 +1,14 @@
 [
   {
+    "reported": "11/21/25",
+    "start": "11/20/25 11:15:00 PM",
+    "end": "11/21/25 8:30:00 AM",
+    "location": "Lincoln Garage",
+    "case_number": "517641",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/18/25",
     "start": "11/18/25 12:00:00 AM",
     "end": "11/18/25 12:00:00 AM",
@@ -52,6 +61,141 @@
     "case_number": "517287",
     "nature": "Hit and Run/DUI",
     "disposition": "Closed by Arrest, Closed by Citation"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/4/25 1:30:00 PM",
+    "end": "11/4/25 1:30:00 PM",
+    "location": "Towers Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:30:00 PM",
+    "end": "11/8/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:30:00 PM",
+    "end": "11/8/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:30:00 PM",
+    "end": "11/17/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:30:00 PM",
+    "end": "11/8/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:30:00 PM",
+    "end": "11/8/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/11/25 12:00:00 AM",
+    "end": "11/11/25 12:00:00 AM",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Drug Law Violation Referral",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/11/25 12:00:00 AM",
+    "end": "11/11/25 12:00:00 AM",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Drug Law Violation Referral",
+    "disposition": "Closed by Referral to DOS"
   },
   {
     "reported": "11/15/25",
@@ -124,6 +268,24 @@
     "case_number": "516503",
     "nature": "Battery",
     "disposition": "Closed by Referral for Judicial Review"
+  },
+  {
+    "reported": "11/10/25",
+    "start": "11/8/25 12:00:00 AM",
+    "end": "11/8/25 12:00:00 AM",
+    "location": "Non-Campus Property",
+    "case_number": "N/A",
+    "nature": "Hazing",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/8/25",
+    "start": "11/17/25 11:30:00 PM",
+    "end": "11/8/25 11:30:00 PM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
   },
   {
     "reported": "11/7/25",
