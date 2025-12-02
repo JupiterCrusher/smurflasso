@@ -1,5 +1,32 @@
 [
   {
+    "reported": "11/24/25",
+    "start": "11/20/25 7:00:00 PM",
+    "end": "11/20/25 11:00:00 PM",
+    "location": "EMA",
+    "case_number": "517730",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/24/25",
+    "start": "11/23/25 4:03:00 AM",
+    "end": "11/23/25 4:03:00 AM",
+    "location": "777 Main",
+    "case_number": "517742",
+    "nature": "Battery/Robbery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/24/25",
+    "start": "11/22/25 9:15:00 PM",
+    "end": "11/22/25 9:15:00 PM",
+    "location": "Capitol/Main",
+    "case_number": "517721",
+    "nature": "Possession of Drug Paraphernalia",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/21/25",
     "start": "11/20/25 11:15:00 PM",
     "end": "11/21/25 8:30:00 AM",
@@ -218,11 +245,11 @@
   {
     "reported": "11/13/25",
     "start": "11/13/25 12:00:00 AM",
-    "end": "11/13/25 12:00:00 PM",
+    "end": "11/20/25 12:00:00 PM",
     "location": "Main Campus",
-    "case_number": "N/A",
+    "case_number": "517573",
     "nature": "Stalking",
-    "disposition": "Closed by Referral to T9"
+    "disposition": "Open, Closed by Referral to T9"
   },
   {
     "reported": "11/12/25",
