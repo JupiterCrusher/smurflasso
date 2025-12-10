@@ -1,5 +1,158 @@
 [
   {
+    "reported": "12/8/25",
+    "start": "12/6/25 12:14:00 AM",
+    "end": "12/6/25 12:45:00 AM",
+    "location": "Driscoll",
+    "case_number": "N/A",
+    "nature": "Narcotics Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/6/25 9:18:00 PM",
+    "end": "12/6/25 10:08:00 PM",
+    "location": "Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/6/25 3:07:00 AM",
+    "end": "12/6/25 4:50:00 AM",
+    "location": "University/Lincoln",
+    "case_number": "518425",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/5/25 11:29:00 PM",
+    "end": "12/5/25 11:29:00 PM",
+    "location": "University/Chrisway",
+    "case_number": "518413",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/4/25 3:20:00 PM",
+    "end": "12/4/25 6:15:00 PM",
+    "location": "Brady Garage",
+    "case_number": "518396",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/4/25 12:00:00 AM",
+    "end": "12/4/25 9:40:00 PM",
+    "location": "Chaffee",
+    "case_number": "518345",
+    "nature": "Grand Theft",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/3/25 2:15:00 PM",
+    "end": "12/3/25 3:30:00 PM",
+    "location": "Lincoln Garage",
+    "case_number": "518323",
+    "nature": "Burglary-Vehicle",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/5/25 9:10:00 PM",
+    "end": "12/5/25 9:10:00 PM",
+    "location": "Front/9",
+    "case_number": "518411",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/8/25",
+    "start": "12/5/25 10:00:00 PM",
+    "end": "12/5/25 10:00:00 PM",
+    "location": "Stadium",
+    "case_number": "518534",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/5/25",
+    "start": "12/5/25 12:48:00 AM",
+    "end": "12/5/25 1:10:00 AM",
+    "location": "Taylor",
+    "case_number": "N/A",
+    "nature": "Alcohol violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/5/25",
+    "start": "12/5/25 3:08:00 PM",
+    "end": "12/5/25 3:08:00 PM",
+    "location": "Brady Garage",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "12/5/25",
+    "start": "12/5/25 12:30:00 PM",
+    "end": "12/5/25 3:20:00 PM",
+    "location": "Student Union",
+    "case_number": "518383",
+    "nature": "Bike Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/4/25",
+    "start": "12/2/25 5:45:00 PM",
+    "end": "12/2/25 5:50:00 PM",
+    "location": "West Reserve Parking Lot",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "12/1/25",
+    "start": "11/30/25 2:29:00 PM",
+    "end": "11/30/25 5:02:00 PM",
+    "location": "Broadway/University",
+    "case_number": "518071",
+    "nature": "Possession of Controlled Substance/Possession of Marijuna/Possession of Paraphernalia",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/1/25",
+    "start": "11/30/25 2:44:00 AM",
+    "end": "11/30/25 2:59:00 AM",
+    "location": "770 Main",
+    "case_number": "518056",
+    "nature": "Public Intoxication",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/1/25",
+    "start": "11/30/25 2:44:00 AM",
+    "end": "11/30/25 2:44:00 AM",
+    "location": "770 Main",
+    "case_number": "518055",
+    "nature": "Battery",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/24/25",
+    "start": "11/21/25 12:10:00 AM",
+    "end": "11/21/25 12:10:00 AM",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
     "reported": "11/24/25",
     "start": "11/20/25 7:00:00 PM",
     "end": "11/20/25 11:00:00 PM",
