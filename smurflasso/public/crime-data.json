@@ -1,5 +1,50 @@
 [
   {
+    "reported": "12/15/25",
+    "start": "11/22/25 9:08:00 PM",
+    "end": "11/22/25 9:08:00 PM",
+    "location": "Boise/University",
+    "case_number": "518731",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/15/25",
+    "start": "12/5/25 7:10:00 PM",
+    "end": "12/6/25 12:10:00 AM",
+    "location": "Belmont/Oakland",
+    "case_number": "518652",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/15/25",
+    "start": "12/11/25 3:40:00 AM",
+    "end": "12/11/25 3:40:00 AM",
+    "location": "Capitol/Idaho",
+    "case_number": "518692",
+    "nature": "Pedestrian- Under the Influence",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/10/25",
+    "start": "12/10/25 10:06:00 PM",
+    "end": "12/10/25 10:06:00 PM",
+    "location": "Grant parking lots",
+    "case_number": "518686",
+    "nature": "Hit & Run/DUI",
+    "disposition": "Inactive, Closed by Arrest"
+  },
+  {
+    "reported": "12/10/25",
+    "start": "12/5/25 10:20:00 AM",
+    "end": "12/5/25 11:45:00 AM",
+    "location": "Brady Garage",
+    "case_number": "518657",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "12/8/25",
     "start": "12/6/25 12:14:00 AM",
     "end": "12/6/25 12:45:00 AM",
