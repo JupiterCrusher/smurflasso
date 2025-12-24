@@ -1,5 +1,77 @@
 [
   {
+    "reported": "12/23/25",
+    "start": "12/17/25 11:52:00 PM",
+    "end": "12/18/25 12:48:00 AM",
+    "location": "312 9th",
+    "case_number": "519080",
+    "nature": "Vandalism",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/23/25",
+    "start": "12/14/25 1:02:00 AM",
+    "end": "12/14/25 1:02:00 AM",
+    "location": "9/Front",
+    "case_number": "518863",
+    "nature": "Possession Marijuana/Possession of Paraphernalia",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "12/23/25",
+    "start": "12/19/25 9:58:00 PM",
+    "end": "12/19/25 10:07:00 PM",
+    "location": "Front/9",
+    "case_number": "519212",
+    "nature": "Hit and Run",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "12/18/25",
+    "start": "12/18/25 1:41:00 PM",
+    "end": "12/18/25 3:16:00 PM",
+    "location": "Lincoln Garage",
+    "case_number": "519113",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "12/16/25",
+    "start": "12/1/25 7:21:00 PM",
+    "end": "12/1/25 7:21:00 PM",
+    "location": "Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/16/25",
+    "start": "12/6/25 2:20:00 AM",
+    "end": "12/6/25 2:20:00 AM",
+    "location": "Square – Topaz Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/16/25",
+    "start": "12/6/25 2:20:00 AM",
+    "end": "12/6/25 2:20:00 AM",
+    "location": "Square -Topaz Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "12/16/25",
+    "start": "12/14/25 2:00:00 AM",
+    "end": "12/14/25 2:00:00 AM",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
     "reported": "12/15/25",
     "start": "11/22/25 9:08:00 PM",
     "end": "11/22/25 9:08:00 PM",
@@ -126,6 +198,15 @@
     "disposition": "Open"
   },
   {
+    "reported": "12/8/25",
+    "start": "12/8/25 12:01:00 AM",
+    "end": "12/8/25 11:59:00 PM",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral to T9"
+  },
+  {
     "reported": "12/5/25",
     "start": "12/5/25 12:48:00 AM",
     "end": "12/5/25 1:10:00 AM",
@@ -204,6 +285,15 @@
     "location": "EMA",
     "case_number": "517730",
     "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/24/25",
+    "start": "11/17/25 12:00:00 PM",
+    "end": "11/20/25 1:19:00 PM",
+    "location": "Lincoln Garage",
+    "case_number": "517573",
+    "nature": "Stalking – DUPLICATE",
     "disposition": "Open"
   },
   {
@@ -294,6 +384,15 @@
     "location": "Towers Hall",
     "case_number": "N/A",
     "nature": "Vandalism",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "11/17/25",
+    "start": "11/8/25 11:00:00 PM",
+    "end": "11/8/25 11:00:00 PM",
+    "location": "Square – Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
   },
   {
@@ -666,6 +765,15 @@
     "disposition": "Closed by Referral to DOS"
   },
   {
+    "reported": "11/2/25",
+    "start": "11/2/25 7:59:00 PM",
+    "end": "11/2/25 9:51:00 PM",
+    "location": "Verve Apts.",
+    "case_number": "516535",
+    "nature": "Harassment-Telephone / Stalking",
+    "disposition": "Closed"
+  },
+  {
     "reported": "11/1/25",
     "start": "11/1/25 12:35:00 AM",
     "end": "11/1/25 1:02:00 AM",
@@ -945,6 +1053,24 @@
     "disposition": "Open"
   },
   {
+    "reported": "10/22/25",
+    "start": "10/22/25 4:00:00 PM",
+    "end": "10/22/25 5:39:00 PM",
+    "location": "Capitol/University",
+    "case_number": "N/A",
+    "nature": "Hit & Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/21/25",
+    "start": "10/9/25 12:00:00 PM",
+    "end": "10/9/25 12:00:00 AM",
+    "location": "Off Campus Residence",
+    "case_number": "N/A",
+    "nature": "Hazing",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
     "reported": "10/21/25",
     "start": "10/21/25 10:07:00 AM",
     "end": "10/21/25 10:07:00 AM",
@@ -1117,6 +1243,15 @@
   },
   {
     "reported": "10/13/25",
+    "start": "10/7/25 8:00:00 PM",
+    "end": "10/8/25 4:50:00 PM",
+    "location": "1879 Belmont",
+    "case_number": "515182",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/13/25",
     "start": "10/9/25 9:09:00 PM",
     "end": "10/9/25 10:36:00 PM",
     "location": "Royal/Capitol",
@@ -1153,6 +1288,15 @@
   },
   {
     "reported": "10/13/25",
+    "start": "10/12/25 1:20:00 AM",
+    "end": "10/12/25 1:24:00 AM",
+    "location": "Capitol/Grove",
+    "case_number": "515367",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/13/25",
     "start": "10/7/25 2:56:00 AM",
     "end": "10/7/25 2:56:00 AM",
     "location": "9/Front",
@@ -1171,12 +1315,30 @@
   },
   {
     "reported": "10/12/25",
+    "start": "10/12/25 7:38:00 PM",
+    "end": "10/12/25 8:12:00 PM",
+    "location": "Morrison Hall",
+    "case_number": "51505",
+    "nature": "Narcotics violation",
+    "disposition": "Closed, Closed by Referral to DOS"
+  },
+  {
+    "reported": "10/12/25",
     "start": "10/12/25 9:38:00 PM",
     "end": "10/13/25 11:03:00 PM",
     "location": "Raptor Research Parking lot",
     "case_number": "N/A",
     "nature": "Alcohol violation",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/11/25",
+    "start": "10/11/25 11:33:00 PM",
+    "end": "10/12/25 12:45:00 AM",
+    "location": "1559 W Cesar Chavez Lane",
+    "case_number": "n/a",
+    "nature": "policy violation",
+    "disposition": "Closed"
   },
   {
     "reported": "10/9/25",
@@ -1248,6 +1410,15 @@
     "location": "770 Main",
     "case_number": "514968",
     "nature": "Domestic Violence- Battery with Trauma Injury",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "10/6/25",
+    "start": "10/4/25 1:20:00 AM",
+    "end": "10/4/25 1:20:00 AM",
+    "location": "8/Idaho",
+    "case_number": "514924",
+    "nature": "Battery",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1468,6 +1639,24 @@
   },
   {
     "reported": "9/29/25",
+    "start": "9/28/25 2:47:00 AM",
+    "end": "9/28/25 3:20:00 AM",
+    "location": "199 8th",
+    "case_number": "514566",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/29/25",
+    "start": "9/28/25 2:47:00 AM",
+    "end": "9/28/25 3:20:00 AM",
+    "location": "199 8th",
+    "case_number": "514566",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/29/25",
     "start": "9/28/25 3:00:00 AM",
     "end": "9/28/25 3:06:00 AM",
     "location": "Front/9",
@@ -1492,6 +1681,15 @@
     "case_number": "514565",
     "nature": "Resist and Obstruct Officers/Aggravated Assault/Fighting",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/29/25",
+    "start": "9/28/25 2:15:00 AM",
+    "end": "9/28/25 2:15:00 AM",
+    "location": "Main/8",
+    "case_number": "514565",
+    "nature": "Aggravated Assault/Fighting",
+    "disposition": "Open"
   },
   {
     "reported": "9/29/25",
@@ -1792,6 +1990,15 @@
   },
   {
     "reported": "9/13/25",
+    "start": "9/13/25 10:02:00 AM",
+    "end": "9/13/25 10:02:00 AM",
+    "location": "Front/9",
+    "case_number": "513735",
+    "nature": "Hit and Run",
+    "disposition": "Unfounded"
+  },
+  {
+    "reported": "9/13/25",
     "start": "9/13/25 11:26:00 PM",
     "end": "9/13/25 11:26:00 PM",
     "location": "Main/8",
@@ -1860,6 +2067,15 @@
     "location": "Syringa Hall",
     "case_number": "513561",
     "nature": "Rape / Attempted Strangulation",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/9/25",
+    "start": "9/9/25 2:00:00 AM",
+    "end": "9/9/25 4:00:00 AM",
+    "location": "Syringa Hall",
+    "case_number": "513651",
+    "nature": "Sexual assault, Strangulation",
     "disposition": "Open"
   },
   {
@@ -1951,6 +2167,15 @@
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "9/7/25",
+    "start": "9/7/25 2:52:00 AM",
+    "end": "9/7/25 2:52:00 AM",
+    "location": "8/Main",
+    "case_number": "513400",
+    "nature": "Battery",
+    "disposition": "Open"
   },
   {
     "reported": "9/7/25",
@@ -2126,6 +2351,15 @@
   {
     "reported": "9/2/25",
     "start": "8/25/25 5:00:00 PM",
+    "end": "8/25/25 8:30:00 PM",
+    "location": "Keiser Hall",
+    "case_number": "513134",
+    "nature": "Sexual Assault",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/2/25",
+    "start": "8/25/25 5:00:00 PM",
     "end": "8/25/25 7:00:00 PM",
     "location": "Keiser Hall",
     "case_number": "513134",
@@ -2194,6 +2428,15 @@
     "case_number": "512949",
     "nature": "Vandalism by Graffiti",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "9/1/25",
+    "start": "8/15/25 8:00:00 PM",
+    "end": "8/29/25 12:41:00 AM",
+    "location": "317 9th",
+    "case_number": "512863",
+    "nature": "Vandalism by Graffiti",
+    "disposition": "Open"
   },
   {
     "reported": "9/1/25",
@@ -2665,6 +2908,15 @@
   },
   {
     "reported": "8/11/25",
+    "start": "8/8/25 5:00:00 PM",
+    "end": "8/8/25 5:09:00 PM",
+    "location": "1185 Cesar Chavez",
+    "case_number": "511779",
+    "nature": "Trespassing",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/11/25",
     "start": "8/4/25 7:59:00 AM",
     "end": "8/4/25 8:04:00 AM",
     "location": "Capitol/University",
@@ -2707,6 +2959,15 @@
     "case_number": "511468",
     "nature": "Resist and Obstructing Officers",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/11/25",
+    "start": "8/2/25 1:52:00 AM",
+    "end": "8/2/25 1:52:00 AM",
+    "location": "Capitol/Myrtle",
+    "case_number": "511429",
+    "nature": "Domestic Battery",
+    "disposition": "Open"
   },
   {
     "reported": "8/11/25",
@@ -2781,6 +3042,15 @@
     "disposition": "Open"
   },
   {
+    "reported": "8/1/25",
+    "start": "8/1/25 8:14:00 PM",
+    "end": "8/1/25 9:45:00 PM",
+    "location": "Parking Lot N. of 2200 University",
+    "case_number": "511412",
+    "nature": "DUI / Leaving the Scene",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "7/30/25",
     "start": "7/29/25 8:30:00 PM",
     "end": "7/29/25 8:40:00 PM",
@@ -2818,12 +3088,30 @@
   },
   {
     "reported": "7/29/25",
+    "start": "7/26/25 11:00:00 PM",
+    "end": "7/27/25 1:20:00 AM",
+    "location": "621 Main",
+    "case_number": "511153",
+    "nature": "Sexual Assault",
+    "disposition": "CSA/SW Report only"
+  },
+  {
+    "reported": "7/29/25",
     "start": "7/29/25 8:28:00 PM",
     "end": "7/29/25 8:40:00 PM",
     "location": "ExtraMile Arena",
     "case_number": "N/A",
     "nature": "Alcohol Violation – MIC",
     "disposition": "Closed"
+  },
+  {
+    "reported": "7/28/25",
+    "start": "7/25/25 1:00:00 PM",
+    "end": "7/25/25 1:40:00 PM",
+    "location": "Osprey",
+    "case_number": "510995",
+    "nature": "Narcotic Violations",
+    "disposition": "Open"
   },
   {
     "reported": "7/28/25",
@@ -2905,6 +3193,15 @@
     "case_number": "510989",
     "nature": "Trespassing",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "7/25/25",
+    "start": "7/25/25 1:00:00 PM",
+    "end": "7/25/25 1:40:00 PM",
+    "location": "Osprey",
+    "case_number": "510995",
+    "nature": "Information",
+    "disposition": "Open"
   },
   {
     "reported": "7/24/25",
@@ -3013,6 +3310,15 @@
     "case_number": "509963",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/7/25",
+    "start": "7/5/25 12:14:00 AM",
+    "end": "7/5/25 12:14:00 AM",
+    "location": "Belmont/Grant",
+    "case_number": "509885",
+    "nature": "Arson in 3rd degree",
+    "disposition": "Open"
   },
   {
     "reported": "7/7/25",
@@ -3457,11 +3763,29 @@
   },
   {
     "reported": "5/27/25",
+    "start": "5/18/25 2:59:00 PM",
+    "end": "5/18/25 2:59:00 PM",
+    "location": "Library",
+    "case_number": "507378",
+    "nature": "Warrant- FTA",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "5/27/25",
     "start": "5/19/25 10:10:00 PM",
     "end": "5/20/25 10:25:00 PM",
     "location": "827 Main",
     "case_number": "507584",
     "nature": "Theft (Larceny)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/27/25",
+    "start": "5/25/25 12:00:00 AM",
+    "end": "5/25/25 2:00:00 AM",
+    "location": "Capitol/Main",
+    "case_number": "507746",
+    "nature": "Battery",
     "disposition": "Open"
   },
   {
@@ -3699,6 +4023,15 @@
     "disposition": "Closed by Arrest"
   },
   {
+    "reported": "5/18/25",
+    "start": "5/18/25 2:59:00 PM",
+    "end": "5/18/25 2:59:00 PM",
+    "location": "Library",
+    "case_number": "507378",
+    "nature": "Warrant- FTA felony",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "5/17/25",
     "start": "5/8/25 11:57:00 PM",
     "end": "5/8/25 11:57:00 PM",
@@ -3787,6 +4120,24 @@
     "case_number": "N/A",
     "nature": "Battery",
     "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "5/9/25",
+    "start": "5/9/25 5:03:00 PM",
+    "end": "5/9/25 5:05:00 PM",
+    "location": "Honors/Sawtooth",
+    "case_number": "N/A",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/8/25",
+    "start": "5/8/25 11:23:00 PM",
+    "end": "5/9/25 2:45:00 AM",
+    "location": "University/Bronco Circle",
+    "case_number": "506809",
+    "nature": "DUI- Alcohol violation",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "5/5/25",
@@ -4087,6 +4438,15 @@
   },
   {
     "reported": "4/21/25",
+    "start": "4/18/25 3:00:00 AM",
+    "end": "4/18/25 3:00:00 AM",
+    "location": "Towers",
+    "case_number": "505659",
+    "nature": "Vandalism",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/21/25",
     "start": "4/16/25 7:00:00 PM",
     "end": "4/17/25 9:20:00 AM",
     "location": "Honors",
@@ -4141,6 +4501,15 @@
   },
   {
     "reported": "4/21/25",
+    "start": "4/19/25 2:39:00 AM",
+    "end": "4/19/25 2:41:00 AM",
+    "location": "Capitol/Main",
+    "case_number": "505708",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/21/25",
     "start": "4/17/25 2:00:00 PM",
     "end": "4/17/25 4:00:00 PM",
     "location": "1029 S Manitou",
@@ -4164,6 +4533,15 @@
     "location": "Towers",
     "case_number": "505659",
     "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/17/25",
+    "start": "4/16/25 7:00:00 PM",
+    "end": "4/17/25 9:20:00 AM",
+    "location": "Sawtooth Hall",
+    "case_number": "505603",
+    "nature": "Theft (DUPLICATE)",
     "disposition": "Open"
   },
   {
@@ -4222,12 +4600,30 @@
   },
   {
     "reported": "4/14/25",
+    "start": "4/9/25 5:30:00 PM",
+    "end": "4/9/25 6:17:00 PM",
+    "location": "Substation",
+    "case_number": "505191",
+    "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/14/25",
     "start": "4/8/25 11:34:00 PM",
     "end": "4/8/25 11:34:00 PM",
     "location": "Denver/Belmont",
     "case_number": "505139",
     "nature": "Carry Concealed While Under the Influence/Felony Possession of Controlled Substance/Possession of Controlled Substance/Possession of Marijuana/Possession of Paraphernalia/DUI",
     "disposition": "Closed by Arrest, Closed by Citation"
+  },
+  {
+    "reported": "4/14/25",
+    "start": "4/13/25 7:21:00 PM",
+    "end": "4/13/25 7:23:00 PM",
+    "location": "Chaffee",
+    "case_number": "505402",
+    "nature": "Possession of Marijuana",
+    "disposition": "Open"
   },
   {
     "reported": "4/14/25",
@@ -4308,6 +4704,15 @@
     "location": "Morrison Center",
     "case_number": "505298",
     "nature": "Stalking",
+    "disposition": "Open, Closed by Referral to T9"
+  },
+  {
+    "reported": "4/11/25",
+    "start": "4/10/25 12:00:00 AM",
+    "end": "4/11/25 11:59:00 PM",
+    "location": "Morrison Center",
+    "case_number": "505298",
+    "nature": "DUPLICATE: Stalking",
     "disposition": "Open, Closed by Referral to T9"
   },
   {
@@ -4525,6 +4930,15 @@
     "case_number": "n/a",
     "nature": "Alcohol Violation ( MIC)",
     "disposition": "Closed by Citation, Closed by Referral to DOS"
+  },
+  {
+    "reported": "3/30/25",
+    "start": "3/29/25 12:08:00 AM",
+    "end": "3/29/25 1:29:00 AM",
+    "location": "University/Joyce",
+    "case_number": "504530",
+    "nature": "Theft",
+    "disposition": "Inactive"
   },
   {
     "reported": "3/29/25",
@@ -5082,6 +5496,15 @@
     "location": "Library",
     "case_number": "502521",
     "nature": "Stalking/Assault",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/24/25",
+    "start": "2/19/25 1:00:00 PM",
+    "end": "2/19/25 1:00:00 PM",
+    "location": "Library",
+    "case_number": "502521",
+    "nature": "Stalking/Assault",
     "disposition": "Inactive"
   },
   {
@@ -5164,6 +5587,15 @@
     "case_number": "N/A",
     "nature": "Dating/Domestic Violence",
     "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "2/24/25",
+    "start": "2/1/25 12:00:00 AM",
+    "end": "2/22/25 2:56:00 PM",
+    "location": "Capitol/Main",
+    "case_number": "502699",
+    "nature": "Attempted Strangulation/Battery-Domestic Violence",
+    "disposition": "Open"
   },
   {
     "reported": "2/24/25",
@@ -5293,6 +5725,15 @@
   },
   {
     "reported": "2/18/25",
+    "start": "2/18/25 10:12:00 PM",
+    "end": "2/18/25 11:00:00 PM",
+    "location": "Albertsons library 2nd floor",
+    "case_number": "N/A",
+    "nature": "Policy violation ( camping)",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "2/18/25",
     "start": "2/14/25 12:00:00 AM",
     "end": "12/15/25 12:00:00 AM",
     "location": "Main Campus",
@@ -5319,6 +5760,15 @@
     "disposition": "Inactive"
   },
   {
+    "reported": "2/16/25",
+    "start": "2/16/25 10:58:00 PM",
+    "end": "2/16/25 12:10:00 AM",
+    "location": "Payette suites – Square #B",
+    "case_number": "n/a",
+    "nature": "Policy violation(s) 1. Weapons policy  2. Alcohol violation",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
     "reported": "2/15/25",
     "start": "2/15/25 5:30:00 AM",
     "end": "2/15/25 6:38:00 AM",
@@ -5326,6 +5776,15 @@
     "case_number": "N/A",
     "nature": "Trespassing",
     "disposition": "Closed by Referral to DOS"
+  },
+  {
+    "reported": "2/13/25",
+    "start": "2/13/25 10:45:00 PM",
+    "end": "2/13/25 10:55:00 PM",
+    "location": "Lincoln Parking Garage",
+    "case_number": "N/A",
+    "nature": "N/A",
+    "disposition": "CSA/SW Report only"
   },
   {
     "reported": "2/12/25",
@@ -5877,6 +6336,15 @@
     "disposition": "Closed by Referral to DOS"
   },
   {
+    "reported": "1/27/25",
+    "start": "1/24/25 8:40:00 AM",
+    "end": "1/24/25 8:40:00 AM",
+    "location": "Honors Hall",
+    "case_number": "N/A",
+    "nature": "None",
+    "disposition": "Closed by Referral to DOS"
+  },
+  {
     "reported": "1/23/25",
     "start": "8/1/24 12:00:00 AM",
     "end": "1/23/25 8:00:00 AM",
@@ -6316,6 +6784,15 @@
     "case_number": "420058",
     "nature": "DUI / Open Container",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "12/25/24",
+    "start": "10/25/24 11:40:00 AM",
+    "end": "10/25/25 11:40:00 AM",
+    "location": "City Center Plaza – Bronco Shop",
+    "case_number": "500377",
+    "nature": "Theft",
+    "disposition": "Closed"
   },
   {
     "reported": "4/3/0025",
