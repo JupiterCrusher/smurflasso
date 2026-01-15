@@ -1,5 +1,14 @@
 [
   {
+    "reported": "1/13/26",
+    "start": "1/13/26 10:25",
+    "end": "1/13/26 11:36",
+    "location": "Brady Garage",
+    "case_number": "N/A",
+    "nature": "Hit and  Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "1/12/26",
     "start": "1/10/26 23:38",
     "end": "1/11/26 0:07",
@@ -37,12 +46,12 @@
   },
   {
     "reported": "1/12/26",
-    "start": "1/11/26 1:00",
-    "end": "1/11/26 1:00",
-    "location": "200 BLK CAPITOL",
-    "case_number": "600537",
-    "nature": "ROBBERY",
-    "disposition": "Open"
+    "start": "1/12/26 18:59",
+    "end": "1/12/26 22:06",
+    "location": "Driscoll Hall",
+    "case_number": "600607",
+    "nature": "Narcotics Violation",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/6/26",
@@ -51,7 +60,7 @@
     "location": "Yanke",
     "case_number": "N/A",
     "nature": "Vandalism",
-    "disposition": "Open,Unfounded"
+    "disposition": "Unfounded"
   },
   {
     "reported": "1/5/26",
