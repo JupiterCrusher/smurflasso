@@ -1,5 +1,14 @@
 [
   {
+    "reported": "1/20/2026",
+    "start": "1/20/2026 11:46",
+    "end": "1/20/2026 11:47",
+    "location": "Univeristy Dr between Capitol and Earle",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "1/19/2026",
     "start": "1/14/2026 18:47",
     "end": "1/14/2026 18:48",
@@ -25,15 +34,6 @@
     "case_number": "600917",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "1/18/2026",
-    "start": "1/18/2026 1:30",
-    "end": "1/18/2026 2:27",
-    "location": "Towers dorm",
-    "case_number": "N/A",
-    "nature": "policy violation",
-    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/17/2026",
