@@ -9,6 +9,51 @@
     "disposition": "Open"
   },
   {
+    "reported": "2/9/26",
+    "start": "2/5/26 14:53",
+    "end": "2/5/26 14:53",
+    "location": "Broadway/University",
+    "case_number": "601843",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 23:01",
+    "end": "2/7/26 20:16",
+    "location": "Main/8",
+    "case_number": "601970",
+    "nature": "Fighting",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 23:01",
+    "end": "2/7/26 1:57",
+    "location": "8/Main",
+    "case_number": "601926",
+    "nature": "Resist and Obstruct/Possession of Electric Cigarette",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 0:44",
+    "end": "2/6/26 0:44",
+    "location": "8/Main",
+    "case_number": "601868",
+    "nature": "Resist and Obstruct/DUI/Possession of Marijuna/Possession of Paraphernalia/Possession of Electronic Cigarette as Minor/Possession of False ID",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "1/30/26 18:30",
+    "end": "1/30/26 18:33",
+    "location": "2201 Cesar Chavez",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "2/8/26",
     "start": "2/7/26 22:21",
     "end": "2/7/26 22:41",
@@ -43,15 +88,6 @@
     "case_number": "N/A",
     "nature": "Hit and Run",
     "disposition": "Open"
-  },
-  {
-    "reported": "2/2/26",
-    "start": "1/30/26 23:15",
-    "end": "1/30/26 0:00",
-    "location": "Syringa",
-    "case_number": "N/A",
-    "nature": "Alcohol violation",
-    "disposition": "Closed by Referral"
   },
   {
     "reported": "2/2/26",
@@ -115,6 +151,15 @@
     "case_number": "601667",
     "nature": "Hit and Run",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/2/26",
+    "start": "1/30/26 23:15",
+    "end": "1/30/26 0:00",
+    "location": "Syringa",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (X8)",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/30/26",
