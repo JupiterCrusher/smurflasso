@@ -1,5 +1,68 @@
 [
   {
+    "reported": "2/23/26",
+    "start": "5/6/25 12:00",
+    "end": "2/17/26 13:00",
+    "location": "Morrison Center",
+    "case_number": "602496",
+    "nature": "Grand Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/22/26",
+    "start": "2/21/26 20:05",
+    "end": "2/21/26 20:08",
+    "location": "Lusk/Royal",
+    "case_number": "602754",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/21/26",
+    "start": "2/20/26 21:32",
+    "end": "2/20/26 22:05",
+    "location": "Sawtooth",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/20/26",
+    "start": "2/20/26 22:30",
+    "end": "2/21/26 0:00",
+    "location": "Malicious Injury to Property",
+    "case_number": "602698",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/20/26",
+    "start": "2/19/26 19:00",
+    "end": "2/20/26 5:00",
+    "location": "Taylor Hall",
+    "case_number": "602661",
+    "nature": "Grand Theft",
+    "disposition": "Open,Inactive"
+  },
+  {
+    "reported": "2/19/26",
+    "start": "2/19/26 15:00",
+    "end": "2/19/26 16:20",
+    "location": "Village Apartments",
+    "case_number": "602606",
+    "nature": "Fraud, Fraud, Fraud",
+    "disposition": "Open"
+  },
+  {
+    "reported": "2/18/26",
+    "start": "2/18/26 21:57",
+    "end": "2/18/26 22:42",
+    "location": "University/Chrisway",
+    "case_number": "602572",
+    "nature": "Alcohol and Narcotics Violations",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "2/17/26",
     "start": "2/13/26 21:00",
     "end": "2/14/26 9:00",
