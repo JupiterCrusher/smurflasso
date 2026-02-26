@@ -1,5 +1,14 @@
 [
   {
+    "reported": "2/24/26",
+    "start": "2/6/26 13:23",
+    "end": "2/17/26 12:00",
+    "location": "On Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "2/23/26",
     "start": "5/6/25 12:00",
     "end": "2/17/26 13:00",
@@ -7,6 +16,87 @@
     "case_number": "602496",
     "nature": "Grand Theft",
     "disposition": "Open"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/21/26 0:35",
+    "end": "2/21/26 0:37",
+    "location": "Idaho/8",
+    "case_number": "602700",
+    "nature": "Reckless Driving",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/20/26 23:37",
+    "end": "2/20/26 23:38",
+    "location": "Capitol/Main",
+    "case_number": "602694",
+    "nature": "Resist and Obstruct Officers/Battery upon LE/Possession of Marijuana/Disturbing the Peace/ Possession of Paraphernalia/Public Intoxication",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/20/26 19:18",
+    "end": "2/20/26 19:44",
+    "location": "Capitol/Main",
+    "case_number": "602675",
+    "nature": "Warrant- FTA x2",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "3/15/24 18:30",
+    "end": "3/15/24 18:30",
+    "location": "On-Campus Student Housing",
+    "case_number": "N/A",
+    "nature": "Sexual Assault",
+    "disposition": "CSA Report Only"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/10/26 12:00",
+    "end": "2/10/26 12:00",
+    "location": "Albertson’s Staduim",
+    "case_number": "N/A",
+    "nature": "Drug Law Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/8/26 22:11",
+    "end": "2/2/0210 12:34",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Burglary",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/14/26 1:45",
+    "end": "2/14/26 1:45",
+    "location": "Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (2)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/20/26 22:10",
+    "end": "2/20/26 22:10",
+    "location": "Taylor Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations (x6)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/21/26 20:30",
+    "end": "2/21/26 20:30",
+    "location": "Taylor Hall",
+    "case_number": "N/A",
+    "nature": "Theft (Larceny)",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "2/22/26",
