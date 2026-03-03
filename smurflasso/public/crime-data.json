@@ -1,5 +1,59 @@
 [
   {
+    "reported": "3/2/26",
+    "start": "2/24/26 16:35",
+    "end": "2/24/26 16:35",
+    "location": "Broadway/University",
+    "case_number": "602877",
+    "nature": "Littering in Public Place",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "3/2/26",
+    "start": "2/25/26 8:50",
+    "end": "2/25/26 8:50",
+    "location": "Stadium",
+    "case_number": "602931",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "3/2/26",
+    "start": "2/28/26 0:15",
+    "end": "2/28/26 0:15",
+    "location": "9/Royal",
+    "case_number": "603057",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/2/26",
+    "start": "2/7/26 0:00",
+    "end": "2/7/26 0:00",
+    "location": "101 Capitol",
+    "case_number": "602862",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/2/26",
+    "start": "2/23/26 17:35",
+    "end": "2/23/26 18:10",
+    "location": "827 Main",
+    "case_number": "602831",
+    "nature": "Resist and Obstruct Officers/ Noise Violations",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/25/26",
+    "start": "2/25/26 8:50",
+    "end": "2/25/26 8:51",
+    "location": "Albertsons Stadium South Parking Lot",
+    "case_number": "602931",
+    "nature": "Hit and Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "2/24/26",
     "start": "2/6/26 13:23",
     "end": "2/17/26 12:00",
@@ -7,15 +61,6 @@
     "case_number": "N/A",
     "nature": "Stalking",
     "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "2/23/26",
-    "start": "5/6/25 12:00",
-    "end": "2/17/26 13:00",
-    "location": "Morrison Center",
-    "case_number": "602496",
-    "nature": "Grand Theft",
-    "disposition": "Open"
   },
   {
     "reported": "2/23/26",
@@ -99,6 +144,15 @@
     "disposition": "Closed by Referral"
   },
   {
+    "reported": "2/23/26",
+    "start": "5/6/25 12:00",
+    "end": "2/17/26 13:00",
+    "location": "Morrison Center",
+    "case_number": "602496",
+    "nature": "Grand Theft",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "2/22/26",
     "start": "2/21/26 20:05",
     "end": "2/21/26 20:08",
@@ -120,10 +174,10 @@
     "reported": "2/20/26",
     "start": "2/20/26 22:30",
     "end": "2/21/26 0:00",
-    "location": "Malicious Injury to Property",
+    "location": "Driscoll Hall",
     "case_number": "602698",
     "nature": "Malicious Injury to Property",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "2/20/26",
@@ -131,8 +185,8 @@
     "end": "2/20/26 5:00",
     "location": "Taylor Hall",
     "case_number": "602661",
-    "nature": "Grand Theft",
-    "disposition": "Open,Inactive"
+    "nature": "Theft of E-Scooter",
+    "disposition": "Inactive"
   },
   {
     "reported": "2/19/26",
@@ -190,12 +244,21 @@
   },
   {
     "reported": "2/16/26",
+    "start": "2/12/26 22:50",
+    "end": "2/15/26 0:36",
+    "location": "1309 W Chrisway",
+    "case_number": "N/A",
+    "nature": "Minor in Consumption (Alcohol Violation)",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "2/16/26",
     "start": "2/12/26 10:45",
     "end": "2/12/26 15:05",
     "location": "770 Main",
     "case_number": "602277",
     "nature": "Hit and Run",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "2/14/26",
@@ -231,16 +294,7 @@
     "location": "Administration",
     "case_number": "602108",
     "nature": "Grand Theft",
-    "disposition": "Open"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/9/26 0:01",
-    "end": "2/9/26 1:25",
-    "location": "Syringa Hall 4th Floor",
-    "case_number": "602021",
-    "nature": "Narcotics Violation ( Fentanyl/Percocet)",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "2/9/26",
@@ -250,15 +304,6 @@
     "case_number": "601843",
     "nature": "Possession of Marijuana",
     "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/6/26 23:01",
-    "end": "2/7/26 1:57",
-    "location": "8/Main",
-    "case_number": "601926",
-    "nature": "Resist and Obstruct/Possession of Electric Cigarette",
-    "disposition": "Closed by Arrest"
   },
   {
     "reported": "2/9/26",
@@ -286,6 +331,24 @@
     "case_number": "602090",
     "nature": "Hit and Run",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/9/26 0:01",
+    "end": "2/9/26 1:25",
+    "location": "Syringa Hall",
+    "case_number": "602021",
+    "nature": "Narcotics Violation",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 23:01",
+    "end": "2/7/26 1:57",
+    "location": "8/Main",
+    "case_number": "601926",
+    "nature": "Resist and Obstruct/Possession of Electric Cigarette",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "2/8/26",
@@ -682,14 +745,5 @@
     "case_number": "600168",
     "nature": "Arson/Malicious Injury to Property",
     "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "2/12/0264",
-    "start": "2/12/0264 22:50",
-    "end": "2/15/26 0:36",
-    "location": "1309 W Chrisway",
-    "case_number": "N/A",
-    "nature": "Minor in Consumption( Alcohol Violation)",
-    "disposition": "Closed"
   }
 ]
