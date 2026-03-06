@@ -1,5 +1,41 @@
 [
   {
+    "reported": "3/4/26",
+    "start": "1/22/26 21:00",
+    "end": "1/23/26 3:00",
+    "location": "Towers Hall",
+    "case_number": "603318",
+    "nature": "Sexual Assault",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/3/26",
+    "start": "3/3/26 0:00",
+    "end": "3/3/26 16:04",
+    "location": "Brady Garage",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "3/3/26",
+    "start": "3/3/26 22:00",
+    "end": "3/3/26 23:45",
+    "location": "Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Narcotics violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "3/3/26",
+    "start": "3/2/26 0:00",
+    "end": "3/3/26 15:45",
+    "location": "Lincoln Garage",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "3/2/26",
     "start": "2/24/26 16:35",
     "end": "2/24/26 16:35",
@@ -316,15 +352,6 @@
   },
   {
     "reported": "2/9/26",
-    "start": "2/6/26 23:01",
-    "end": "2/7/26 20:16",
-    "location": "Main/8",
-    "case_number": "601970",
-    "nature": "Battery",
-    "disposition": "Open"
-  },
-  {
-    "reported": "2/9/26",
     "start": "1/30/26 18:30",
     "end": "1/30/26 18:40",
     "location": "Morrison Center Parking Lot",
@@ -351,6 +378,15 @@
     "disposition": "Closed by Arrest"
   },
   {
+    "reported": "2/9/26",
+    "start": "2/6/26 23:01",
+    "end": "2/7/26 20:16",
+    "location": "Main/8",
+    "case_number": "601970",
+    "nature": "Battery",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "2/8/26",
     "start": "2/7/26 22:21",
     "end": "2/7/26 22:41",
@@ -375,7 +411,7 @@
     "location": "Beacon/Lincoln",
     "case_number": "601919",
     "nature": "Hit and Run",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "2/5/26",
@@ -384,15 +420,6 @@
     "location": "Brady Garage",
     "case_number": "N/A",
     "nature": "Hit and Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "2/2/26",
-    "start": "1/29/26 19:26",
-    "end": "1/29/26 19:26",
-    "location": "Morrison Center",
-    "case_number": "601489",
-    "nature": "Threat",
     "disposition": "Open"
   },
   {
@@ -457,6 +484,15 @@
     "case_number": "N/A",
     "nature": "Alcohol Violation (X8)",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/2/26",
+    "start": "1/29/26 19:26",
+    "end": "1/29/26 19:26",
+    "location": "Morrison Center",
+    "case_number": "601489",
+    "nature": "Threat",
+    "disposition": "Inactive"
   },
   {
     "reported": "1/30/26",
@@ -618,7 +654,7 @@
     "location": "Selway Suites",
     "case_number": "600815",
     "nature": "Vandalism",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "1/14/26",
