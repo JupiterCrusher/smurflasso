@@ -1,5 +1,50 @@
 [
   {
+    "reported": "3/9/26",
+    "start": "3/5/26 21:00",
+    "end": "3/5/26 23:20",
+    "location": "Syringa",
+    "case_number": "603459",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "2/18/26 12:47",
+    "end": "2/18/26 12:47",
+    "location": "Lusk/Royal",
+    "case_number": "603259",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/3/26 15:55",
+    "end": "3/3/26 15:55",
+    "location": "Main/Main",
+    "case_number": "603258",
+    "nature": "Absconding Probation and Parole",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/7/26",
+    "start": "3/6/26 22:00",
+    "end": "3/7/26 1:00",
+    "location": "Keiser Hall",
+    "case_number": "603481",
+    "nature": "Sexual Battery, Sexual Battery and Rape-victim unable to consent",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/6/26",
+    "start": "3/5/26 21:00",
+    "end": "3/6/26 3:30",
+    "location": "Syringa Hall",
+    "case_number": "603402",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Open"
+  },
+  {
     "reported": "3/4/26",
     "start": "1/22/26 21:00",
     "end": "1/23/26 3:00",
