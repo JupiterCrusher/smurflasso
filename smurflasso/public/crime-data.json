@@ -1,15 +1,6 @@
 [
   {
     "reported": "3/9/26",
-    "start": "3/5/26 21:00",
-    "end": "3/5/26 23:20",
-    "location": "Syringa",
-    "case_number": "603459",
-    "nature": "Malicious Injury to Property",
-    "disposition": "Open"
-  },
-  {
-    "reported": "3/9/26",
     "start": "2/18/26 12:47",
     "end": "2/18/26 12:47",
     "location": "Lusk/Royal",
@@ -19,9 +10,45 @@
   },
   {
     "reported": "3/9/26",
+    "start": "2/28/26 23:00",
+    "end": "2/28/26 23:30",
+    "location": "Idaho/8",
+    "case_number": "603119",
+    "nature": "Weapons- Exhibition or Use of Deadly Weapon",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/5/26 21:00",
+    "end": "3/5/26 23:20",
+    "location": "Syringa",
+    "case_number": "603402",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/1/26 20:00",
+    "end": "3/2/26 7:00",
+    "location": "Lincoln Townhomes",
+    "case_number": "603591",
+    "nature": "Sexual Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "12/11/25 12:01",
+    "end": "3/9/26 15:45",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking / Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
     "start": "3/3/26 15:55",
     "end": "3/3/26 15:55",
-    "location": "Main/Main",
+    "location": "Main/8th",
     "case_number": "603258",
     "nature": "Absconding Probation and Parole",
     "disposition": "Closed by Arrest"
@@ -190,15 +217,6 @@
   },
   {
     "reported": "2/23/26",
-    "start": "2/8/26 22:11",
-    "end": "2/2/0210 12:34",
-    "location": "Selway Suites",
-    "case_number": "N/A",
-    "nature": "Burglary",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "2/23/26",
     "start": "2/14/26 1:45",
     "end": "2/14/26 1:45",
     "location": "Sawtooth Hall",
@@ -232,6 +250,15 @@
     "case_number": "602496",
     "nature": "Grand Theft",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/8/26 14:11",
+    "end": "2/10/26 4:34",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Burglary",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "2/22/26",
