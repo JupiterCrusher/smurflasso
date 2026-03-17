@@ -1,5 +1,41 @@
 [
   {
+    "reported": "3/16/26",
+    "start": "3/8/26 1:00",
+    "end": "3/8/26 3:00",
+    "location": "Juanita/Potter",
+    "case_number": "603508",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/16/26",
+    "start": "8/18/25 0:01",
+    "end": "8/18/25 0:31",
+    "location": "Osprey",
+    "case_number": "603614",
+    "nature": "Rape",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/16/26",
+    "start": "3/6/26 20:14",
+    "end": "3/6/26 20:28",
+    "location": "777 Main",
+    "case_number": "603746",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/11/26",
+    "start": "3/11/26 16:48",
+    "end": "3/11/26 16:55",
+    "location": "University/Bronco Lane",
+    "case_number": "26-0083886",
+    "nature": "Unsafe lane change, Hit and Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "3/9/26",
     "start": "2/18/26 12:47",
     "end": "2/18/26 12:47",
@@ -28,15 +64,6 @@
   },
   {
     "reported": "3/9/26",
-    "start": "3/1/26 20:00",
-    "end": "3/2/26 7:00",
-    "location": "Lincoln Townhomes",
-    "case_number": "603591",
-    "nature": "Sexual Battery",
-    "disposition": "Open"
-  },
-  {
-    "reported": "3/9/26",
     "start": "12/11/25 12:01",
     "end": "3/9/26 15:45",
     "location": "Main Campus",
@@ -52,6 +79,24 @@
     "case_number": "603258",
     "nature": "Absconding Probation and Parole",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/1/26 20:00",
+    "end": "3/2/26 7:00",
+    "location": "Lincoln Townhomes",
+    "case_number": "603591",
+    "nature": "Sexual Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/1/26 23:00",
+    "end": "3/2/26 1:00",
+    "location": "Hawthorn House",
+    "case_number": "603591",
+    "nature": "Sexual Battery",
+    "disposition": "Open"
   },
   {
     "reported": "3/7/26",
