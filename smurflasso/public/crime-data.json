@@ -1,5 +1,59 @@
 [
   {
+    "reported": "3/31/26",
+    "start": "3/24/26 12:00",
+    "end": "3/25/26 12:00",
+    "location": "Substation",
+    "case_number": "604381",
+    "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/24/26 16:25",
+    "end": "3/24/26 16:28",
+    "location": "Capitol/University",
+    "case_number": "604318",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/2/26 12:00",
+    "end": "3/13/26 12:00",
+    "location": "Administration",
+    "case_number": "604306",
+    "nature": "Grand Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/29/26 0:39",
+    "end": "3/29/26 0:39",
+    "location": "Main/Capitol",
+    "case_number": "604635",
+    "nature": "Reckless Driving/Fleeing or Attempting to Elude Officers",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/29/26 2:37",
+    "end": "3/29/26 2:37",
+    "location": "Capitol/Main",
+    "case_number": "604638",
+    "nature": "Possession of Marijuana/Disturbing the Peace",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/28/26 0:59",
+    "end": "3/28/26 0:59",
+    "location": "Capitol/Main",
+    "case_number": "604553",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "3/26/26",
     "start": "3/26/26 14:20",
     "end": "3/26/26 14:21",
