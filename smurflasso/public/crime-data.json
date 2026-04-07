@@ -1,5 +1,68 @@
 [
   {
+    "reported": "4/6/26",
+    "start": "4/2/26 19:17",
+    "end": "4/2/26 19:17",
+    "location": "Myrtle/Capitol",
+    "case_number": "604862",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "4/6/26",
+    "start": "4/4/26 2:40",
+    "end": "4/4/26 3:00",
+    "location": "Capitol/Main",
+    "case_number": "604966",
+    "nature": "Battery, Disturbing the Peace",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/6/26",
+    "start": "4/1/26 1:25",
+    "end": "4/1/26 2:36",
+    "location": "Capitol/Myrtle",
+    "case_number": "604779",
+    "nature": "Alcohol Beverage- Consume or Possess Open Container by Driver",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "4/5/26",
+    "start": "4/5/26 4:30",
+    "end": "4/5/26 4:40",
+    "location": "Syringa",
+    "case_number": "605002",
+    "nature": "Theft- E Scooter",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "4/5/26",
+    "start": "4/5/26 20:20",
+    "end": "4/5/26 4:30",
+    "location": "Jasper",
+    "case_number": "604994",
+    "nature": "Unlawful Entry",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/3/26",
+    "start": "3/30/26 3:23",
+    "end": "3/30/26 3:25",
+    "location": "Heights Bike Racks",
+    "case_number": "604899",
+    "nature": "Theft",
+    "disposition": "Open,Inactive"
+  },
+  {
+    "reported": "4/2/26",
+    "start": "4/2/26 9:54",
+    "end": "4/2/26 9:55",
+    "location": "Theatre Ln/Cesar Chavez",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "3/31/26",
     "start": "3/24/26 12:00",
     "end": "3/25/26 12:00",
