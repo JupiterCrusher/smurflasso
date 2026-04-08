@@ -1,5 +1,41 @@
 [
   {
+    "reported": "4/7/26",
+    "start": "1/20/26 12:00",
+    "end": "4/1/26 12:00",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/7/26",
+    "start": "3/26/26 21:55",
+    "end": "3/26/26 21:55",
+    "location": "Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation Referral",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/7/26",
+    "start": "4/2/26 16:02",
+    "end": "4/2/26 16:02",
+    "location": "Taylor Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation Referral",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/7/26",
+    "start": "4/3/26 1:00",
+    "end": "4/3/26 1:00",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation Referral",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "4/6/26",
     "start": "4/2/26 19:17",
     "end": "4/2/26 19:17",
@@ -25,6 +61,15 @@
     "case_number": "604779",
     "nature": "Alcohol Beverage- Consume or Possess Open Container by Driver",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "4/6/26",
+    "start": "4/3/26 12:00",
+    "end": "4/3/26 12:00",
+    "location": "Syringa Hall bike rack",
+    "case_number": "N/A",
+    "nature": "Theft (Larceny)",
+    "disposition": "CSA Report Only"
   },
   {
     "reported": "4/5/26",
