@@ -1,5 +1,86 @@
 [
   {
+    "reported": "4/14/26",
+    "start": "4/7/26 12:00",
+    "end": "4/7/26 12:00",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/14/26",
+    "start": "4/9/26 12:00",
+    "end": "4/9/26 12:00",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/14/26",
+    "start": "4/8/26 12:00",
+    "end": "4/9/26 12:00",
+    "location": "Main Campus",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/13/26",
+    "start": "1/14/26 16:30",
+    "end": "4/9/26 13:00",
+    "location": "Science",
+    "case_number": "605225",
+    "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/13/26",
+    "start": "4/7/26 0:00",
+    "end": "4/7/26 0:00",
+    "location": "Denver/University",
+    "case_number": "605105",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/13/26",
+    "start": "4/2/26 15:00",
+    "end": "4/6/26 15:00",
+    "location": "Syringa",
+    "case_number": "605098",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/13/26",
+    "start": "4/11/26 21:50",
+    "end": "4/11/26 21:50",
+    "location": "Main/Capitol",
+    "case_number": "605369",
+    "nature": "Open Container",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/13/26",
+    "start": "4/10/26 20:52",
+    "end": "4/10/26 22:30",
+    "location": "Capitol/Main",
+    "case_number": "605320",
+    "nature": "Pedestrian Under the Influence of Alcohol or Drugs",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/11/26",
+    "start": "4/10/26 23:56",
+    "end": "4/11/26 0:20",
+    "location": "Keiser Hall",
+    "case_number": "605333",
+    "nature": "E-Scooter Theft (Motor Vehicle Theft)",
+    "disposition": "Open"
+  },
+  {
     "reported": "4/7/26",
     "start": "1/20/26 12:00",
     "end": "4/1/26 12:00",
@@ -36,6 +117,33 @@
     "disposition": "Closed by Referral"
   },
   {
+    "reported": "4/7/26",
+    "start": "3/25/26 9:00",
+    "end": "3/25/26 9:00",
+    "location": "Theft (Larceny)",
+    "case_number": "N/A",
+    "nature": "Theft (Larceny)",
+    "disposition": "CSA Report Only"
+  },
+  {
+    "reported": "4/7/26",
+    "start": "4/5/26 22:42",
+    "end": "4/5/26 22:43",
+    "location": "Syringa",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/7/26",
+    "start": "4/7/26 9:30",
+    "end": "4/7/26 17:30",
+    "location": "Brady garage",
+    "case_number": "605130",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "4/6/26",
     "start": "4/2/26 19:17",
     "end": "4/2/26 19:17",
@@ -43,15 +151,6 @@
     "case_number": "604862",
     "nature": "Possession of Marijuana",
     "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "4/6/26",
-    "start": "4/4/26 2:40",
-    "end": "4/4/26 3:00",
-    "location": "Capitol/Main",
-    "case_number": "604966",
-    "nature": "Battery, Disturbing the Peace",
-    "disposition": "Open"
   },
   {
     "reported": "4/6/26",
@@ -72,13 +171,13 @@
     "disposition": "CSA Report Only"
   },
   {
-    "reported": "4/5/26",
-    "start": "4/5/26 4:30",
-    "end": "4/5/26 4:40",
-    "location": "Syringa",
-    "case_number": "605002",
-    "nature": "Theft- E Scooter",
-    "disposition": "Inactive"
+    "reported": "4/6/26",
+    "start": "4/4/26 2:40",
+    "end": "4/4/26 3:00",
+    "location": "Capitol/Main",
+    "case_number": "604966",
+    "nature": "Battery, Disturbing the Peace",
+    "disposition": "Open"
   },
   {
     "reported": "4/5/26",
@@ -88,6 +187,15 @@
     "case_number": "604994",
     "nature": "Unlawful Entry",
     "disposition": "Open"
+  },
+  {
+    "reported": "4/5/26",
+    "start": "4/5/26 4:30",
+    "end": "4/5/26 4:40",
+    "location": "Syringa",
+    "case_number": "605002",
+    "nature": "E-Scooter Theft (Motor Vehicle Theft)",
+    "disposition": "Inactive"
   },
   {
     "reported": "4/3/26",
@@ -856,20 +964,20 @@
   },
   {
     "reported": "1/26/26",
-    "start": "1/22/26 1:16",
-    "end": "1/22/26 1:16",
-    "location": "Syringa",
-    "case_number": "601090",
-    "nature": "Alcohol Violations",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "1/26/26",
     "start": "1/26/26 1:51",
     "end": "1/26/26 1:51",
     "location": "Boise/Protest",
     "case_number": "601282",
     "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/26/26",
+    "start": "1/24/26 15:12",
+    "end": "1/24/26 15:12",
+    "location": "765 Idaho",
+    "case_number": "601237",
+    "nature": "Battery, DUI",
     "disposition": "Closed by Arrest"
   },
   {
@@ -883,12 +991,12 @@
   },
   {
     "reported": "1/26/26",
-    "start": "1/24/26 15:12",
-    "end": "1/24/26 15:12",
-    "location": "765 Idaho",
-    "case_number": "601237",
-    "nature": "Battery, DUI",
-    "disposition": "Closed by Arrest"
+    "start": "1/22/26 1:16",
+    "end": "1/22/26 1:16",
+    "location": "Syringa",
+    "case_number": "601090",
+    "nature": "Alcohol Violation Referral",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/22/26",
