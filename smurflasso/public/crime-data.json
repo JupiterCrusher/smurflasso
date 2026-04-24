@@ -1,5 +1,77 @@
 [
   {
+    "reported": "4/22/26",
+    "start": "4/22/26 15:46",
+    "end": "4/22/26 16:34",
+    "location": "Student Union",
+    "case_number": "605949",
+    "nature": "Warrant Arrest",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/21/26",
+    "start": "4/21/26 1:49",
+    "end": "4/21/26 1:57",
+    "location": "Appleton tennis courts",
+    "case_number": "N/A",
+    "nature": "Narcotics violation, Narcotics violation, Narcotics violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/20/26",
+    "start": "4/16/26 19:50",
+    "end": "4/16/26 19:59",
+    "location": "SPEC",
+    "case_number": "605638",
+    "nature": "Narcotics violation",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "4/20/26",
+    "start": "4/17/26 21:47",
+    "end": "4/17/26 21:47",
+    "location": "Capitol/Front",
+    "case_number": "605701",
+    "nature": "DUI/Possession of Marijuana/Possession of Paraphernalia",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/20/26",
+    "start": "4/10/26 22:45",
+    "end": "4/10/26 22:45",
+    "location": "Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/20/26",
+    "start": "4/17/26 23:31",
+    "end": "4/17/26 23:31",
+    "location": "Liberal Arts Parking Lot",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "4/16/26",
+    "start": "4/16/26 19:59",
+    "end": "4/16/26 19:59",
+    "location": "Student Union",
+    "case_number": "605638",
+    "nature": "None",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "4/15/26",
+    "start": "4/14/26 21:00",
+    "end": "4/15/26 7:00",
+    "location": "Taylor Hall",
+    "case_number": "605542",
+    "nature": "Theft (motor vehicle theft)",
+    "disposition": "Open,Inactive"
+  },
+  {
     "reported": "4/14/26",
     "start": "4/7/26 12:00",
     "end": "4/7/26 12:00",
@@ -739,24 +811,6 @@
   },
   {
     "reported": "2/9/26",
-    "start": "2/5/26 14:53",
-    "end": "2/5/26 14:53",
-    "location": "Broadway/University",
-    "case_number": "601843",
-    "nature": "Possession of Marijuana",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/6/26 0:44",
-    "end": "2/6/26 0:44",
-    "location": "8/Main",
-    "case_number": "601868",
-    "nature": "Resist and Obstruct/DUI/Possession of Marijuna/Possession of Paraphernalia/Possession of Electronic Cigarette as Minor/Possession of False ID",
-    "disposition": "Closed by Arrest,Closed by Citation"
-  },
-  {
-    "reported": "2/9/26",
     "start": "1/30/26 18:30",
     "end": "1/30/26 18:40",
     "location": "Morrison Center Parking Lot",
@@ -790,6 +844,24 @@
     "case_number": "601970",
     "nature": "Battery",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/5/26 14:53",
+    "end": "2/5/26 14:53",
+    "location": "Broadway/University",
+    "case_number": "601843",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 0:44",
+    "end": "2/6/26 0:44",
+    "location": "8/Main",
+    "case_number": "601868",
+    "nature": "Resist and Obstruct/DUI/Possession of Marijuna/Possession of Paraphernalia/Possession of Electronic Cigarette as Minor/Possession of False ID",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "2/8/26",
@@ -847,12 +919,21 @@
   },
   {
     "reported": "2/2/26",
-    "start": "1/30/26 17:40",
-    "end": "1/30/26 17:50",
-    "location": "City Center Plaza",
-    "case_number": "601530",
-    "nature": "Disturbing the Peace",
-    "disposition": "Closed by Arrest"
+    "start": "1/30/26 23:15",
+    "end": "1/30/26 0:00",
+    "location": "Syringa",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (X8)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/2/26",
+    "start": "1/29/26 19:26",
+    "end": "1/29/26 19:26",
+    "location": "Morrison Center",
+    "case_number": "601489",
+    "nature": "Threat",
+    "disposition": "Inactive"
   },
   {
     "reported": "2/2/26",
@@ -862,6 +943,15 @@
     "case_number": "601365",
     "nature": "Hit and Run",
     "disposition": "Open"
+  },
+  {
+    "reported": "2/2/26",
+    "start": "1/30/26 17:40",
+    "end": "1/30/26 17:50",
+    "location": "City Center Plaza",
+    "case_number": "601530",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "2/2/26",
@@ -879,24 +969,6 @@
     "location": "Morrison Center parking lot",
     "case_number": "601667",
     "nature": "Hit and Run",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "2/2/26",
-    "start": "1/30/26 23:15",
-    "end": "1/30/26 0:00",
-    "location": "Syringa",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation (X8)",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "2/2/26",
-    "start": "1/29/26 19:26",
-    "end": "1/29/26 19:26",
-    "location": "Morrison Center",
-    "case_number": "601489",
-    "nature": "Threat",
     "disposition": "Inactive"
   },
   {
@@ -950,7 +1022,7 @@
     "end": "1/28/26 3:10",
     "location": "Morrison Center Parking lot",
     "case_number": "601378",
-    "nature": "HIT & RUN",
+    "nature": "Hit and Run",
     "disposition": "Closed by Citation"
   },
   {
@@ -961,24 +1033,6 @@
     "case_number": "600983",
     "nature": "False Info to an Officer/Probation Violations, Curfew/Possession of Electronic Cigarette",
     "disposition": "Closed by Arrest,Closed by Citation"
-  },
-  {
-    "reported": "1/26/26",
-    "start": "1/26/26 1:51",
-    "end": "1/26/26 1:51",
-    "location": "Boise/Protest",
-    "case_number": "601282",
-    "nature": "DUI",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "1/26/26",
-    "start": "1/24/26 15:12",
-    "end": "1/24/26 15:12",
-    "location": "765 Idaho",
-    "case_number": "601237",
-    "nature": "Battery, DUI",
-    "disposition": "Closed by Arrest"
   },
   {
     "reported": "1/26/26",
@@ -997,6 +1051,24 @@
     "case_number": "601090",
     "nature": "Alcohol Violation Referral",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "1/26/26",
+    "start": "1/24/26 15:12",
+    "end": "1/24/26 15:12",
+    "location": "765 Idaho",
+    "case_number": "601237",
+    "nature": "Battery, DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/26/26",
+    "start": "1/26/26 1:51",
+    "end": "1/26/26 1:51",
+    "location": "Boise/Protest",
+    "case_number": "601282",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "1/22/26",
@@ -1027,20 +1099,20 @@
   },
   {
     "reported": "1/19/26",
+    "start": "1/18/26 1:26",
+    "end": "1/18/26 1:26",
+    "location": "8/Main",
+    "case_number": "600917",
+    "nature": "DUI (Excessive)",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/19/26",
     "start": "1/14/26 13:10",
     "end": "1/14/26 13:11",
     "location": "Broadway/University",
     "case_number": "600707",
     "nature": "Warrant- Fail to Apear",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "1/19/26",
-    "start": "1/18/26 1:26",
-    "end": "1/18/26 1:26",
-    "location": "8/Main",
-    "case_number": "600917",
-    "nature": "DUI",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1081,9 +1153,27 @@
   },
   {
     "reported": "1/12/26",
+    "start": "1/12/26 1:58",
+    "end": "1/12/26 2:25",
+    "location": "827 MAIN",
+    "case_number": "600569",
+    "nature": "BATTERY/AGGRAVATED ASSAULT",
+    "disposition": "Open"
+  },
+  {
+    "reported": "1/12/26",
+    "start": "1/12/26 18:59",
+    "end": "1/12/26 22:06",
+    "location": "Driscoll Hall",
+    "case_number": "600607",
+    "nature": "Narcotics Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "1/12/26",
     "start": "1/10/26 23:38",
     "end": "1/11/26 0:07",
-    "location": "UNIVERSITY/BROADWAY",
+    "location": "University / Broadway",
     "case_number": "600527",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
@@ -1099,30 +1189,12 @@
   },
   {
     "reported": "1/12/26",
-    "start": "1/12/26 1:58",
-    "end": "1/12/26 2:25",
-    "location": "827 MAIN",
-    "case_number": "600569",
-    "nature": "BATTERY/AGGRAVATED ASSAULT",
-    "disposition": "Open"
-  },
-  {
-    "reported": "1/12/26",
     "start": "1/12/26 2:23",
     "end": "1/12/26 2:23",
     "location": "FRONT/9",
     "case_number": "600567",
     "nature": "POSSESSION OF OPEN CONTAINER/POSSESSION OF CONTROLLED SUBSTANCE/DUI/POSSESSION OF PARAPHERNALIA",
     "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "1/12/26",
-    "start": "1/12/26 18:59",
-    "end": "1/12/26 22:06",
-    "location": "Driscoll Hall",
-    "case_number": "600607",
-    "nature": "Narcotics Violation",
-    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/6/26",
