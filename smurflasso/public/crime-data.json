@@ -1,5 +1,41 @@
 [
   {
+    "reported": "4/27/26",
+    "start": "3/25/26 17:30",
+    "end": "4/20/26 17:30",
+    "location": "Recreation Center",
+    "case_number": "605933",
+    "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/27/26",
+    "start": "4/24/26 23:12",
+    "end": "4/25/26 0:44",
+    "location": "800 BLK Main",
+    "case_number": "606085",
+    "nature": "Possession of Open Container/Possession of Controlled Substance/Possession of Paraphernalia",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/25/26",
+    "start": "4/25/26 3:00",
+    "end": "4/25/26 3:45",
+    "location": "Osprey",
+    "case_number": "606110",
+    "nature": "Sexual Battery (Forcible Fondling)",
+    "disposition": "Open,Closed by Arrest"
+  },
+  {
+    "reported": "4/23/26",
+    "start": "4/23/06 7:00",
+    "end": "4/23/26 11:12",
+    "location": "Education",
+    "case_number": "606035",
+    "nature": "Graffiti",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "4/22/26",
     "start": "4/22/26 15:46",
     "end": "4/22/26 16:34",
@@ -14,7 +50,7 @@
     "end": "4/21/26 1:57",
     "location": "Appleton tennis courts",
     "case_number": "N/A",
-    "nature": "Narcotics violation, Narcotics violation, Narcotics violation",
+    "nature": "Narcotics violation (x3)",
     "disposition": "Closed by Referral"
   },
   {
