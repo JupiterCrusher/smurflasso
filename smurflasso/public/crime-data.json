@@ -1,5 +1,14 @@
 [
   {
+    "reported": "4/28/26",
+    "start": "1/6/26 12:00",
+    "end": "4/28/26 16:20",
+    "location": "Micron Engineering Center",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "CSA Report Only"
+  },
+  {
     "reported": "4/27/26",
     "start": "3/25/26 17:30",
     "end": "4/20/26 17:30",
@@ -50,7 +59,7 @@
     "end": "4/21/26 1:57",
     "location": "Appleton tennis courts",
     "case_number": "N/A",
-    "nature": "Narcotics violation (x3)",
+    "nature": "Narcotics violation, Narcotics violation, Narcotics violation",
     "disposition": "Closed by Referral"
   },
   {
