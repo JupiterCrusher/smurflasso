@@ -1,5 +1,104 @@
 [
   {
+    "reported": "5/4/26",
+    "start": "4/26/26 16:00",
+    "end": "4/26/26 17:30",
+    "location": "1009 Oakland",
+    "case_number": "606191",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/30/26 13:00",
+    "end": "4/30/26 13:16",
+    "location": "Boise/Beacon",
+    "case_number": "606378",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/28/26 11:50",
+    "end": "4/28/26 12:00",
+    "location": "Library",
+    "case_number": "606235",
+    "nature": "Theft",
+    "disposition": "Unfounded"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/19/26 0:00",
+    "end": "4/19/26 23:59",
+    "location": "777 Main",
+    "case_number": "606516",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "5/2/26 20:45",
+    "end": "5/2/26 21:29",
+    "location": "Main/8",
+    "case_number": "606489",
+    "nature": "Aggravated Assault/Warrants x2 FTA",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "5/2/26 22:54",
+    "end": "5/2/26 22:58",
+    "location": "Taylor Hall",
+    "case_number": "N/A Filed on line by Victim",
+    "nature": "Theft ( electric scooter)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/25/26 1:35",
+    "end": "4/25/26 1:35",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (x5)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/29/26 22:00",
+    "end": "4/29/26 22:00",
+    "location": "Square – Jasper",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (x3)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "5/3/26 0:03",
+    "end": "5/3/26 0:03",
+    "location": "Taylor Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (x4)",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/22/26 12:00",
+    "end": "4/28/26 10:48",
+    "location": "REC Center",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "5/1/26",
+    "start": "4/3/26 10:00",
+    "end": "4/30/26 16:27",
+    "location": "Grant West Parking Lot",
+    "case_number": "606401",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "4/28/26",
     "start": "1/6/26 12:00",
     "end": "4/28/26 16:20",
@@ -640,15 +739,6 @@
   },
   {
     "reported": "2/23/26",
-    "start": "2/20/26 19:18",
-    "end": "2/20/26 19:44",
-    "location": "Capitol/Main",
-    "case_number": "602675",
-    "nature": "Warrant- FTA x2",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "2/23/26",
     "start": "3/15/24 18:30",
     "end": "3/15/24 18:30",
     "location": "On-Campus Student Housing",
@@ -694,6 +784,15 @@
   },
   {
     "reported": "2/23/26",
+    "start": "2/8/26 14:11",
+    "end": "2/10/26 4:34",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Burglary",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "2/23/26",
     "start": "5/6/25 12:00",
     "end": "2/17/26 13:00",
     "location": "Morrison Center",
@@ -703,12 +802,12 @@
   },
   {
     "reported": "2/23/26",
-    "start": "2/8/26 14:11",
-    "end": "2/10/26 4:34",
-    "location": "Selway Suites",
-    "case_number": "N/A",
-    "nature": "Burglary",
-    "disposition": "Closed by Referral"
+    "start": "2/20/26 19:18",
+    "end": "2/20/26 19:44",
+    "location": "Capitol/Main",
+    "case_number": "602675",
+    "nature": "Warrant- FTA x2",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "2/22/26",
@@ -716,7 +815,7 @@
     "end": "2/21/26 20:08",
     "location": "Lusk/Royal",
     "case_number": "602754",
-    "nature": "Malicious Injury to Property",
+    "nature": "Malicious injury to property",
     "disposition": "Open"
   },
   {
@@ -730,6 +829,15 @@
   },
   {
     "reported": "2/20/26",
+    "start": "2/19/26 19:00",
+    "end": "2/20/26 5:00",
+    "location": "Outside Taylor Hall",
+    "case_number": "602661",
+    "nature": "Theft of E-Scooter",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "2/20/26",
     "start": "2/20/26 22:30",
     "end": "2/21/26 0:00",
     "location": "Driscoll Hall",
@@ -738,21 +846,12 @@
     "disposition": "Inactive"
   },
   {
-    "reported": "2/20/26",
-    "start": "2/19/26 19:00",
-    "end": "2/20/26 5:00",
-    "location": "Taylor Hall",
-    "case_number": "602661",
-    "nature": "Theft of E-Scooter",
-    "disposition": "Inactive"
-  },
-  {
     "reported": "2/19/26",
     "start": "2/19/26 15:00",
     "end": "2/19/26 16:20",
     "location": "Village Apartments",
     "case_number": "602606",
-    "nature": "Fraud, Fraud, Fraud",
+    "nature": "Fraud, Attempted Grand Theft",
     "disposition": "Open"
   },
   {
@@ -761,7 +860,7 @@
     "end": "2/18/26 22:42",
     "location": "University/Chrisway",
     "case_number": "602572",
-    "nature": "Alcohol and Narcotics Violations",
+    "nature": "Possession of Methamphetamine, Possession of drug paraphernalia, Possession of an open container",
     "disposition": "Closed by Arrest"
   },
   {
@@ -775,12 +874,12 @@
   },
   {
     "reported": "2/16/26",
-    "start": "1/15/26 9:19",
-    "end": "2/11/26 14:38",
-    "location": "Sawtooth",
-    "case_number": "602201",
-    "nature": "Harassment",
-    "disposition": "Inactive"
+    "start": "2/12/26 22:50",
+    "end": "2/15/26 0:36",
+    "location": "1309 W Chrisway",
+    "case_number": "N/A",
+    "nature": "Minor in Consumption (Alcohol Violation)",
+    "disposition": "Closed"
   },
   {
     "reported": "2/16/26",
@@ -793,21 +892,12 @@
   },
   {
     "reported": "2/16/26",
-    "start": "2/14/26 14:20",
-    "end": "2/14/26 14:20",
-    "location": "Capitol/Main",
-    "case_number": "602344",
-    "nature": "Public Urination",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "2/16/26",
-    "start": "2/12/26 22:50",
-    "end": "2/15/26 0:36",
-    "location": "1309 W Chrisway",
-    "case_number": "N/A",
-    "nature": "Minor in Consumption (Alcohol Violation)",
-    "disposition": "Closed"
+    "start": "1/15/26 9:19",
+    "end": "2/11/26 14:38",
+    "location": "Sawtooth Hall",
+    "case_number": "602201",
+    "nature": "Harassment",
+    "disposition": "Inactive"
   },
   {
     "reported": "2/16/26",
@@ -817,6 +907,15 @@
     "case_number": "602277",
     "nature": "Hit and Run",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/16/26",
+    "start": "2/14/26 14:20",
+    "end": "2/14/26 14:20",
+    "location": "Capitol/Main",
+    "case_number": "602344",
+    "nature": "Public Urination",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "2/14/26",
@@ -838,15 +937,6 @@
   },
   {
     "reported": "2/10/26",
-    "start": "2/10/26 6:45",
-    "end": "2/10/26 12:30",
-    "location": "Bleymaier",
-    "case_number": "602115",
-    "nature": "Theft",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "2/10/26",
     "start": "1/21/26 12:00",
     "end": "1/21/26 12:00",
     "location": "Administration",
@@ -855,39 +945,12 @@
     "disposition": "Inactive"
   },
   {
-    "reported": "2/9/26",
-    "start": "1/30/26 18:30",
-    "end": "1/30/26 18:40",
-    "location": "Morrison Center Parking Lot",
-    "case_number": "602090",
-    "nature": "Hit and Run",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/9/26 0:01",
-    "end": "2/9/26 1:25",
-    "location": "Syringa Hall",
-    "case_number": "602021",
-    "nature": "Narcotics Violation",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/6/26 23:01",
-    "end": "2/7/26 1:57",
-    "location": "8/Main",
-    "case_number": "601926",
-    "nature": "Resist and Obstruct/Possession of Electric Cigarette",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "2/9/26",
-    "start": "2/6/26 23:01",
-    "end": "2/7/26 20:16",
-    "location": "Main/8",
-    "case_number": "601970",
-    "nature": "Battery",
+    "reported": "2/10/26",
+    "start": "2/10/26 6:45",
+    "end": "2/10/26 12:30",
+    "location": "Outside Bleymaier",
+    "case_number": "602115",
+    "nature": "E-Scooter Theft",
     "disposition": "Inactive"
   },
   {
@@ -907,6 +970,33 @@
     "case_number": "601868",
     "nature": "Resist and Obstruct/DUI/Possession of Marijuna/Possession of Paraphernalia/Possession of Electronic Cigarette as Minor/Possession of False ID",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/6/26 23:01",
+    "end": "2/7/26 1:57",
+    "location": "8th/Main",
+    "case_number": "601926",
+    "nature": "Resist and Obstruct/Possession of Electric Cigarette",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "2/9/26 0:01",
+    "end": "2/9/26 1:25",
+    "location": "Syringa Hall",
+    "case_number": "602021",
+    "nature": "Narcotics Violation",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "2/9/26",
+    "start": "1/30/26 18:30",
+    "end": "1/30/26 18:40",
+    "location": "Morrison Center Parking Lot",
+    "case_number": "602090",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
   },
   {
     "reported": "2/8/26",
@@ -943,15 +1033,6 @@
     "case_number": "N/A",
     "nature": "Hit and Run",
     "disposition": "Open"
-  },
-  {
-    "reported": "2/2/26",
-    "start": "1/27/26 17:46",
-    "end": "1/27/26 17:47",
-    "location": "Morrison Center",
-    "case_number": "601378",
-    "nature": "Hit and Run",
-    "disposition": "Closed by Citation"
   },
   {
     "reported": "2/2/26",
@@ -1015,6 +1096,15 @@
     "case_number": "601667",
     "nature": "Hit and Run",
     "disposition": "Inactive"
+  },
+  {
+    "reported": "2/2/26",
+    "start": "1/27/26 17:46",
+    "end": "1/27/26 17:47",
+    "location": "Morrison Center Parking Lot",
+    "case_number": "601378",
+    "nature": "Hit and Run",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "1/30/26",
