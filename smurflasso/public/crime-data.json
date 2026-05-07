@@ -1162,15 +1162,6 @@
   },
   {
     "reported": "1/26/26",
-    "start": "1/20/26 2:29",
-    "end": "1/20/26 2:29",
-    "location": "Broadway/University",
-    "case_number": "600983",
-    "nature": "False Info to an Officer/Probation Violations, Curfew/Possession of Electronic Cigarette",
-    "disposition": "Closed by Arrest,Closed by Citation"
-  },
-  {
-    "reported": "1/26/26",
     "start": "1/23/26 0:47",
     "end": "1/23/26 2:05",
     "location": "Beacon/Euclid",
@@ -1204,6 +1195,15 @@
     "case_number": "601282",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/26/26",
+    "start": "1/20/26 2:29",
+    "end": "1/20/26 2:29",
+    "location": "Broadway/University",
+    "case_number": "600983",
+    "nature": "False Info to an Officer/Probation Violations, Curfew/Possession of Electronic Cigarette",
+    "disposition": "Closed by Arrest,Closed by Citation"
   },
   {
     "reported": "1/22/26",
@@ -1288,15 +1288,6 @@
   },
   {
     "reported": "1/12/26",
-    "start": "1/12/26 1:58",
-    "end": "1/12/26 2:25",
-    "location": "827 MAIN",
-    "case_number": "600569",
-    "nature": "BATTERY/AGGRAVATED ASSAULT",
-    "disposition": "Open"
-  },
-  {
-    "reported": "1/12/26",
     "start": "1/12/26 18:59",
     "end": "1/12/26 22:06",
     "location": "Driscoll Hall",
@@ -1330,6 +1321,15 @@
     "case_number": "600567",
     "nature": "POSSESSION OF OPEN CONTAINER/POSSESSION OF CONTROLLED SUBSTANCE/DUI/POSSESSION OF PARAPHERNALIA",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/12/26",
+    "start": "1/12/26 1:58",
+    "end": "1/12/26 2:25",
+    "location": "827 MAIN",
+    "case_number": "600569",
+    "nature": "Aggravated Assault, Battery",
+    "disposition": "Open"
   },
   {
     "reported": "1/6/26",
