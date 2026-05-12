@@ -1,5 +1,14 @@
 [
   {
+    "reported": "5/9/26",
+    "start": "5/9/26 2:35",
+    "end": "5/9/26 2:35",
+    "location": "1100 blk of S. Lincoln",
+    "case_number": "606827",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "5/4/26",
     "start": "4/26/26 16:00",
     "end": "4/26/26 17:30",
@@ -541,24 +550,6 @@
   },
   {
     "reported": "3/9/26",
-    "start": "2/18/26 12:47",
-    "end": "2/18/26 12:47",
-    "location": "Lusk/Royal",
-    "case_number": "603259",
-    "nature": "Hit and Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "3/9/26",
-    "start": "2/28/26 23:00",
-    "end": "2/28/26 23:30",
-    "location": "Idaho/8",
-    "case_number": "603119",
-    "nature": "Weapons- Exhibition or Use of Deadly Weapon",
-    "disposition": "Open"
-  },
-  {
-    "reported": "3/9/26",
     "start": "3/5/26 21:00",
     "end": "3/5/26 23:20",
     "location": "Syringa",
@@ -577,15 +568,6 @@
   },
   {
     "reported": "3/9/26",
-    "start": "3/3/26 15:55",
-    "end": "3/3/26 15:55",
-    "location": "Main/8th",
-    "case_number": "603258",
-    "nature": "Absconding Probation and Parole",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "3/9/26",
     "start": "3/1/26 20:00",
     "end": "3/2/26 7:00",
     "location": "Lincoln Townhomes",
@@ -600,6 +582,33 @@
     "location": "Hawthorn House",
     "case_number": "603591",
     "nature": "Sexual Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "2/28/26 23:00",
+    "end": "2/28/26 23:30",
+    "location": "Idaho/8",
+    "case_number": "603119",
+    "nature": "Weapons- Exhibition or Use of Deadly Weapon",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "3/3/26 15:55",
+    "end": "3/3/26 15:55",
+    "location": "Main/8th",
+    "case_number": "603258",
+    "nature": "Absconding Probation and Parole",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/9/26",
+    "start": "2/18/26 12:47",
+    "end": "2/18/26 12:47",
+    "location": "Lusk/Royal",
+    "case_number": "603259",
+    "nature": "Hit and Run",
     "disposition": "Open"
   },
   {
@@ -658,15 +667,6 @@
   },
   {
     "reported": "3/2/26",
-    "start": "2/24/26 16:35",
-    "end": "2/24/26 16:35",
-    "location": "Broadway/University",
-    "case_number": "602877",
-    "nature": "Littering in Public Place",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "3/2/26",
     "start": "2/25/26 8:50",
     "end": "2/25/26 8:50",
     "location": "Stadium",
@@ -676,11 +676,11 @@
   },
   {
     "reported": "3/2/26",
-    "start": "2/28/26 0:15",
-    "end": "2/28/26 0:15",
-    "location": "9/Royal",
-    "case_number": "603057",
-    "nature": "DUI",
+    "start": "2/23/26 17:35",
+    "end": "2/23/26 18:10",
+    "location": "827 Main",
+    "case_number": "602831",
+    "nature": "Resist and Obstruct Officers/ Noise Violations",
     "disposition": "Closed by Arrest"
   },
   {
@@ -694,11 +694,20 @@
   },
   {
     "reported": "3/2/26",
-    "start": "2/23/26 17:35",
-    "end": "2/23/26 18:10",
-    "location": "827 Main",
-    "case_number": "602831",
-    "nature": "Resist and Obstruct Officers/ Noise Violations",
+    "start": "2/24/26 16:35",
+    "end": "2/24/26 16:35",
+    "location": "Broadway/University",
+    "case_number": "602877",
+    "nature": "Littering in Public Place",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "3/2/26",
+    "start": "2/28/26 0:15",
+    "end": "2/28/26 0:15",
+    "location": "9th/Royal",
+    "case_number": "603057",
+    "nature": "DUI",
     "disposition": "Closed by Arrest"
   },
   {
