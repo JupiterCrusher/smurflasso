@@ -253,6 +253,15 @@
   },
   {
     "reported": "4/13/26",
+    "start": "4/2/26 15:00",
+    "end": "4/6/26 15:00",
+    "location": "Syringa",
+    "case_number": "605098",
+    "nature": "Bike Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "4/13/26",
     "start": "1/14/26 16:30",
     "end": "4/9/26 13:00",
     "location": "Science",
@@ -271,12 +280,12 @@
   },
   {
     "reported": "4/13/26",
-    "start": "4/2/26 15:00",
-    "end": "4/6/26 15:00",
-    "location": "Syringa",
-    "case_number": "605098",
-    "nature": "Theft",
-    "disposition": "Open"
+    "start": "4/10/26 20:52",
+    "end": "4/10/26 22:30",
+    "location": "Capitol/Main",
+    "case_number": "605320",
+    "nature": "Pedestrian Under the Influence of Alcohol or Drugs",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "4/13/26",
@@ -285,15 +294,6 @@
     "location": "Main/Capitol",
     "case_number": "605369",
     "nature": "Open Container",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "4/13/26",
-    "start": "4/10/26 20:52",
-    "end": "4/10/26 22:30",
-    "location": "Capitol/Main",
-    "case_number": "605320",
-    "nature": "Pedestrian Under the Influence of Alcohol or Drugs",
     "disposition": "Closed by Arrest"
   },
   {
@@ -370,12 +370,12 @@
   },
   {
     "reported": "4/6/26",
-    "start": "4/2/26 19:17",
-    "end": "4/2/26 19:17",
-    "location": "Myrtle/Capitol",
-    "case_number": "604862",
-    "nature": "Possession of Marijuana",
-    "disposition": "Closed by Citation"
+    "start": "4/3/26 12:00",
+    "end": "4/3/26 12:00",
+    "location": "Syringa Hall bike rack",
+    "case_number": "N/A",
+    "nature": "Theft (Larceny)",
+    "disposition": "CSA Report Only"
   },
   {
     "reported": "4/6/26",
@@ -388,12 +388,12 @@
   },
   {
     "reported": "4/6/26",
-    "start": "4/3/26 12:00",
-    "end": "4/3/26 12:00",
-    "location": "Syringa Hall bike rack",
-    "case_number": "N/A",
-    "nature": "Theft (Larceny)",
-    "disposition": "CSA Report Only"
+    "start": "4/2/26 19:17",
+    "end": "4/2/26 19:17",
+    "location": "Myrtle/Capitol",
+    "case_number": "604862",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "4/6/26",
@@ -428,7 +428,7 @@
     "end": "3/30/26 3:25",
     "location": "Heights Bike Racks",
     "case_number": "604899",
-    "nature": "Theft",
+    "nature": "Theft (larceny)",
     "disposition": "Open,Inactive"
   },
   {
@@ -442,11 +442,11 @@
   },
   {
     "reported": "3/31/26",
-    "start": "3/24/26 12:00",
-    "end": "3/25/26 12:00",
-    "location": "Substation",
-    "case_number": "604381",
-    "nature": "Harassment",
+    "start": "3/2/26 12:00",
+    "end": "3/13/26 12:00",
+    "location": "Administration",
+    "case_number": "604306",
+    "nature": "Grand Theft",
     "disposition": "Open"
   },
   {
@@ -460,12 +460,21 @@
   },
   {
     "reported": "3/31/26",
-    "start": "3/2/26 12:00",
-    "end": "3/13/26 12:00",
-    "location": "Administration",
-    "case_number": "604306",
-    "nature": "Grand Theft",
+    "start": "3/24/26 12:00",
+    "end": "3/25/26 12:00",
+    "location": "Substation",
+    "case_number": "604381",
+    "nature": "Harassment",
     "disposition": "Open"
+  },
+  {
+    "reported": "3/31/26",
+    "start": "3/28/26 0:59",
+    "end": "3/28/26 0:59",
+    "location": "Capitol/Main",
+    "case_number": "604553",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "3/31/26",
@@ -486,15 +495,6 @@
     "disposition": "Closed by Arrest"
   },
   {
-    "reported": "3/31/26",
-    "start": "3/28/26 0:59",
-    "end": "3/28/26 0:59",
-    "location": "Capitol/Main",
-    "case_number": "604553",
-    "nature": "DUI",
-    "disposition": "Closed by Arrest"
-  },
-  {
     "reported": "3/26/26",
     "start": "3/26/26 14:20",
     "end": "3/26/26 14:21",
@@ -507,18 +507,9 @@
     "reported": "3/25/26",
     "start": "3/18/26 20:16",
     "end": "3/18/26 20:18",
-    "location": "Towers",
+    "location": "Towers Hall Bike Rack",
     "case_number": "604352",
-    "nature": "Theft – Scooter",
-    "disposition": "Open"
-  },
-  {
-    "reported": "3/16/26",
-    "start": "3/8/26 1:00",
-    "end": "3/8/26 3:00",
-    "location": "Juanita/Potter",
-    "case_number": "603508",
-    "nature": "Battery",
+    "nature": "Theft of E-Scooter",
     "disposition": "Open"
   },
   {
@@ -527,6 +518,15 @@
     "end": "3/6/26 20:28",
     "location": "777 Main",
     "case_number": "603746",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "3/16/26",
+    "start": "3/8/26 1:00",
+    "end": "3/8/26 3:00",
+    "location": "Juanita/Potter",
+    "case_number": "603508",
     "nature": "Battery",
     "disposition": "Open"
   },
