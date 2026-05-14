@@ -19,24 +19,6 @@
   },
   {
     "reported": "5/4/26",
-    "start": "4/30/26 13:00",
-    "end": "4/30/26 13:16",
-    "location": "Boise/Beacon",
-    "case_number": "606378",
-    "nature": "Hit and Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "5/4/26",
-    "start": "4/28/26 11:50",
-    "end": "4/28/26 12:00",
-    "location": "Library",
-    "case_number": "606235",
-    "nature": "Theft",
-    "disposition": "Unfounded"
-  },
-  {
-    "reported": "5/4/26",
     "start": "4/19/26 0:00",
     "end": "4/19/26 23:59",
     "location": "777 Main",
@@ -99,6 +81,24 @@
     "disposition": "Closed by Referral"
   },
   {
+    "reported": "5/4/26",
+    "start": "4/28/26 11:50",
+    "end": "4/28/26 12:00",
+    "location": "Albertsons Library",
+    "case_number": "606235",
+    "nature": "Theft (Larceny)",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/30/26 13:00",
+    "end": "4/30/26 13:16",
+    "location": "Boise/Beacon",
+    "case_number": "606378",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "5/1/26",
     "start": "4/3/26 10:00",
     "end": "4/30/26 16:27",
@@ -118,21 +118,21 @@
   },
   {
     "reported": "4/27/26",
-    "start": "3/25/26 17:30",
-    "end": "4/20/26 17:30",
-    "location": "Recreation Center",
-    "case_number": "605933",
-    "nature": "Harassment",
-    "disposition": "Open"
-  },
-  {
-    "reported": "4/27/26",
     "start": "4/24/26 23:12",
     "end": "4/25/26 0:44",
     "location": "800 BLK Main",
     "case_number": "606085",
     "nature": "Possession of Open Container/Possession of Controlled Substance/Possession of Paraphernalia",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "4/27/26",
+    "start": "3/25/26 17:30",
+    "end": "4/20/26 17:30",
+    "location": "Recreation Center",
+    "case_number": "605933",
+    "nature": "Harassment",
+    "disposition": "Open"
   },
   {
     "reported": "4/25/26",
@@ -149,7 +149,7 @@
     "end": "4/23/26 11:12",
     "location": "Education",
     "case_number": "606035",
-    "nature": "Graffiti",
+    "nature": "Vandalism by Graffiti",
     "disposition": "Inactive"
   },
   {
@@ -212,7 +212,7 @@
     "end": "4/16/26 19:59",
     "location": "Student Union",
     "case_number": "605638",
-    "nature": "None",
+    "nature": "Narcotics Violation",
     "disposition": "Closed"
   },
   {
@@ -221,8 +221,8 @@
     "end": "4/15/26 7:00",
     "location": "Taylor Hall",
     "case_number": "605542",
-    "nature": "Theft (motor vehicle theft)",
-    "disposition": "Open,Inactive"
+    "nature": "E-Scooter Theft (motor vehicle theft)",
+    "disposition": "Inactive"
   },
   {
     "reported": "4/14/26",
