@@ -1,5 +1,23 @@
 [
   {
+    "reported": "5/18/26",
+    "start": "5/6/26 15:00",
+    "end": "5/6/26 15:02",
+    "location": "Chaffee",
+    "case_number": "606952",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/17/26",
+    "start": "5/17/26 16:20",
+    "end": "5/17/26 21:20",
+    "location": "Brady Garage",
+    "case_number": "n/a",
+    "nature": "Hit & Run",
+    "disposition": "Closed"
+  },
+  {
     "reported": "5/9/26",
     "start": "5/9/26 2:35",
     "end": "5/9/26 2:35",
@@ -14,15 +32,6 @@
     "end": "4/26/26 17:30",
     "location": "1009 Oakland",
     "case_number": "606191",
-    "nature": "Theft",
-    "disposition": "Open"
-  },
-  {
-    "reported": "5/4/26",
-    "start": "4/19/26 0:00",
-    "end": "4/19/26 23:59",
-    "location": "777 Main",
-    "case_number": "606516",
     "nature": "Theft",
     "disposition": "Open"
   },
@@ -96,6 +105,15 @@
     "location": "Boise/Beacon",
     "case_number": "606378",
     "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/4/26",
+    "start": "4/19/26 0:00",
+    "end": "4/19/26 23:59",
+    "location": "777 Main",
+    "case_number": "606516",
+    "nature": "Theft (Larceny)",
     "disposition": "Open"
   },
   {
