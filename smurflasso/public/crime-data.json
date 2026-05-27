@@ -1,5 +1,41 @@
 [
   {
+    "reported": "5/26/26",
+    "start": "5/21/26 23:41",
+    "end": "5/22/26 0:58",
+    "location": "Front/9",
+    "case_number": "607536",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "5/26/26",
+    "start": "5/24/26 2:06",
+    "end": "5/24/26 2:06",
+    "location": "Main/8",
+    "case_number": "607637",
+    "nature": "Infraction Violations- Alcohol and Curfew, Infraction- Curfew/ E Bike Reckless, Careless or Inattentive Operation",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "5/26/26",
+    "start": "10/26/25 23:00",
+    "end": "10/26/25 23:00",
+    "location": "Capitol/Main",
+    "case_number": "607599",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "5/26/26",
+    "start": "11/12/25 0:12",
+    "end": "11/14/25 12:00",
+    "location": "On Campus Residence Hall",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "5/19/26",
     "start": "5/5/26 9:20",
     "end": "5/5/26 9:20",
@@ -25,6 +61,15 @@
     "case_number": "N/A",
     "nature": "Alcohol Violation (x6)",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "5/18/26",
+    "start": "5/9/26 2:25",
+    "end": "5/9/26 2:25",
+    "location": "Capitol/Main",
+    "case_number": "606818",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "5/18/26",
@@ -81,15 +126,6 @@
     "disposition": "Closed by Arrest"
   },
   {
-    "reported": "5/18/26",
-    "start": "5/9/26 2:25",
-    "end": "5/9/26 2:25",
-    "location": "Capitol/Main",
-    "case_number": "606818",
-    "nature": "Disturbing the Peace",
-    "disposition": "Closed by Arrest"
-  },
-  {
     "reported": "5/17/26",
     "start": "5/17/26 16:20",
     "end": "5/17/26 21:20",
@@ -115,15 +151,6 @@
     "case_number": "606191",
     "nature": "Theft",
     "disposition": "Open"
-  },
-  {
-    "reported": "5/4/26",
-    "start": "5/2/26 20:45",
-    "end": "5/2/26 21:29",
-    "location": "Main/8",
-    "case_number": "606489",
-    "nature": "Aggravated Assault/Warrants x2 FTA",
-    "disposition": "Closed by Arrest"
   },
   {
     "reported": "5/4/26",
@@ -198,6 +225,15 @@
     "disposition": "Open"
   },
   {
+    "reported": "5/4/26",
+    "start": "5/2/26 20:45",
+    "end": "5/2/26 21:29",
+    "location": "Main/8",
+    "case_number": "606489",
+    "nature": "Aggravated Assault/Warrants x2 FTA",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "5/1/26",
     "start": "4/3/26 10:00",
     "end": "4/30/26 16:27",
@@ -217,21 +253,21 @@
   },
   {
     "reported": "4/27/26",
-    "start": "4/24/26 23:12",
-    "end": "4/25/26 0:44",
-    "location": "800 BLK Main",
-    "case_number": "606085",
-    "nature": "Possession of Open Container/Possession of Controlled Substance/Possession of Paraphernalia",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "4/27/26",
     "start": "3/25/26 17:30",
     "end": "4/20/26 17:30",
     "location": "Recreation Center",
     "case_number": "605933",
     "nature": "Harassment",
     "disposition": "Open"
+  },
+  {
+    "reported": "4/27/26",
+    "start": "4/24/26 23:12",
+    "end": "4/25/26 0:44",
+    "location": "800 BLK Main",
+    "case_number": "606085",
+    "nature": "Possession of Open Container/Possession of Controlled Substance/Possession of Paraphernalia",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "4/25/26",
@@ -613,19 +649,19 @@
   },
   {
     "reported": "3/16/26",
-    "start": "3/6/26 20:14",
-    "end": "3/6/26 20:28",
-    "location": "777 Main",
-    "case_number": "603746",
+    "start": "3/8/26 1:00",
+    "end": "3/8/26 3:00",
+    "location": "Juanita/Potter",
+    "case_number": "603508",
     "nature": "Battery",
     "disposition": "Open"
   },
   {
     "reported": "3/16/26",
-    "start": "3/8/26 1:00",
-    "end": "3/8/26 3:00",
-    "location": "Juanita/Potter",
-    "case_number": "603508",
+    "start": "3/6/26 20:14",
+    "end": "3/6/26 20:28",
+    "location": "777 Main",
+    "case_number": "603746",
     "nature": "Battery",
     "disposition": "Open"
   },
@@ -829,24 +865,6 @@
   },
   {
     "reported": "2/23/26",
-    "start": "2/21/26 0:35",
-    "end": "2/21/26 0:37",
-    "location": "Idaho/8",
-    "case_number": "602700",
-    "nature": "Reckless Driving",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "2/23/26",
-    "start": "2/20/26 23:37",
-    "end": "2/20/26 23:38",
-    "location": "Capitol/Main",
-    "case_number": "602694",
-    "nature": "Resist and Obstruct Officers/Battery upon LE/Possession of Marijuana/Disturbing the Peace/ Possession of Paraphernalia/Public Intoxication",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "2/23/26",
     "start": "3/15/24 18:30",
     "end": "3/15/24 18:30",
     "location": "On-Campus Student Housing",
@@ -916,6 +934,24 @@
     "case_number": "602675",
     "nature": "Warrant- FTA x2",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/20/26 23:37",
+    "end": "2/20/26 23:38",
+    "location": "Capitol/Main",
+    "case_number": "602694",
+    "nature": "Resist and Obstruct Officers/Battery upon LE/Possession of Marijuana/Disturbing the Peace/ Possession of Paraphernalia/Public Intoxication",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "2/23/26",
+    "start": "2/21/26 0:35",
+    "end": "2/21/26 0:37",
+    "location": "Idaho/8",
+    "case_number": "602700",
+    "nature": "Reckless Driving",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "2/22/26",
@@ -1396,15 +1432,6 @@
   },
   {
     "reported": "1/12/26",
-    "start": "1/12/26 18:59",
-    "end": "1/12/26 22:06",
-    "location": "Driscoll Hall",
-    "case_number": "600607",
-    "nature": "Narcotics Violation",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "1/12/26",
     "start": "1/10/26 23:38",
     "end": "1/11/26 0:07",
     "location": "University / Broadway",
@@ -1440,6 +1467,15 @@
     "disposition": "Open"
   },
   {
+    "reported": "1/12/26",
+    "start": "1/12/26 18:59",
+    "end": "1/12/26 22:06",
+    "location": "Driscoll Hall",
+    "case_number": "600607",
+    "nature": "Narcotics Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "1/6/26",
     "start": "12/10/25 17:00",
     "end": "1/6/26 12:30",
@@ -1459,20 +1495,20 @@
   },
   {
     "reported": "1/5/26",
-    "start": "1/1/26 2:38",
-    "end": "1/1/26 2:38",
-    "location": "Royal/Capitol",
-    "case_number": "600008",
-    "nature": "Warrant- Fail to Appear",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "1/5/26",
     "start": "1/4/26 5:38",
     "end": "1/4/26 5:38",
     "location": "Idaho/8",
     "case_number": "600169",
     "nature": "Possession of Marijuana",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/5/26",
+    "start": "12/31/25 23:13",
+    "end": "1/1/26 1:34",
+    "location": "Main/Capitol",
+    "case_number": "519780",
+    "nature": "Driving without Privileges/ Hit and Run",
     "disposition": "Closed by Arrest"
   },
   {
@@ -1486,11 +1522,11 @@
   },
   {
     "reported": "1/5/26",
-    "start": "12/31/25 23:13",
-    "end": "1/1/26 1:34",
-    "location": "Main/Capitol",
-    "case_number": "519780",
-    "nature": "Driving without Privileges/ Hit and Run",
+    "start": "1/1/26 2:38",
+    "end": "1/1/26 2:38",
+    "location": "Royal/Capitol",
+    "case_number": "600008",
+    "nature": "Warrant- Fail to Appear",
     "disposition": "Closed by Arrest"
   },
   {
