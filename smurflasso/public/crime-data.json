@@ -1,5 +1,14 @@
 [
   {
+    "reported": "6/3/26",
+    "start": "6/3/26 20:40",
+    "end": "6/3/26 22:45",
+    "location": "Sawtooth Hall",
+    "case_number": "608182",
+    "nature": "Drug Law Violation",
+    "disposition": "Closed"
+  },
+  {
     "reported": "6/1/26",
     "start": "5/21/26 23:38",
     "end": "5/21/26 23:38",
@@ -7,6 +16,42 @@
     "case_number": "N/A",
     "nature": "Alcohol Violation (x2)",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "6/1/26",
+    "start": "6/1/26 8:58",
+    "end": "6/1/26 9:00",
+    "location": "University/Broadway",
+    "case_number": "698050",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "6/1/26",
+    "start": "5/29/26 12:00",
+    "end": "5/29/26 14:15",
+    "location": "445 Capitol",
+    "case_number": "607923",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "6/1/26",
+    "start": "5/26/26 3:11",
+    "end": "5/26/26 3:11",
+    "location": "Front/9",
+    "case_number": "607717",
+    "nature": "Possession of Paraphernalia/ Possession of Methamphetamine, Possession of Methamphetamine",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "6/1/26",
+    "start": "5/29/26 0:40",
+    "end": "5/29/26 0:40",
+    "location": "Capitol/Main",
+    "case_number": "607956",
+    "nature": "Resist and Obstruct Officers",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "5/26/26",
