@@ -1,5 +1,32 @@
 [
   {
+    "reported": "6/15/26",
+    "start": "6/14/26 1:18",
+    "end": "6/14/26 1:18",
+    "location": "Royal/Capitol",
+    "case_number": "608713",
+    "nature": "Possession of Marijuana/Fail to Provide Proof of Insurance/Fail to Register Vehicle/Driving w/o Privileges",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
+    "reported": "6/15/26",
+    "start": "6/14/26 2:00",
+    "end": "6/14/26 2:00",
+    "location": "Front/9",
+    "case_number": "608712",
+    "nature": "Resist and Obstruct Officers/Indecent Exposure",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "6/15/26",
+    "start": "6/14/26 1:49",
+    "end": "6/14/26 1:49",
+    "location": "Capitol/Main",
+    "case_number": "608711",
+    "nature": "Disturbing the Peace, Disturbing the Peace",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "6/10/26",
     "start": "6/7/26 2:00",
     "end": "6/8/26 17:00",
