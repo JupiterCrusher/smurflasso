@@ -1,5 +1,59 @@
 [
   {
+    "reported": "6/29/26",
+    "start": "6/21/26 15:30",
+    "end": "6/21/26 21:00",
+    "location": "Micron Engineering Center",
+    "case_number": "609170",
+    "nature": "Bike Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "6/29/26",
+    "start": "6/27/26 0:12",
+    "end": "6/27/26 2:30",
+    "location": "Royal/9",
+    "case_number": "609392",
+    "nature": "DUI/Driving w/o Privileges",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "6/29/26",
+    "start": "6/27/26 12:15",
+    "end": "6/27/26 12:56",
+    "location": "Capitol/Grove",
+    "case_number": "609409",
+    "nature": "Violation of Protection Order- Non Domestic",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "6/29/26",
+    "start": "6/26/26 23:08",
+    "end": "6/26/26 23:08",
+    "location": "Capitol/Main",
+    "case_number": "609388",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "6/29/26",
+    "start": "6/25/26 13:30",
+    "end": "6/25/26 13:30",
+    "location": "Main/Capitol",
+    "case_number": "609322",
+    "nature": "Probation Violations- Juvenile",
+    "disposition": "Open"
+  },
+  {
+    "reported": "6/29/26",
+    "start": "6/27/26 1:52",
+    "end": "6/27/26 1:56",
+    "location": "Capitol/Main",
+    "case_number": "609396",
+    "nature": "Possession of Controlled Substance/Probation Violation X2, Resist and Obstruct Officers/Tobacco or E cigarette- Minor to possess,  Pedestrian Control Signal Violation",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
     "reported": "6/22/26",
     "start": "6/19/26 23:51",
     "end": "6/20/26 0:55",
