@@ -1,5 +1,32 @@
 [
   {
+    "reported": "7/6/26",
+    "start": "7/5/26 23:20",
+    "end": "7/6/26 0:33",
+    "location": "Lincoln/Belmont",
+    "case_number": "609832",
+    "nature": "Possession of Marijuana/DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/6/26",
+    "start": "7/3/26 12:41",
+    "end": "7/3/26 13:23",
+    "location": "Grove/Capitol",
+    "case_number": "609725",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "6/30/26",
+    "start": "6/30/26 21:30",
+    "end": "63/02/026 22:52",
+    "location": "Raptor Research parking lot",
+    "case_number": "609583",
+    "nature": "Narcotics Violation – Possession of narcotics",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "6/29/26",
     "start": "6/21/26 15:30",
     "end": "6/21/26 21:00",
