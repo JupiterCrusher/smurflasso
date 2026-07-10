@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,21 +13,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Boise State Crime Tracker',
-  description: 'Unofficial live dashboard tracking campus crime reports from Boise State University.',
-  keywords: ['Boise State', 'Crime Tracker', 'Campus Safety', 'BSU'],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  title: 'Campus Incident Explorer',
+  description: 'Independent dashboard for exploring public campus incident records, trends, locations, and case status.',
+  keywords: ['campus incidents', 'crime log', 'campus safety', 'public data dashboard'],
   authors: [{ name: 'Cole Kreiling', url: 'https://colekreiling.com' }],
   openGraph: {
-    title: 'Boise State Crime Tracker',
-    description: 'Live, auto-updating crime log from BSU’s public safety data.',
+    title: 'Campus Incident Explorer',
+    description: 'Independent public incident dashboard with summaries, filters, charts, and a searchable log.',
     url: 'https://your-site.vercel.app',
-    siteName: 'Boise State Crime Tracker',
+    siteName: 'Campus Incident Explorer',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Boise State Crime Tracker Preview',
+        alt: 'Campus Incident Explorer dashboard preview',
       },
     ],
     locale: 'en_US',
