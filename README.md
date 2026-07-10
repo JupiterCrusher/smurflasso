@@ -8,7 +8,7 @@ A real-time dashboard that scrapes Boise State University’s [campus crime log]
 - 📊 **Visual Insights** — Interactive charts for crime types, monthly trends, and upcoming location heatmap  
 - 🔍 **Smart Table Tools** — Search, sort, and filter by case status or keyword  
 - ⚡ **Lazy Loading** — Efficient scrolling for large datasets  
-- 🤖 **AI Summary (coming soon)** — Automatic trend analysis and summaries  
+- 🤖 **AI Summary** — Automatic trend analysis and summaries  
 
 ## Tech Stack
 
