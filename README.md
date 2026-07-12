@@ -4,7 +4,7 @@ An independent dashboard for exploring Boise State University's public campus cr
 
 ![Campus Incident Explorer dashboard](smurflasso/design/campus-incident-explorer-night-ledger-desktop.png)
 
-## Highlights
+## Highlights 
 
 - Search, sort, filter, and paginate public incident records
 - Compare incident categories and monthly trends
