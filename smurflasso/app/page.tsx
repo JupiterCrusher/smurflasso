@@ -50,7 +50,6 @@ type IconName =
   | 'document'
   | 'download'
   | 'external'
-  | 'info'
   | 'refresh'
   | 'search'
   | 'shield'
@@ -165,7 +164,6 @@ function Icon({ name, className = '' }: { name: IconName; className?: string }) 
     document: <><path d="M8 3.5h6l4 4V20H6V3.5h2Z" /><path d="M14 3.5V8h4M9 12h6M9 16h4" /></>,
     download: <><path d="M12 3v11m-5-4 5 5 5-5M5 20h14" /></>,
     external: <><path d="M14 5h5v5M19 5l-8 8" /><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" /></>,
-    info: <><circle cx="12" cy="12" r="9" /><path d="M12 11v5M12 8h.01" /></>,
     refresh: <><path d="M20 12a8 8 0 0 1-14.7 4.4M4 12A8 8 0 0 1 18.7 7.6M18.7 3.5v4.1h-4.1M5.3 20.5v-4.1h4.1" /></>,
     search: <><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></>,
     shield: <><path d="M12 3.25 19 6v5.2c0 4.2-2.7 7.8-7 9.55-4.3-1.75-7-5.35-7-9.55V6l7-2.75Z" /><path d="m9.5 12 1.7 1.7 3.5-3.7" /></>,
@@ -304,7 +302,6 @@ function useCountUp(target: number, duration = 650) {
 
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
-  const [summary, setSummary] = useState('Loading the latest summary…');
   const [loading, setLoading] = useState(true);
   const [lastUpdated, setLastUpdated] = useState('');
   const [sortKey, setSortKey] = useState<SortKey>('reported');
@@ -320,21 +317,13 @@ export default function Home() {
     setLoading(true);
     try {
       const cacheBust = Date.now();
-      const [dataResponse, summaryResponse] = await Promise.all([
-        fetch(`/crime-data.json?ts=${cacheBust}`),
-        fetch(`/summary.json?ts=${cacheBust}`),
-      ]);
+      const dataResponse = await fetch(`/crime-data.json?ts=${cacheBust}`);
       if (!dataResponse.ok) throw new Error('Incident data could not be loaded.');
-      const [incidentJson, summaryJson] = await Promise.all([
-        dataResponse.json(),
-        summaryResponse.ok ? summaryResponse.json() : Promise.resolve({}),
-      ]);
+      const incidentJson = await dataResponse.json();
       if (Array.isArray(incidentJson)) setData(incidentJson);
-      setSummary(summaryJson.summary || 'No summary is available for the latest reporting period.');
       setLastUpdated(LAST_UPDATED_FORMATTER.format(new Date()));
     } catch (error) {
       console.error(error);
-      setSummary('The latest summary could not be loaded. The incident log may still be available.');
     } finally {
       setLoading(false);
     }
@@ -428,6 +417,9 @@ export default function Home() {
 
   const mostCommon = categoryEntries[0] || ['None', 0];
   const openCasePercent = data.length ? ((openCases / data.length) * 100).toFixed(1) : '0.0';
+  const safetyBrief = data.length
+    ? `${mostCommon[0]} is the most frequently recorded category (${mostCommon[1]} incidents). ${countThisMonth} incidents were reported in the latest month represented, and ${openCases} cases are currently marked open.`
+    : 'Load the incident log to see a summary of the latest available records.';
 
   const incidentMix = useMemo(() => ({
     labels: categoryEntries.map(([label]) => label),
@@ -595,11 +587,7 @@ export default function Home() {
         <section className="analysis-grid">
           <Panel title="Safety brief" icon="shield" className="safety-panel">
             <div className="safety-panel__body">
-              <p>{summary}</p>
-              <div className="safety-panel__note">
-                <Icon name="info" />
-                AI-generated summary may contain errors.
-              </div>
+              <p>{safetyBrief}</p>
             </div>
           </Panel>
 

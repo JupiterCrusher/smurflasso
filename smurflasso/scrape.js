@@ -1,6 +1,6 @@
-const fs = require("fs");
-const axios = require("axios");
-const cheerio = require("cheerio");
+import fs from "node:fs";
+import axios from "axios";
+import * as cheerio from "cheerio";
 
 const URL = "https://www.boisestate.edu/publicsafety-security/campus-crime/campus-crime-log/";
 

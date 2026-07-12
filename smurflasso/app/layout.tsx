@@ -21,16 +21,7 @@ export const metadata = {
   openGraph: {
     title: 'Campus Incident Explorer',
     description: 'Independent public incident dashboard with summaries, filters, charts, and a searchable log.',
-    url: 'https://your-site.vercel.app',
     siteName: 'Campus Incident Explorer',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Campus Incident Explorer dashboard preview',
-      },
-    ],
     locale: 'en_US',
     type: 'website',
   },
