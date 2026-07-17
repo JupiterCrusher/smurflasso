@@ -1,5 +1,14 @@
 [
   {
+    "reported": "7/13/26",
+    "start": "7/11/26 2:25",
+    "end": "7/11/26 2:30",
+    "location": "Capitol/Main",
+    "case_number": "610150",
+    "nature": "Malicious Harassment",
+    "disposition": "Open"
+  },
+  {
     "reported": "7/6/26",
     "start": "7/5/26 23:20",
     "end": "7/6/26 0:33",
@@ -1752,6 +1761,15 @@
     "location": "Stadium",
     "case_number": "600168",
     "nature": "Arson/Malicious Injury to Property",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/13/26",
+    "start": "7/11/26 0:44",
+    "end": "7/11/26 0:44",
+    "location": "8/Main",
+    "case_number": "610142",
+    "nature": "Disturbing the Peace, Disturbing the Peace",
     "disposition": "Closed by Arrest"
   }
 ]
