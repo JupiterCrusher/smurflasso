@@ -22,6 +22,10 @@ The original table includes:
 - `disposition`
 - `case_number`
 
+![BigQuery CrimeData table schema showing the seven source fields](docs/images/bigquery-crime-data-schema.png)
+
+*The `CrimeData` schema in BigQuery, including the date, timestamp, descriptive, and case-identification fields used in the analysis.*
+
 ## Data Preparation
 
 A reusable view named `cleaned_incidents` was created to standardize the source data and make later queries easier to read.
@@ -80,12 +84,16 @@ The query counts distinct case numbers to reduce duplicate counting when one inc
 
 ```sql
 SELECT
-  DATE_TRUNC(reported_date, MONTH) AS month,
+  DATE_TRUNC(reported, MONTH) AS month,
   COUNT(*) AS incident_count
-FROM `bigquerylab-502817.bsu_crime.cleaned_incidents`
+FROM `bigquerylab-502817.bsu_crime.CrimeData`
 GROUP BY month
 ORDER BY month;
 ```
+
+![Completed BigQuery monthly incident totals query and results](docs/images/bigquery-monthly-query-results.png)
+
+*The completed query groups all 197 source records by month, with the results shown directly in the BigQuery console.*
 
 ### Incident Duration
 
