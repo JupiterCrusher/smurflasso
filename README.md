@@ -37,6 +37,10 @@ The scheduled workflow runs the scraper every 12 hours. The scraper parses the u
 - Axios and Cheerio
 - GitHub Actions
 
+## BigQuery analysis
+
+A companion [Google BigQuery analysis](BIGQUERY.md) explores the 197-record incident dataset with reusable views, monthly aggregations, incident-duration calculations, and keyword-based category joins written in GoogleSQL.
+
 ## Run locally
 
 Requirements: Node.js 20 or newer and npm.
@@ -65,6 +69,7 @@ npm run build
 
 ```text
 .github/workflows/scrape.yml   Scheduled data refresh
+BIGQUERY.md                    BigQuery workflow and example GoogleSQL queries
 smurflasso/app/                Dashboard UI and data transformations
 smurflasso/public/             Static incident dataset and public assets
 smurflasso/scrape.js           Public crime-log scraper
