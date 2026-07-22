@@ -1,5 +1,59 @@
 [
   {
+    "reported": "7/21/2026",
+    "start": "6/29/2026 8:00",
+    "end": "7/13/2026 15:46",
+    "location": "University Plaza",
+    "case_number": "610272",
+    "nature": "Vandalism by Graffiti",
+    "disposition": "Open"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/17/2026 18:27",
+    "end": "7/17/2026 18:27",
+    "location": "801 Main",
+    "case_number": "610506",
+    "nature": "Battery, Indecent Exposure",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/16/2026 19:18",
+    "end": "7/16/2026 19:18",
+    "location": "Front/9",
+    "case_number": "610456",
+    "nature": "DUI- 2nd offense within 10 yrs Misd. Arrest Warrant",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/14/2026 21:51",
+    "end": "7/14/2026 23:43",
+    "location": "City Center Plaza",
+    "case_number": "610343",
+    "nature": "No Contact Order Violations",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/19/2026 0:20",
+    "end": "7/19/2026 0:25",
+    "location": "Main/8",
+    "case_number": "610561",
+    "nature": "Battery",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/17/2026 11:53",
+    "end": "7/17/2026 11:58",
+    "location": "Student Union",
+    "case_number": "610483",
+    "nature": "Narcotics Violation",
+    "disposition": "Closed"
+  },
+  {
     "reported": "7/13/2026",
     "start": "7/11/2026 2:25",
     "end": "7/11/2026 2:30",
