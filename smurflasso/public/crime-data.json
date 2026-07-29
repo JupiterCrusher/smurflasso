@@ -1,5 +1,32 @@
 [
   {
+    "reported": "7/28/2026",
+    "start": "7/21/2026 18:31",
+    "end": "7/21/2026 18:31",
+    "location": "Capitol/Royal",
+    "case_number": "610703",
+    "nature": "Glass Container in Park/Consumption or Possession of Open Container in Public",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "7/25/2026",
+    "start": "7/23/2026 12:00",
+    "end": "7/25/2026 12:00",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Unknown",
+    "disposition": "Open"
+  },
+  {
+    "reported": "7/25/2026",
+    "start": "7/23/2026 12:00",
+    "end": "7/25/2026 12:00",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "7/21/2026",
     "start": "6/29/2026 8:00",
     "end": "7/13/2026 15:46",
