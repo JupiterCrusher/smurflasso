@@ -1,5 +1,23 @@
 [
   {
+    "reported": "7/30/2026",
+    "start": "7/29/2026 20:00",
+    "end": "7/30/2026 14:00",
+    "location": "Village Apts",
+    "case_number": "611147",
+    "nature": "Theft (scooter)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "7/30/2026",
+    "start": "7/30/2026 8:30",
+    "end": "7/30/2026 17:40",
+    "location": "Lincoln Garage",
+    "case_number": "611167",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "7/29/2026",
     "start": "7/29/2026 20:15",
     "end": "7/29/2026 10:30",
