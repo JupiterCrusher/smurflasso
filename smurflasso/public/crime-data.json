@@ -1,5 +1,41 @@
 [
   {
+    "reported": "8/3/2026",
+    "start": "8/1/2026 21:02",
+    "end": "8/1/2026 22:10",
+    "location": "Front/9",
+    "case_number": "611286",
+    "nature": "Possession of Marijuana/DUI",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "8/3/2026",
+    "start": "7/30/2026 19:07",
+    "end": "7/30/2026 19:25",
+    "location": "405 Capitol",
+    "case_number": "611172",
+    "nature": "Trespass/Consumption or Possession of Open Container",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/3/2026",
+    "start": "7/29/2026 6:30",
+    "end": "7/29/2026 12:00",
+    "location": "445 Capitol",
+    "case_number": "611086",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/3/2026",
+    "start": "8/3/2026 14:15",
+    "end": "8/3/2026 15:33",
+    "location": "Stadium",
+    "case_number": "611358",
+    "nature": "Trespassing",
+    "disposition": "Closed by Citation"
+  },
+  {
     "reported": "7/30/2026",
     "start": "7/29/2026 20:00",
     "end": "7/30/2026 14:00",
@@ -41,7 +77,7 @@
     "end": "7/25/2026 12:00",
     "location": "Osprey",
     "case_number": "N/A",
-    "nature": "Unknown",
+    "nature": "Theft",
     "disposition": "Open"
   },
   {
