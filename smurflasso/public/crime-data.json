@@ -1,5 +1,23 @@
 [
   {
+    "reported": "8/10/2026",
+    "start": "8/2/2026 15:18",
+    "end": "8/2/2026 15:18",
+    "location": "Royal/Lusk",
+    "case_number": "611314",
+    "nature": "Hit and Run; Fail to purchase Drivers License/Fail to Maintain Liability Insurance/Fail to Register/Unsafe Opening or Closing Vehicle Doors",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "8/10/2026",
+    "start": "8/7/2026 23:50",
+    "end": "8/7/2026 23:50",
+    "location": "Capitol/Main",
+    "case_number": "611631",
+    "nature": "Possession of Marijuana/Open Container",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "8/3/2026",
     "start": "8/1/2026 21:02",
     "end": "8/1/2026 22:10",
