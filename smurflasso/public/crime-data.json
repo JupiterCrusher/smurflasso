@@ -127,15 +127,6 @@
   },
   {
     "reported": "7/21/2026",
-    "start": "7/17/2026 18:27",
-    "end": "7/17/2026 18:27",
-    "location": "801 Main",
-    "case_number": "610506",
-    "nature": "Battery, Indecent Exposure",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "7/21/2026",
     "start": "7/16/2026 19:18",
     "end": "7/16/2026 19:18",
     "location": "Front/9",
@@ -169,6 +160,15 @@
     "case_number": "610483",
     "nature": "Narcotics Violation",
     "disposition": "Closed"
+  },
+  {
+    "reported": "7/21/2026",
+    "start": "7/17/2026 18:27",
+    "end": "7/17/2026 18:27",
+    "location": "801 Main",
+    "case_number": "610506",
+    "nature": "Battery, Indecent Exposure",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "7/13/2026",
