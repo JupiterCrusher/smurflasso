@@ -1,5 +1,41 @@
 [
   {
+    "reported": "8/17/2026",
+    "start": "8/15/2026 9:04",
+    "end": "8/15/2026 9:04",
+    "location": "Stadium",
+    "case_number": "612015",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/17/2026",
+    "start": "8/15/2026 22:31",
+    "end": "8/15/2026 22:31",
+    "location": "Boise/Capitol",
+    "case_number": "612040",
+    "nature": "DUI/Possession of Marijuana",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/17/2026",
+    "start": "8/12/2026 9:00",
+    "end": "8/12/2026 17:00",
+    "location": "312 9th",
+    "case_number": "611928",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/17/2026",
+    "start": "8/14/2026 21:27",
+    "end": "8/14/2026 22:03",
+    "location": "Main/8",
+    "case_number": "611998",
+    "nature": "Warrant- Battery",
+    "disposition": "Closed by Arrest"
+  },
+  {
     "reported": "8/10/2026",
     "start": "8/2/2026 15:18",
     "end": "8/2/2026 15:18",
