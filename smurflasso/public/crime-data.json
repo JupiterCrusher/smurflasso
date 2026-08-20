@@ -1,11 +1,20 @@
 [
   {
-    "reported": "8/17/2026",
-    "start": "8/15/2026 9:04",
-    "end": "8/15/2026 9:04",
-    "location": "Stadium",
-    "case_number": "612015",
-    "nature": "Battery",
+    "reported": "8/18/2026",
+    "start": "8/17/2026 15:52",
+    "end": "8/17/2026 15:53",
+    "location": "Student Union",
+    "case_number": "612127",
+    "nature": "Video Voyeurism",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/18/2026",
+    "start": "8/17/2026 6:00",
+    "end": "8/17/2026 20:00",
+    "location": "North end of stadium on East side near Bleymaier",
+    "case_number": "612197",
+    "nature": "Theft",
     "disposition": "Open"
   },
   {
@@ -34,6 +43,15 @@
     "case_number": "611998",
     "nature": "Warrant- Battery",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/17/2026",
+    "start": "8/15/2026 9:04",
+    "end": "8/15/2026 9:04",
+    "location": "Stadium",
+    "case_number": "612015",
+    "nature": "Battery, Battery",
+    "disposition": "Open"
   },
   {
     "reported": "8/10/2026",
