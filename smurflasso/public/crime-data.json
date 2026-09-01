@@ -1,5 +1,50 @@
 [
   {
+    "reported": "8/31/2026",
+    "start": "8/31/2026 2:01",
+    "end": "8/31/2026 3:43",
+    "location": "Capitol/University",
+    "case_number": "612875",
+    "nature": "Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "8/31/2026",
+    "start": "8/27/2026 10:40",
+    "end": "8/27/2026 10:50",
+    "location": "Belmont/Euclid",
+    "case_number": "612691",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/30/2026",
+    "start": "8/29/2026 20:00",
+    "end": "8/30/2026 9:45",
+    "location": "Taylor Hall",
+    "case_number": "612854",
+    "nature": "Theft (scooter)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/28/2026",
+    "start": "8/28/2026 22:00",
+    "end": "8/28/2026 23:30",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/27/2026",
+    "start": "8/27/2026 20:50",
+    "end": "8/27/2026 21:00",
+    "location": "Garnet Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Open"
+  },
+  {
     "reported": "8/26/2026",
     "start": "8/26/2026 7:00",
     "end": "8/26/2026 16:30",
