@@ -1,5 +1,14 @@
 [
   {
+    "reported": "9/1/2026",
+    "start": "9/1/2026 17:43",
+    "end": "9/1/2026 17:48",
+    "location": "2000 W University drive",
+    "case_number": "612978",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "8/31/2026",
     "start": "8/31/2026 2:01",
     "end": "8/31/2026 3:43",
@@ -15,6 +24,24 @@
     "location": "Belmont/Euclid",
     "case_number": "612691",
     "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "8/31/2026",
+    "start": "8/31/2026 22:32",
+    "end": "9/1/2026 0:04",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Trespass",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "8/31/2026",
+    "start": "8/31/2026 22:10",
+    "end": "8/31/2026 23:53",
+    "location": "Greenbelt near Towers Dorm",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
     "disposition": "Open"
   },
   {
