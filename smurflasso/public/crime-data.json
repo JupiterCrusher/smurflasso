@@ -1,5 +1,50 @@
 [
   {
+    "reported": "9/7/2026",
+    "start": "9/7/2026 16:35",
+    "end": "9/7/2026 16:35",
+    "location": "Chaffee",
+    "case_number": "N/A",
+    "nature": "Theft/Fraud",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "9/7/2026",
+    "start": "9/5/2026 10:50",
+    "end": "9/5/2026 11:02",
+    "location": "777 Main",
+    "case_number": "613187",
+    "nature": "Possession of Paraphernalia",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/6/2026",
+    "start": "9/6/2026 22:20",
+    "end": "9/6/2026 23:32",
+    "location": "Taylor Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x 7",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/5/2026",
+    "start": "9/5/2026 0:31",
+    "end": "9/5/2026 0:34",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Minor in Consumption",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/4/2026",
+    "start": "9/4/2026 9:45",
+    "end": "9/4/2026 13:30",
+    "location": "Brady Garage",
+    "case_number": "613162",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "9/3/2026",
     "start": "8/27/2026 17:00",
     "end": "9/3/2026 8:00",
