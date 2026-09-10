@@ -1,5 +1,14 @@
 [
   {
+    "reported": "9/8/2026",
+    "start": "9/8/2026 20:00",
+    "end": "9/8/2026 20:40",
+    "location": "Syringa Hall",
+    "case_number": "613325",
+    "nature": "Minor in Possession/Alcohol Violation",
+    "disposition": "Closed by Citation"
+  },
+  {
     "reported": "9/7/2026",
     "start": "9/7/2026 16:35",
     "end": "9/7/2026 16:35",
@@ -43,6 +52,15 @@
     "case_number": "613162",
     "nature": "Hit and Run",
     "disposition": "Open"
+  },
+  {
+    "reported": "9/4/2026",
+    "start": "9/4/2026 11:30",
+    "end": "9/4/2026 14:35",
+    "location": "Hemingway",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Inactive"
   },
   {
     "reported": "9/3/2026",
