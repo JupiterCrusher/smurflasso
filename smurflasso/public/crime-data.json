@@ -1,5 +1,77 @@
 [
   {
+    "reported": "9/14/2026",
+    "start": "8/15/2026 21:00",
+    "end": "8/16/2026 5:00",
+    "location": "Towers",
+    "case_number": "612125",
+    "nature": "Sexual Assault",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/14/2026",
+    "start": "9/2/2026 16:00",
+    "end": "9/2/2026 19:00",
+    "location": "Chaffee",
+    "case_number": "613264",
+    "nature": "Criminal Possession of FTC/Grand Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/14/2026",
+    "start": "9/7/2026 10:00",
+    "end": "9/7/2026 10:38",
+    "location": "Capitol/Grove",
+    "case_number": "613243",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/14/2026",
+    "start": "9/13/2026 0:50",
+    "end": "9/13/2026 0:55",
+    "location": "Main/8",
+    "case_number": "613586",
+    "nature": "Warrant- FTA",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/14/2026",
+    "start": "9/12/2026 1:08",
+    "end": "9/12/2026 1:08",
+    "location": "Capitol/Main",
+    "case_number": "613526",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/11/2026",
+    "start": "9/11/2026 22:30",
+    "end": "9/11/2026 23:00",
+    "location": "Topaz Hall",
+    "case_number": "613515",
+    "nature": "Narcotics Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/11/2026",
+    "start": "9/11/2026 23:30",
+    "end": "9/11/2026 23:53",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/11/2026",
+    "start": "9/11/2026 11:00",
+    "end": "9/11/2026 16:00",
+    "location": "Norco Bldg",
+    "case_number": "613494",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "9/9/2026",
     "start": "9/8/2026 7:00",
     "end": "9/9/2026 17:00",
