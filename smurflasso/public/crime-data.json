@@ -1,5 +1,23 @@
 [
   {
+    "reported": "9/16/2026",
+    "start": "9/15/2026 22:30",
+    "end": "9/15/2026 22:40",
+    "location": "East of Spruce house housing on access road near EP PHone 428",
+    "case_number": "613737",
+    "nature": "Battery (misdemeanor)",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/16/2026",
+    "start": "9/15/2026 15:00",
+    "end": "9/15/2026 22:00",
+    "location": "Administration",
+    "case_number": "613771",
+    "nature": "Stalking/Harassment by email",
+    "disposition": "Open"
+  },
+  {
     "reported": "9/14/2026",
     "start": "8/15/2026 21:00",
     "end": "8/16/2026 5:00",
@@ -43,6 +61,15 @@
     "case_number": "613526",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/14/2026",
+    "start": "9/13/2026 3:10",
+    "end": "9/13/2026 3:10",
+    "location": "Theater Ln.",
+    "case_number": "613742",
+    "nature": "Hit and Run",
+    "disposition": "Open"
   },
   {
     "reported": "9/11/2026",
