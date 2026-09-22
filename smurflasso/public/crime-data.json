@@ -1,5 +1,77 @@
 [
   {
+    "reported": "9/21/2026",
+    "start": "9/19/2026 23:13",
+    "end": "9/19/2026 23:13",
+    "location": "1400 Bronco",
+    "case_number": "613957",
+    "nature": "Injury to Child",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/21/2026",
+    "start": "9/12/2026 21:00",
+    "end": "9/13/2026 10:00",
+    "location": "Verna/Juanita",
+    "case_number": "613604",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/21/2026",
+    "start": "9/19/2026 23:12",
+    "end": "9/19/2026 23:12",
+    "location": "Front/Capitol",
+    "case_number": "613961",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/19/2026",
+    "start": "9/19/2026 20:40",
+    "end": "9/19/2026 20:40",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/19/2026",
+    "start": "9/19/2026 20:18",
+    "end": "9/19/2026 20:18",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/19/2026",
+    "start": "9/19/2026 20:30",
+    "end": "9/19/2026 20:30",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/19/2026",
+    "start": "9/19/2026 21:15",
+    "end": "9/19/2026 21:15",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/19/2026",
+    "start": "9/19/2026 22:14",
+    "end": "9/19/2026 22:14",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "9/16/2026",
     "start": "9/15/2026 22:30",
     "end": "9/15/2026 22:40",
@@ -190,26 +262,17 @@
   },
   {
     "reported": "9/8/2026",
-    "start": "9/6/2026 16:13",
-    "end": "9/6/2026 16:13",
-    "location": "Towers Hall",
+    "start": "8/30/2026 19:51",
+    "end": "8/30/2026 19:51",
+    "location": "Sawtooth Hall",
     "case_number": "N/A",
-    "nature": "Alcohol Violation",
-    "disposition": "Closed by Referral"
+    "nature": "Narcotics Violation – Marijuana Use",
+    "disposition": "CSA Report Only"
   },
   {
     "reported": "9/8/2026",
-    "start": "9/6/2026 15:38",
-    "end": "9/6/2026 15:38",
-    "location": "Chaffee Hall",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "9/8/2026",
-    "start": "9/6/2026 15:20",
-    "end": "9/6/2026 15:20",
+    "start": "9/6/2026 23:20",
+    "end": "9/6/2026 23:20",
     "location": "Payette Suites",
     "case_number": "N/A",
     "nature": "Alcohol Violation x5",
@@ -217,12 +280,21 @@
   },
   {
     "reported": "9/8/2026",
-    "start": "8/30/2026 11:51",
-    "end": "8/30/2026 11:51",
-    "location": "Sawtooth Hall",
+    "start": "9/6/2026 23:38",
+    "end": "9/6/2026 23:38",
+    "location": "Chaffee Hall",
     "case_number": "N/A",
-    "nature": "Narcotics Violation – Marijuana Use",
-    "disposition": "CSA Report Only"
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/8/2026",
+    "start": "9/6/2026 0:13",
+    "end": "9/6/2026 0:13",
+    "location": "Towers Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "9/7/2026",
