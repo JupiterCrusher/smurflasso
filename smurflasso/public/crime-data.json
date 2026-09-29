@@ -1,5 +1,113 @@
 [
   {
+    "reported": "9/28/2026",
+    "start": "9/25/2026 11:30",
+    "end": "9/25/2026 13:30",
+    "location": "1404 Bronco",
+    "case_number": "614277",
+    "nature": "Injury to Child",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/27/2026 1:00",
+    "end": "9/27/2026 1:00",
+    "location": "0.6 SE Greenbelt",
+    "case_number": "614363",
+    "nature": "Possession of Marijuana, Possession of Marijuana",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/26/2026 21:20",
+    "end": "9/26/2026 21:20",
+    "location": "Lincoln/Beacon",
+    "case_number": "614355",
+    "nature": "Probation Violation/Provided False Information to LE/Open Container of Alcohol/Possession of Marijuana/Possession of Paraphernalia/Possession of Methamphetamine/Driving w/o Privileges",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/20/2026 20:14",
+    "end": "9/22/2026 18:46",
+    "location": "Lincoln Garage",
+    "case_number": "614159",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/25/2026 20:00",
+    "end": "9/25/2026 20:15",
+    "location": "Myrtle/Capitol",
+    "case_number": "614337",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/24/2026 21:30",
+    "end": "9/25/2026 2:30",
+    "location": "9/Front",
+    "case_number": "614252",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/23/2026 18:08",
+    "end": "9/23/2026 18:08",
+    "location": "777 Main",
+    "case_number": "614173",
+    "nature": "Battery",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/27/2026 0:27",
+    "end": "9/27/2026 0:27",
+    "location": "Capitol/Main",
+    "case_number": "614361",
+    "nature": "Resist and Obstruct LE/Pedestrian Crossing- Jaywalking",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
+    "reported": "9/28/2026",
+    "start": "9/24/2026 14:40",
+    "end": "9/24/2026 14:48",
+    "location": "Brady Garage",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "9/27/2026",
+    "start": "9/26/2026 1:23",
+    "end": "9/27/2026 1:27",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/27/2026",
+    "start": "9/27/2026 2:34",
+    "end": "9/28/2026 2:37",
+    "location": "Chaffee Hall Bike Rack",
+    "case_number": "614400",
+    "nature": "Bike Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "9/26/2026",
+    "start": "9/26/2026 1:50",
+    "end": "9/27/2026 2:37",
+    "location": "Syringa hall",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "9/23/2026",
     "start": "9/23/2026 22:57",
     "end": "9/23/2026 23:19",
