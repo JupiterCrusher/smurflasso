@@ -1,5 +1,176 @@
 [
   {
+    "reported": "10/5/2026",
+    "start": "10/3/2026 19:30",
+    "end": "10/3/2026 19:30",
+    "location": "Stadium",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/27/2026 1:00",
+    "end": "9/27/2026 10:00",
+    "location": "Towers",
+    "case_number": "614751",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/2/2026 0:00",
+    "end": "10/2/2026 0:00",
+    "location": "Administration",
+    "case_number": "614688",
+    "nature": "Threats",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/1/2026 22:47",
+    "end": "10/1/2026 22:47",
+    "location": "Capitol/University",
+    "case_number": "614671",
+    "nature": "DUI/Possession of Marijuana",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/1/2026 23:00",
+    "end": "10/1/2026 23:00",
+    "location": "Beacon/Manitou",
+    "case_number": "614668",
+    "nature": "Alcohol Violation- Under 21/R&O LE/Public Urination/Tobacco- E Cigarette",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/2/2026 22:12",
+    "end": "10/2/2026 22:12",
+    "location": "800 Blk Main",
+    "case_number": "614716",
+    "nature": "Reckless driving",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/3/2026 1:25",
+    "end": "10/3/2026 1:25",
+    "location": "Myrtle/Capitol",
+    "case_number": "614725",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/29/2026 20:15",
+    "end": "9/29/2026 20:16",
+    "location": "Main/8",
+    "case_number": "614522",
+    "nature": "Malicious Injury to Property by Vandalism",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/19/2026 16:00",
+    "end": "9/19/2026 16:00",
+    "location": "8/Main",
+    "case_number": "614510",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/26/2026 0:20",
+    "end": "9/26/2026 0:20",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/26/2026 1:28",
+    "end": "9/26/2026 1:28",
+    "location": "Morrison Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/27/2026 1:56",
+    "end": "9/27/2026 1:56",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/27/2026 0:38",
+    "end": "9/27/2026 0:38",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/3/2026 0:15",
+    "end": "10/3/2026 0:15",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x8",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "10/3/2026 22:40",
+    "end": "10/3/2026 23:40",
+    "location": "2001 Boise",
+    "case_number": "614796",
+    "nature": "Battery",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/3/2026",
+    "start": "10/3/2026 19:45",
+    "end": "10/6/2026 19:45",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Simple Battery",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/3/2026",
+    "start": "10/3/2026 18:10",
+    "end": "10/3/2026 18:43",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Minor in Consumption x2",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/2/2026",
+    "start": "10/1/2026 6:30",
+    "end": "10/1/2026 16:35",
+    "location": "Bleymaier",
+    "case_number": "614692",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/2/2026",
+    "start": "10/2/2026 12:30",
+    "end": "10/2/2026 13:30",
+    "location": "Varsity Center",
+    "case_number": "614695",
+    "nature": "Theft",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "9/30/2026",
     "start": "9/23/2026 14:00",
     "end": "7/11/1902 22:00",
@@ -100,15 +271,6 @@
   },
   {
     "reported": "9/28/2026",
-    "start": "9/28/2026 3:00",
-    "end": "9/28/2026 10:00",
-    "location": "Towers",
-    "case_number": "N/A",
-    "nature": "Theft",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "9/28/2026",
     "start": "9/19/2026 3:48",
     "end": "9/19/2026 5:20",
     "location": "Syringa Hall",
@@ -142,6 +304,15 @@
     "case_number": "N/A",
     "nature": "Alcohol violation",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "9/26/2026",
+    "start": "9/25/2026 22:19",
+    "end": "9/25/2026 22:19",
+    "location": "Lincoln/University",
+    "case_number": "614312",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
   },
   {
     "reported": "9/23/2026",
