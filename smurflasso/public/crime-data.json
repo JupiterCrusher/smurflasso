@@ -1,5 +1,23 @@
 [
   {
+    "reported": "10/6/2026",
+    "start": "10/6/2026 11:10",
+    "end": "10/6/2026 11:10",
+    "location": "Belmont/Manitou",
+    "case_number": "N/A",
+    "nature": "Vandalism by Graffiti",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/6/2026",
+    "start": "10/1/2026 19:56",
+    "end": "10/1/2026 19:57",
+    "location": "Syringa",
+    "case_number": "614917",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "10/5/2026",
     "start": "10/3/2026 19:30",
     "end": "10/3/2026 19:30",
@@ -133,6 +151,15 @@
     "case_number": "614796",
     "nature": "Battery",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "9/28/2026 15:30",
+    "end": "9/28/2026 16:00",
+    "location": "Beacon/Oakland",
+    "case_number": "614801",
+    "nature": "Hit and Run",
+    "disposition": "Open"
   },
   {
     "reported": "10/3/2026",
