@@ -1,5 +1,59 @@
 [
   {
+    "reported": "10/12/2026",
+    "start": "10/9/2026 0:14",
+    "end": "10/9/2026 0:14",
+    "location": "Lincoln/Beacon",
+    "case_number": "615076",
+    "nature": "DUI",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/12/2026",
+    "start": "10/5/2026 12:00",
+    "end": "10/5/2026 22:15",
+    "location": "Syringa",
+    "case_number": "614964",
+    "nature": "Malicious Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/12/2026",
+    "start": "10/8/2026 15:00",
+    "end": "10/9/2026 10:00",
+    "location": "495 Capitol",
+    "case_number": "615107",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/12/2026",
+    "start": "10/6/2026 12:00",
+    "end": "10/6/2026 23:00",
+    "location": "Syringa",
+    "case_number": "615014",
+    "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/11/2026",
+    "start": "10/11/2026 23:37",
+    "end": "10/12/2026 0:34",
+    "location": "Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol violation x7",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/10/2026",
+    "start": "10/9/2026 23:30",
+    "end": "10/10/2026 0:22",
+    "location": "Greenbelt near Syringa Hall",
+    "case_number": "615142",
+    "nature": "Forcible Rape",
+    "disposition": "Open"
+  },
+  {
     "reported": "10/9/2026",
     "start": "10/3/2026 12:00",
     "end": "10/4/2026 0:00",
@@ -7,6 +61,24 @@
     "case_number": "614982",
     "nature": "Malicious Harassment",
     "disposition": "Open"
+  },
+  {
+    "reported": "10/9/2026",
+    "start": "10/9/2026 0:00",
+    "end": "10/9/2026 12:56",
+    "location": "Syringa Hall bike rack",
+    "case_number": "N/A",
+    "nature": "Theft E-Scooter",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "10/8/2026",
+    "start": "10/8/2026 15:08",
+    "end": "10/8/2026 15:08",
+    "location": "Student Union Building",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Inactive"
   },
   {
     "reported": "10/6/2026",
@@ -2944,21 +3016,21 @@
   },
   {
     "reported": "1/12/2026",
-    "start": "1/12/2026 1:58",
-    "end": "1/12/2026 2:25",
-    "location": "827 MAIN",
-    "case_number": "600569",
-    "nature": "Aggravated Assault, Battery",
-    "disposition": "Open"
-  },
-  {
-    "reported": "1/12/2026",
     "start": "1/12/2026 18:59",
     "end": "1/12/2026 22:06",
     "location": "Driscoll Hall",
     "case_number": "600607",
     "nature": "Narcotics Violation",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "1/12/2026",
+    "start": "1/12/2026 1:58",
+    "end": "1/12/2026 2:25",
+    "location": "827 MAIN",
+    "case_number": "600569",
+    "nature": "Aggravated Assault, Battery",
+    "disposition": "Inactive"
   },
   {
     "reported": "1/6/2026",
