@@ -10,15 +10,6 @@
   },
   {
     "reported": "10/12/2026",
-    "start": "10/5/2026 12:00",
-    "end": "10/5/2026 22:15",
-    "location": "Syringa",
-    "case_number": "614964",
-    "nature": "Malicious Harassment",
-    "disposition": "Open"
-  },
-  {
-    "reported": "10/12/2026",
     "start": "10/8/2026 15:00",
     "end": "10/9/2026 10:00",
     "location": "495 Capitol",
@@ -33,6 +24,15 @@
     "location": "Syringa",
     "case_number": "615014",
     "nature": "Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/12/2026",
+    "start": "10/5/2026 12:00",
+    "end": "10/5/2026 22:15",
+    "location": "Syringa",
+    "case_number": "614964",
+    "nature": "Malicious Harassment",
     "disposition": "Open"
   },
   {
@@ -241,6 +241,15 @@
     "case_number": "614801",
     "nature": "Hit and Run",
     "disposition": "Open"
+  },
+  {
+    "reported": "10/5/2026",
+    "start": "8/24/2026 0:00",
+    "end": "8/30/2026 0:00",
+    "location": "Buster’s Kitchen",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "10/3/2026",
