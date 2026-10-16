@@ -1,5 +1,41 @@
 [
   {
+    "reported": "10/14/2026",
+    "start": "10/12/2026 21:54",
+    "end": "10/14/2026 17:30",
+    "location": "Lincoln Parking Garage",
+    "case_number": "615396",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/14/2026",
+    "start": "10/14/2026 16:00",
+    "end": "10/14/2026 17:30",
+    "location": "Barnes Towers",
+    "case_number": "615399",
+    "nature": "Extortion",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/13/2026",
+    "start": "10/13/2026 0:40",
+    "end": "10/13/2026 1:09",
+    "location": "Garnet Hall",
+    "case_number": "61309",
+    "nature": "Trespass",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/13/2026",
+    "start": "8/10/2026 12:00",
+    "end": "10/12/2026 12:00",
+    "location": "Student Union Building",
+    "case_number": "N/A",
+    "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "10/12/2026",
     "start": "10/9/2026 0:14",
     "end": "10/9/2026 0:14",
@@ -48,10 +84,10 @@
     "reported": "10/10/2026",
     "start": "10/9/2026 23:30",
     "end": "10/10/2026 0:22",
-    "location": "Greenbelt near Syringa Hall",
+    "location": "Syringa Hall",
     "case_number": "615142",
     "nature": "Forcible Rape",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "10/9/2026",
@@ -412,6 +448,15 @@
     "case_number": "614400",
     "nature": "Bike Theft",
     "disposition": "Open"
+  },
+  {
+    "reported": "9/27/2026",
+    "start": "9/27/2026 18:00",
+    "end": "9/27/2026 2:32",
+    "location": "Capitol/Main",
+    "case_number": "6143367",
+    "nature": "Disturbing the Peace",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "9/26/2026",
@@ -1842,7 +1887,7 @@
     "location": "Osprey",
     "case_number": "606110",
     "nature": "Sexual Battery (Forcible Fondling)",
-    "disposition": "Open,Closed by Arrest"
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "4/23/2026",
@@ -2643,7 +2688,7 @@
     "location": "Caven Williams",
     "case_number": "602166",
     "nature": "Violation of Protection Order",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "2/10/2026",
@@ -3052,15 +3097,6 @@
   },
   {
     "reported": "1/5/2026",
-    "start": "1/4/2026 21:08",
-    "end": "1/4/2026 21:08",
-    "location": "Capitol/University",
-    "case_number": "600195",
-    "nature": "Driving without Privileges/ Possession of Paraphernalia",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "1/5/2026",
     "start": "1/4/2026 5:38",
     "end": "1/4/2026 5:38",
     "location": "Idaho/8",
@@ -3094,6 +3130,15 @@
     "case_number": "600008",
     "nature": "Warrant- Fail to Appear",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "1/5/2026",
+    "start": "1/4/2026 21:08",
+    "end": "1/4/2026 21:08",
+    "location": "Capitol/University",
+    "case_number": "600195",
+    "nature": "Driving without Privileges/ Possession of Paraphernalia",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "1/4/2026",
