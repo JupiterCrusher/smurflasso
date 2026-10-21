@@ -1,5 +1,149 @@
 [
   {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 0:12",
+    "end": "10/17/2026 0:37",
+    "location": "Clearwater",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 23:41",
+    "end": "10/17/2026 0:21",
+    "location": "Juanita/University",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 21:00",
+    "end": "10/18/2026 12:00",
+    "location": "Taylor Hall",
+    "case_number": "615589",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/16/2026 0:35",
+    "end": "10/16/2026 0:35",
+    "location": "Oakland & Beacon",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/10/2026 22:28",
+    "end": "10/10/2026 22:28",
+    "location": "Jade Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/11/2026 19:20",
+    "end": "10/11/2026 19:20",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Recovered Stolen Property",
+    "disposition": "CSA Report Only"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/12/2026 12:50",
+    "end": "10/12/2026 12:50",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/13/2026 15:30",
+    "end": "10/13/2026 15:30",
+    "location": "Towers Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations x4",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/13/2026 19:10",
+    "end": "10/13/2026 19:10",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/13/2026 23:34",
+    "end": "10/13/2026 23:34",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations x7",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/15/2026 16:05",
+    "end": "10/15/2026 16:05",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Recovered Stolen Property",
+    "disposition": "CSA Report Only"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 1:08",
+    "end": "10/17/2026 1:08",
+    "location": "Jasper",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x4",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/16/2026 23:55",
+    "end": "10/17/2026 1:02",
+    "location": "Liberal Arts parking lot",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations x2",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/14/2026 17:55",
+    "end": "10/14/2026 17:55",
+    "location": "Selway Suites",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/18/2026 8:30",
+    "end": "10/18/2026 8:30",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation X3",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/17/2026",
+    "start": "10/17/2026 21:10",
+    "end": "10/17/2026 21:10",
+    "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "10/16/2026",
     "start": "10/15/2026 23:44",
     "end": "10/15/2026 23:44",
@@ -162,6 +306,15 @@
     "disposition": "Open"
   },
   {
+    "reported": "10/6/2026",
+    "start": "10/3/2026 15:41",
+    "end": "10/3/2026 15:41",
+    "location": "Beacon & Oakland",
+    "case_number": "N/A",
+    "nature": "Public Urination",
+    "disposition": "Closed by Citation"
+  },
+  {
     "reported": "10/5/2026",
     "start": "10/3/2026 19:30",
     "end": "10/3/2026 19:30",
@@ -316,21 +469,21 @@
   },
   {
     "reported": "10/3/2026",
-    "start": "10/3/2026 19:45",
-    "end": "10/6/2026 19:45",
-    "location": "Albertsons Stadium",
-    "case_number": "N/A",
-    "nature": "Simple Battery",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "10/3/2026",
     "start": "10/3/2026 18:10",
     "end": "10/3/2026 18:43",
     "location": "Albertsons Stadium",
     "case_number": "N/A",
     "nature": "Minor in Consumption x2",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "10/3/2026",
+    "start": "10/3/2026 19:45",
+    "end": "10/6/2026 19:45",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Simple Battery",
+    "disposition": "Inactive"
   },
   {
     "reported": "10/2/2026",
