@@ -1,7 +1,61 @@
 [
   {
+    "reported": "10/26/2026",
+    "start": "10/19/2026 11:45",
+    "end": "10/19/2026 19:20",
+    "location": "ILC",
+    "case_number": "615746",
+    "nature": "Theft",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/24/2026",
+    "start": "10/22/2026 0:00",
+    "end": "10/23/2026 12:07",
+    "location": "Towers Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/23/2026",
+    "start": "10/23/2026 2:30",
+    "end": "10/23/2026 3:36",
+    "location": "Driscoll Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/23/2026",
+    "start": "10/23/2026 21:00",
+    "end": "10/23/2026 22:22",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/23/2026",
+    "start": "10/23/2026 0:00",
+    "end": "10/23/2026 12:30",
+    "location": "Multipurpose Classroom Building",
+    "case_number": "616003",
+    "nature": "Malicious Injury To Propety",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "10/22/2026",
-    "start": "10/22/20266 3:26",
+    "start": "10/21/2026 21:00",
+    "end": "10/22/2026 11:00",
+    "location": "Keiser Hall Bike rack",
+    "case_number": "On Line by Victim",
+    "nature": "THEFT",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/22/2026",
+    "start": "10/22/2026 3:26",
     "end": "10/22/2026 3:26",
     "location": "Towers",
     "case_number": "615818",
@@ -861,7 +915,7 @@
     "location": "Honors Hall",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
-    "disposition": "Closed by Referral"
+    "disposition": "CSA Report Only"
   },
   {
     "reported": "9/19/2026",
