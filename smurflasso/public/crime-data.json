@@ -1,5 +1,23 @@
 [
   {
+    "reported": "10/27/2026",
+    "start": "10/26/2026 18:30",
+    "end": "10/27/2026 9:30",
+    "location": "ILC",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/27/2026",
+    "start": "10/27/2026 14:00",
+    "end": "10/27/2026 14:50",
+    "location": "BSU Varsity Center/Preco Center",
+    "case_number": "N/A",
+    "nature": "Petit Theft",
+    "disposition": "Open"
+  },
+  {
     "reported": "10/26/2026",
     "start": "10/19/2026 11:45",
     "end": "10/19/2026 19:20",
@@ -7,6 +25,24 @@
     "case_number": "615746",
     "nature": "Theft",
     "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/26/2026",
+    "start": "10/26/2026 13:49",
+    "end": "10/26/2026 13:49",
+    "location": "Keiser",
+    "case_number": "616069",
+    "nature": "Telephone Harassment",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/26/2026",
+    "start": "10/25/2026 18:30",
+    "end": "10/26/2026 18:30",
+    "location": "Lincoln garage 5th floor parking area",
+    "case_number": "UNK",
+    "nature": "",
+    "disposition": "Open"
   },
   {
     "reported": "10/24/2026",
