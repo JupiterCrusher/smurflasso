@@ -1,5 +1,86 @@
 [
   {
+    "reported": "11/2/2026",
+    "start": "10/29/2026 23:45",
+    "end": "10/29/2026 23:45",
+    "location": "Beacon/Euclid",
+    "case_number": "616286",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/2/2026",
+    "start": "11/2/2026 1:23",
+    "end": "11/2/2026 1:30",
+    "location": "University/Juanita",
+    "case_number": "616460",
+    "nature": "Malicious injury to property",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/1/2026",
+    "start": "10/31/2026 20:12",
+    "end": "10/31/2026 20:12",
+    "location": "University/Broadway",
+    "case_number": "616391",
+    "nature": "Domestic Violence",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/1/2026",
+    "start": "10/31/2026 23:38",
+    "end": "11/1/2026 0:00",
+    "location": "Syringa Hall",
+    "case_number": "616459",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 22:30",
+    "end": "10/31/2026 22:40",
+    "location": "Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 22:42",
+    "end": "10/31/2026 22:43",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 22:05",
+    "end": "10/31/2026 22:05",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 21:25",
+    "end": "10/31/2026 21:25",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Battery",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 20:22",
+    "end": "10/31/2026 20:22",
+    "location": "Albertsons Stadium",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x2",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "10/29/2026",
     "start": "8/24/2026 0:00",
     "end": "10/28/2026 23:59",
