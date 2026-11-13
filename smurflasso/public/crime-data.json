@@ -1,5 +1,41 @@
 [
   {
+    "reported": "11/10/2026",
+    "start": "11/10/2026 5:58",
+    "end": "11/10/2026 5:58",
+    "location": "Protest/Boise",
+    "case_number": "616861",
+    "nature": "Resisting and Obstructing Officers/ Battery upon LE",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/10/2026",
+    "start": "11/10/2026 16:21",
+    "end": "11/10/2026 16:21",
+    "location": "University/Capitol",
+    "case_number": "616901",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/10/2026",
+    "start": "11/9/2026 22:05",
+    "end": "11/9/2026 22:05",
+    "location": "Syringa Hall",
+    "case_number": "N/A",
+    "nature": "Hazing",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "11/10/2026",
+    "start": "11/8/2026 17:00",
+    "end": "11/8/2026 19:00",
+    "location": "Village Apts",
+    "case_number": "N/A",
+    "nature": "Malicious Injury to Property",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "11/9/2026",
     "start": "11/9/2026 0:01",
     "end": "11/9/2026 0:54",
@@ -387,6 +423,33 @@
     "disposition": "Closed by Referral"
   },
   {
+    "reported": "11/2/2026",
+    "start": "10/28/2026 2:16",
+    "end": "10/28/2026 2:16",
+    "location": "9th St. Garage",
+    "case_number": "616161",
+    "nature": "Warrant for Probation Violation. Lewd Conduct",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/2/2026",
+    "start": "11/1/2026 9:44",
+    "end": "11/1/2026 17:44",
+    "location": "BSU Public Safety Office",
+    "case_number": "616442",
+    "nature": "Telephone Harassment, Exposure",
+    "disposition": "Open"
+  },
+  {
+    "reported": "11/2/2026",
+    "start": "11/1/2026 1:13",
+    "end": "11/1/2026 1:13",
+    "location": "Boise/Beacon",
+    "case_number": "616410",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/1/2026",
     "start": "10/31/2026 20:12",
     "end": "10/31/2026 20:12",
@@ -622,6 +685,15 @@
   },
   {
     "reported": "10/20/2026",
+    "start": "10/20/2026 11:00",
+    "end": "10/20/2026 18:15",
+    "location": "Interactive learning center bike rack",
+    "case_number": "615730",
+    "nature": "Scooter Theft",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "10/20/2026",
     "start": "10/20/2026 2:45",
     "end": "10/20/2026 4:45",
     "location": "Syringa bike racks",
@@ -636,42 +708,6 @@
     "location": "Selway Suites parking lot NW corner",
     "case_number": "615729",
     "nature": "Hit & Run",
-    "disposition": "Open"
-  },
-  {
-    "reported": "10/20/2026",
-    "start": "10/20/2026 11:00",
-    "end": "10/20/2026 18:15",
-    "location": "Interactive learning center bike rack",
-    "case_number": "615730",
-    "nature": "Scooter Theft",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "10/19/2026",
-    "start": "10/17/2026 0:12",
-    "end": "10/17/2026 0:37",
-    "location": "Clearwater",
-    "case_number": "N/A",
-    "nature": "Alcohol Violations",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "10/19/2026",
-    "start": "10/17/2026 23:41",
-    "end": "10/17/2026 0:21",
-    "location": "Juanita/University",
-    "case_number": "N/A",
-    "nature": "Alcohol Violations",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "10/19/2026",
-    "start": "10/17/2026 21:00",
-    "end": "10/18/2026 12:00",
-    "location": "Taylor Hall",
-    "case_number": "615589",
-    "nature": "Theft",
     "disposition": "Open"
   },
   {
@@ -757,15 +793,6 @@
   },
   {
     "reported": "10/19/2026",
-    "start": "10/16/2026 23:55",
-    "end": "10/17/2026 1:02",
-    "location": "Liberal Arts parking lot",
-    "case_number": "N/A",
-    "nature": "Alcohol Violations x2",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "10/19/2026",
     "start": "10/14/2026 17:55",
     "end": "10/14/2026 17:55",
     "location": "Selway Suites",
@@ -784,11 +811,47 @@
   },
   {
     "reported": "10/19/2026",
+    "start": "10/17/2026 23:41",
+    "end": "10/17/2026 0:21",
+    "location": "Juanita/University",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/16/2026 23:55",
+    "end": "10/17/2026 1:02",
+    "location": "Liberal Arts parking lot",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations x2",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 0:12",
+    "end": "10/17/2026 0:37",
+    "location": "Clearwater",
+    "case_number": "N/A",
+    "nature": "Alcohol Violations",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/19/2026",
+    "start": "10/17/2026 21:00",
+    "end": "10/18/2026 12:00",
+    "location": "Taylor Hall",
+    "case_number": "615589",
+    "nature": "Theft",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/19/2026",
     "start": "10/19/2026 11:30",
     "end": "10/19/2026 19:19",
     "location": "ILC bike rack",
     "case_number": "Unk",
-    "nature": "theft, theft",
+    "nature": "Theft of E-Scooter",
     "disposition": "Closed by Referral"
   },
   {
@@ -796,6 +859,15 @@
     "start": "10/17/2026 21:10",
     "end": "10/17/2026 21:10",
     "location": "Barnes Towers",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x2",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/17/2026",
+    "start": "10/17/2026 23:50",
+    "end": "10/7/2026 23:50",
+    "location": "Juanita/University",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
     "disposition": "Closed by Referral"
