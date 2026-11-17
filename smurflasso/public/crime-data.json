@@ -1,5 +1,104 @@
 [
   {
+    "reported": "11/16/2026",
+    "start": "11/7/2026 13:31",
+    "end": "11/7/2026 13:31",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/16/2026",
+    "start": "11/13/2026 20:23",
+    "end": "11/13/2026 20:23",
+    "location": "Square Garnet",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x6",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "11/16/2026",
+    "start": "11/14/2026 0:00",
+    "end": "11/15/2026 11:00",
+    "location": "Chaffee Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 16:32",
+    "end": "11/14/2026 16:32",
+    "location": "Student Union",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Citation,Closed by Referral"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 14:54",
+    "end": "11/14/2026 14:54",
+    "location": "1208 Lincoln",
+    "case_number": "617080",
+    "nature": "Alcohol Violations/R&O",
+    "disposition": "Closed by Arrest,Closed by Citation"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 22:51",
+    "end": "11/14/2026 23:25",
+    "location": "Michigan/Belmont",
+    "case_number": "617103",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 16:51",
+    "end": "11/14/2026 16:51",
+    "location": "Clearwater Suites",
+    "case_number": "N/A",
+    "nature": "Public Urination",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 22:12",
+    "end": "11/14/2026 22:12",
+    "location": "Honors College/Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "11/14/2026",
+    "start": "11/14/2026 17:40",
+    "end": "11/14/2026 17:35",
+    "location": "Stadium",
+    "case_number": "617086",
+    "nature": "Battery x2",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "11/13/2026",
+    "start": "11/13/2026 13:00",
+    "end": "11/13/2026 13:40",
+    "location": "Student Union",
+    "case_number": "617029",
+    "nature": "Theft",
+    "disposition": "Closed"
+  },
+  {
+    "reported": "11/13/2026",
+    "start": "11/13/2026 21:51",
+    "end": "11/13/2026 22:28",
+    "location": "Honors College/Sawtooth Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Inactive"
+  },
+  {
     "reported": "11/10/2026",
     "start": "11/10/2026 5:58",
     "end": "11/10/2026 5:58",
