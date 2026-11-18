@@ -1,5 +1,32 @@
 [
   {
+    "reported": "11/17/2026",
+    "start": "11/14/2026 0:08",
+    "end": "11/14/2026 0:08",
+    "location": "Capitol/University",
+    "case_number": "617059",
+    "nature": "DUI",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/17/2026",
+    "start": "11/15/2026 2:34",
+    "end": "11/15/2026 2:34",
+    "location": "8/Main",
+    "case_number": "617114",
+    "nature": "Resist and Obstruct Officers/Possession of Controlled Substance",
+    "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "11/17/2026",
+    "start": "11/14/2026 14:00",
+    "end": "11/14/2026 16:30",
+    "location": "Administration",
+    "case_number": "617085",
+    "nature": "Fraud- Computer Crime",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/16/2026",
     "start": "11/7/2026 13:31",
     "end": "11/7/2026 13:31",
@@ -24,6 +51,24 @@
     "location": "Chaffee Hall",
     "case_number": "N/A",
     "nature": "Vandalism",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/16/2026",
+    "start": "11/16/2026 13:10",
+    "end": "11/16/2026 14:10",
+    "location": "Multipurpose",
+    "case_number": "N/A",
+    "nature": "Theft",
+    "disposition": "Inactive"
+  },
+  {
+    "reported": "11/16/2026",
+    "start": "11/16/2026 11:32",
+    "end": "11/16/2026 11:33",
+    "location": "Denver/University",
+    "case_number": "N/A",
+    "nature": "Hit and Run",
     "disposition": "Inactive"
   },
   {
@@ -415,15 +460,6 @@
   },
   {
     "reported": "11/2/2026",
-    "start": "10/23/2026 2:40",
-    "end": "10/23/2026 2:40",
-    "location": "Driscoll Hall",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "11/2/2026",
     "start": "10/23/2026 20:30",
     "end": "10/23/2026 20:30",
     "location": "Chaffee Hall",
@@ -448,15 +484,6 @@
     "case_number": "N/A",
     "nature": "Vandalism",
     "disposition": "Inactive"
-  },
-  {
-    "reported": "11/2/2026",
-    "start": "10/28/2026 23:15",
-    "end": "10/28/2026 23:15",
-    "location": "Brady Garage",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation",
-    "disposition": "Closed by Referral"
   },
   {
     "reported": "11/2/2026",
@@ -549,6 +576,24 @@
     "disposition": "Open"
   },
   {
+    "reported": "11/2/2026",
+    "start": "10/23/2026 2:40",
+    "end": "10/23/2026 2:40",
+    "location": "Driscoll Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "11/2/2026",
+    "start": "10/28/2026 23:15",
+    "end": "10/28/2026 23:15",
+    "location": "Brady Garage",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "11/1/2026",
     "start": "10/31/2026 20:12",
     "end": "10/31/2026 20:12",
@@ -595,20 +640,20 @@
   },
   {
     "reported": "10/31/2026",
-    "start": "10/31/2026 22:30",
-    "end": "10/31/2026 22:40",
-    "location": "Jasper Hall",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation x3",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "10/31/2026",
     "start": "10/31/2026 22:05",
     "end": "10/31/2026 22:05",
     "location": "Albertsons Stadium",
     "case_number": "N/A",
     "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "10/31/2026",
+    "start": "10/31/2026 22:30",
+    "end": "10/31/2026 22:40",
+    "location": "Jasper Hall",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation x3",
     "disposition": "Closed by Referral"
   },
   {
@@ -636,7 +681,7 @@
     "location": "BSU Varsity Center/Preco Center",
     "case_number": "N/A",
     "nature": "Petit Theft",
-    "disposition": "Open"
+    "disposition": "Inactive"
   },
   {
     "reported": "10/27/2026",
@@ -658,6 +703,15 @@
   },
   {
     "reported": "10/26/2026",
+    "start": "10/25/2026 18:30",
+    "end": "10/26/2026 18:30",
+    "location": "Lincoln garage 5th floor parking area",
+    "case_number": "UNK",
+    "nature": "Hit and Run",
+    "disposition": "Open"
+  },
+  {
+    "reported": "10/26/2026",
     "start": "10/26/2026 13:49",
     "end": "10/26/2026 13:49",
     "location": "Keiser",
@@ -669,19 +723,19 @@
     "reported": "10/26/2026",
     "start": "10/24/2026 22:18",
     "end": "10/26/2026 2:31",
-    "location": "Honors & Sawtooth east exterior",
+    "location": "Honors & Sawtooth",
     "case_number": "616034",
-    "nature": "Malicious Injury to Property",
-    "disposition": "Open"
+    "nature": "Vandalism",
+    "disposition": "Inactive"
   },
   {
-    "reported": "10/26/2026",
-    "start": "10/25/2026 18:30",
-    "end": "10/26/2026 18:30",
-    "location": "Lincoln garage 5th floor parking area",
-    "case_number": "UNK",
-    "nature": "Hit and Run",
-    "disposition": "Open"
+    "reported": "10/24/2026",
+    "start": "10/24/2026 1:45",
+    "end": "10/24/2026 1:45",
+    "location": "Towers Hall",
+    "case_number": "N/A",
+    "nature": "Vandalism",
+    "disposition": "Inactive"
   },
   {
     "reported": "10/24/2026",
@@ -694,12 +748,12 @@
   },
   {
     "reported": "10/23/2026",
-    "start": "10/23/2026 2:30",
-    "end": "10/23/2026 3:36",
-    "location": "Driscoll Hall",
-    "case_number": "N/A",
-    "nature": "Alcohol violation",
-    "disposition": "Closed by Referral"
+    "start": "10/23/2026 0:00",
+    "end": "10/23/2026 12:30",
+    "location": "Multipurpose Classroom Building",
+    "case_number": "616003",
+    "nature": "Malicious Injury To Propety",
+    "disposition": "Inactive"
   },
   {
     "reported": "10/23/2026",
@@ -711,13 +765,13 @@
     "disposition": "Closed by Referral"
   },
   {
-    "reported": "10/23/2026",
-    "start": "10/23/2026 0:00",
-    "end": "10/23/2026 12:30",
-    "location": "Multipurpose Classroom Building",
-    "case_number": "616003",
-    "nature": "Malicious Injury To Propety",
-    "disposition": "Inactive"
+    "reported": "10/22/2026",
+    "start": "10/22/2026 3:26",
+    "end": "10/22/2026 3:26",
+    "location": "Towers",
+    "case_number": "615818",
+    "nature": "Trespassing",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "10/22/2026",
@@ -726,16 +780,7 @@
     "location": "Keiser Hall Bike rack",
     "case_number": "On Line by Victim",
     "nature": "THEFT",
-    "disposition": "Open"
-  },
-  {
-    "reported": "10/22/2026",
-    "start": "10/22/2026 3:26",
-    "end": "10/22/2026 3:26",
-    "location": "Towers",
-    "case_number": "615818",
-    "nature": "Trespassing",
-    "disposition": "Closed by Citation"
+    "disposition": "Inactive"
   },
   {
     "reported": "10/21/2026",
