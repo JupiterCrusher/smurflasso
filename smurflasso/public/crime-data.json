@@ -1,5 +1,14 @@
 [
   {
+    "reported": "11/18/2026",
+    "start": "11/13/2026 22:30",
+    "end": "11/14/2026 12:00",
+    "location": "Honors Sawtooth lawn",
+    "case_number": "617299",
+    "nature": "Theft (Scooter)",
+    "disposition": "Open"
+  },
+  {
     "reported": "11/17/2026",
     "start": "11/14/2026 0:08",
     "end": "11/14/2026 0:08",
@@ -2242,15 +2251,6 @@
   },
   {
     "reported": "8/17/2026",
-    "start": "8/14/2026 21:27",
-    "end": "8/14/2026 22:03",
-    "location": "Main/8",
-    "case_number": "611998",
-    "nature": "Warrant- Battery",
-    "disposition": "Closed by Arrest"
-  },
-  {
-    "reported": "8/17/2026",
     "start": "8/15/2026 9:04",
     "end": "8/15/2026 9:04",
     "location": "Stadium",
@@ -2259,13 +2259,13 @@
     "disposition": "Open"
   },
   {
-    "reported": "8/10/2026",
-    "start": "8/2/2026 15:18",
-    "end": "8/2/2026 15:18",
-    "location": "Royal/Lusk",
-    "case_number": "611314",
-    "nature": "Hit and Run; Fail to purchase Drivers License/Fail to Maintain Liability Insurance/Fail to Register/Unsafe Opening or Closing Vehicle Doors",
-    "disposition": "Closed by Citation"
+    "reported": "8/17/2026",
+    "start": "8/14/2026 21:27",
+    "end": "8/14/2026 22:03",
+    "location": "Main/8",
+    "case_number": "611998",
+    "nature": "Warrant- Battery",
+    "disposition": "Closed by Arrest"
   },
   {
     "reported": "8/10/2026",
@@ -2275,6 +2275,15 @@
     "case_number": "611631",
     "nature": "Possession of Marijuana/Open Container",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "8/10/2026",
+    "start": "8/2/2026 15:18",
+    "end": "8/2/2026 15:18",
+    "location": "Royal/Lusk",
+    "case_number": "611314",
+    "nature": "Hit and Run; Fail to purchase Drivers License/Fail to Maintain Liability Insurance/Fail to Register/Unsafe Opening or Closing Vehicle Doors",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "8/3/2026",
@@ -3457,15 +3466,6 @@
   },
   {
     "reported": "3/2/2026",
-    "start": "2/25/2026 8:50",
-    "end": "2/25/2026 8:50",
-    "location": "Stadium",
-    "case_number": "602931",
-    "nature": "Hit and Run",
-    "disposition": "Inactive"
-  },
-  {
-    "reported": "3/2/2026",
     "start": "2/23/2026 17:35",
     "end": "2/23/2026 18:10",
     "location": "827 Main",
@@ -3499,6 +3499,15 @@
     "case_number": "603057",
     "nature": "DUI",
     "disposition": "Closed by Arrest"
+  },
+  {
+    "reported": "3/2/2026",
+    "start": "2/25/2026 8:50",
+    "end": "2/25/2026 8:50",
+    "location": "Stadium",
+    "case_number": "602931",
+    "nature": "Hit and Run",
+    "disposition": "Inactive"
   },
   {
     "reported": "2/25/2026",
@@ -3668,7 +3677,7 @@
     "end": "2/14/2026 9:00",
     "location": "Osprey",
     "case_number": "N/A",
-    "nature": "Vandalism, Vandalism",
+    "nature": "Vandalism",
     "disposition": "Closed by Referral"
   },
   {
@@ -3722,8 +3731,8 @@
     "end": "2/15/2026 0:27",
     "location": "Towers Dorm",
     "case_number": "N/A",
-    "nature": "Minor in Consumption ( Alcohol violation)",
-    "disposition": "Closed by Citation,Closed by Referral"
+    "nature": "Minor in Consumption (Alcohol violation)",
+    "disposition": "Closed by Citation"
   },
   {
     "reported": "2/11/2026",
@@ -3835,24 +3844,6 @@
   },
   {
     "reported": "2/2/2026",
-    "start": "1/25/2026 3:36",
-    "end": "1/25/2026 3:36",
-    "location": "Protest/Boise",
-    "case_number": "601249",
-    "nature": "Possession of Spice tetrahydrocannavinols/Juvenile Beyond Control Violation of Status Offenses/Curfew/Minor to Possess Electronic Cigarettes/Trespass/Unlawful Entry",
-    "disposition": "Closed by Citation"
-  },
-  {
-    "reported": "2/2/2026",
-    "start": "1/30/2026 23:15",
-    "end": "1/30/2026 0:00",
-    "location": "Syringa",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation (X8)",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "2/2/2026",
     "start": "1/29/2026 19:26",
     "end": "1/29/2026 19:26",
     "location": "Morrison Center",
@@ -3906,21 +3897,30 @@
     "disposition": "Closed by Citation"
   },
   {
+    "reported": "2/2/2026",
+    "start": "1/25/2026 3:36",
+    "end": "1/25/2026 3:36",
+    "location": "Protest/Boise",
+    "case_number": "601249",
+    "nature": "Possession of Spice tetrahydrocannavinols/Juvenile Beyond Control Violation of Status Offenses/Curfew/Minor to Possess Electronic Cigarettes/Trespass/Unlawful Entry",
+    "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "2/2/2026",
+    "start": "1/30/2026 23:15",
+    "end": "1/30/2026 0:00",
+    "location": "Syringa",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation (X8)",
+    "disposition": "Closed by Referral"
+  },
+  {
     "reported": "1/30/2026",
     "start": "1/27/2026 12:00",
     "end": "1/27/2026 12:00",
     "location": "Chaffee Hall",
     "case_number": "N/A",
     "nature": "Rape",
-    "disposition": "Closed by Referral"
-  },
-  {
-    "reported": "1/27/2026",
-    "start": "1/26/2026 21:40",
-    "end": "1/26/2026 21:40",
-    "location": "Osprey",
-    "case_number": "N/A",
-    "nature": "Alcohol Violation",
     "disposition": "Closed by Referral"
   },
   {
@@ -3958,6 +3958,15 @@
     "case_number": "601378",
     "nature": "Hit and Run",
     "disposition": "Closed by Citation"
+  },
+  {
+    "reported": "1/27/2026",
+    "start": "1/26/2026 21:40",
+    "end": "1/26/2026 21:40",
+    "location": "Osprey",
+    "case_number": "N/A",
+    "nature": "Alcohol Violation",
+    "disposition": "Closed by Referral"
   },
   {
     "reported": "1/26/2026",
@@ -4011,6 +4020,15 @@
     "location": "Selway Suites",
     "case_number": "N/A",
     "nature": "Stalking",
+    "disposition": "Closed by Referral"
+  },
+  {
+    "reported": "1/22/2026",
+    "start": "1/21/2026 23:00",
+    "end": "1/22/2026 2:23",
+    "location": "1815 W Cesar Chavez Lane",
+    "case_number": "601090",
+    "nature": "Alcohol violation",
     "disposition": "Closed by Referral"
   },
   {
