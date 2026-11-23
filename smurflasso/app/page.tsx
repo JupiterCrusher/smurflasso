@@ -40,47 +40,52 @@ interface CrimeEntry {
 type SortKey = keyof CrimeEntry;
 type DateRange = 'all' | '30' | '90' | '365';
 type IconName =
-  | 'calendar'
-  | 'chart'
+  | 'atlas'
   | 'chevron-down'
   | 'chevron-left'
   | 'chevron-right'
-  | 'clock'
   | 'close'
-  | 'document'
   | 'download'
   | 'external'
   | 'refresh'
   | 'search'
-  | 'shield'
-  | 'tag'
-  | 'warning';
+  | 'sort';
 
 const CATEGORIES = [
   'Alcohol / DUI',
   'Drugs',
-  'Assault / Violence',
-  'Sexual Assault',
-  'Vandalism / Property Damage',
-  'Theft / Burglary',
-  'Hit & Run / Vehicle',
-  'Trespassing / Harassment',
-  'Weapons / Threats',
-  'Other / Miscellaneous',
+  'Assault / violence',
+  'Sexual assault',
+  'Vandalism / property damage',
+  'Theft / burglary',
+  'Hit & run / vehicle',
+  'Trespassing / harassment',
+  'Weapons / threats',
+  'Other / miscellaneous',
 ] as const;
 
+const STATUS_LABELS: Record<string, string> = {
+  'closed by arrest': 'Closed by arrest',
+  'closed by citation': 'Closed by citation',
+  'closed by referral': 'Closed by referral',
+  'csa report only': 'CSA report only',
+};
+
 const CATEGORY_COLORS = [
-  '#f45b16',
-  '#1769e0',
-  '#3c9ee8',
-  '#3197a2',
-  '#6f88a0',
-  '#2d73b6',
-  '#ef9a35',
-  '#6fc1ee',
-  '#aabbd0',
-  '#425a73',
+  '#17483a',
+  '#789256',
+  '#d47643',
+  '#afbf8e',
+  '#4a8077',
+  '#bd944d',
+  '#86865d',
+  '#a36954',
+  '#5e767e',
+  '#939b80',
 ];
+
+const SOURCE_URL = 'https://www.boisestate.edu/publicsafety-security/campus-crime/campus-crime-log/';
+const PUBLISHED_DATA_URL = 'https://raw.githubusercontent.com/JupiterCrusher/smurflasso/main/smurflasso/public/crime-data.json';
 
 const TABLE_COLUMNS: Array<{ key: SortKey; label: string }> = [
   { key: 'reported', label: 'Reported' },
@@ -92,21 +97,76 @@ const TABLE_COLUMNS: Array<{ key: SortKey; label: string }> = [
   { key: 'case_number', label: 'Case #' },
 ];
 
-const MONTH_FORMATTER = new Intl.DateTimeFormat('en-US', { month: 'short' });
-const LAST_UPDATED_FORMATTER = new Intl.DateTimeFormat('en-US', {
+const MONTH_FORMATTER = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' });
+const LATEST_MONTH_FORMATTER = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
+const REPORT_DATE_FORMATTER = new Intl.DateTimeFormat('en-US', {
   month: 'short',
   day: 'numeric',
   year: 'numeric',
-  hour: 'numeric',
-  minute: '2-digit',
 });
+
+const chartTooltip = {
+  backgroundColor: '#133c31',
+  bodyColor: '#f2eee4',
+  titleColor: '#ffffff',
+  padding: 10,
+};
+const doughnutOptions: ChartOptions<'doughnut'> = {
+  responsive: true,
+  maintainAspectRatio: false,
+  animation: false,
+  cutout: '65%',
+  plugins: {
+    legend: { display: false },
+    tooltip: chartTooltip,
+  },
+};
+
+const lineOptions: ChartOptions<'line'> = {
+  responsive: true,
+  maintainAspectRatio: false,
+  animation: false,
+  interaction: { intersect: false, mode: 'index' },
+  plugins: {
+    legend: { display: false },
+    tooltip: chartTooltip,
+  },
+  scales: {
+    y: {
+      beginAtZero: true,
+      border: { display: false },
+      grid: { color: '#dedfd4', drawTicks: false },
+      ticks: { color: '#616b5c', font: { size: 11 }, precision: 0, padding: 9 },
+    },
+    x: {
+      border: { display: false },
+      grid: { color: '#e9e8df', drawTicks: false },
+      ticks: { color: '#616b5c', font: { size: 11 }, maxRotation: 0, padding: 8 },
+    },
+  },
+};
 
 function parseDate(value: string) {
   const parsed = new Date(value);
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
-function categorizeNature(nature: string) {
+async function fetchIncidents(url: string, signal?: AbortSignal): Promise<CrimeEntry[]> {
+  const response = await fetch(url, { cache: 'no-cache', signal });
+  if (!response.ok) throw new Error(`Could not load incidents (${response.status}).`);
+
+  const records = await response.json();
+  if (
+    !Array.isArray(records) ||
+    !records.length ||
+    !records.every((record) => record && TABLE_COLUMNS.every(({ key }) => typeof record[key] === 'string'))
+  ) {
+    throw new Error('Invalid incident data.');
+  }
+  return records;
+}
+
+function categorizeNature(nature: string): (typeof CATEGORIES)[number] {
   const normalized = nature.toLowerCase();
   if (
     normalized.includes('alcohol') ||
@@ -126,49 +186,49 @@ function categorizeNature(nature: string) {
     normalized.includes('battery') ||
     normalized.includes('violence') ||
     normalized.includes('fighting')
-  ) return 'Assault / Violence';
-  if (normalized.includes('rape') || normalized.includes('sexual')) return 'Sexual Assault';
+  ) return 'Assault / violence';
+  if (normalized.includes('rape') || normalized.includes('sexual')) return 'Sexual assault';
   if (
     normalized.includes('vandalism') ||
     normalized.includes('graffiti') ||
     normalized.includes('malicious')
-  ) return 'Vandalism / Property Damage';
+  ) return 'Vandalism / property damage';
   if (
     normalized.includes('theft') ||
     normalized.includes('larceny') ||
     normalized.includes('burglary')
-  ) return 'Theft / Burglary';
-  if (normalized.includes('hit and run') || normalized.includes('reckless')) return 'Hit & Run / Vehicle';
+  ) return 'Theft / burglary';
+  if (normalized.includes('hit and run') || normalized.includes('reckless')) return 'Hit & run / vehicle';
   if (
     normalized.includes('trespass') ||
     normalized.includes('harass') ||
     normalized.includes('stalk')
-  ) return 'Trespassing / Harassment';
+  ) return 'Trespassing / harassment';
   if (
     normalized.includes('weapon') ||
     normalized.includes('threat') ||
     normalized.includes('bribery')
-  ) return 'Weapons / Threats';
-  return 'Other / Miscellaneous';
+  ) return 'Weapons / threats';
+  return 'Other / miscellaneous';
+}
+
+function formatStatus(value: string) {
+  const labels = value.split(',').map((part) => part.trim()).filter(Boolean);
+  return labels.map((label) => STATUS_LABELS[label.toLowerCase()] ?? label).join(', ') || 'Unknown';
 }
 
 function Icon({ name, className = '' }: { name: IconName; className?: string }) {
   const paths: Record<IconName, React.ReactNode> = {
-    calendar: <><path d="M7 3v3M17 3v3M4 9h16" /><rect x="4" y="5" width="16" height="16" rx="2" /></>,
-    chart: <><path d="M5 19v-5M10 19V9M15 19v-8M20 19V5" /></>,
+    atlas: <><path d="M2 11c4 1 6-6 11-7 4-.7 5 2 9 2.5M2 15c5 1 6-6 11-7 4-.7 5 2 9 2.5M2 19c6 .7 7-6 11-7s5 2 9 2.5M7 21c2.5-1 3.2-4.4 6-5 4-.9 5 2 9 2.5" /></>,
     'chevron-down': <path d="m7 10 5 5 5-5" />,
     'chevron-left': <path d="m15 18-6-6 6-6" />,
     'chevron-right': <path d="m9 18 6-6-6-6" />,
-    clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
     close: <><path d="M18 6 6 18M6 6l12 12" /></>,
-    document: <><path d="M8 3.5h6l4 4V20H6V3.5h2Z" /><path d="M14 3.5V8h4M9 12h6M9 16h4" /></>,
     download: <><path d="M12 3v11m-5-4 5 5 5-5M5 20h14" /></>,
-    external: <><path d="M14 5h5v5M19 5l-8 8" /><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" /></>,
+    external: <path d="M6 18 18 6M8 6h10v10" />,
     refresh: <><path d="M20 12a8 8 0 0 1-14.7 4.4M4 12A8 8 0 0 1 18.7 7.6M18.7 3.5v4.1h-4.1M5.3 20.5v-4.1h4.1" /></>,
     search: <><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></>,
-    shield: <><path d="M12 3.25 19 6v5.2c0 4.2-2.7 7.8-7 9.55-4.3-1.75-7-5.35-7-9.55V6l7-2.75Z" /><path d="m9.5 12 1.7 1.7 3.5-3.7" /></>,
-    tag: <><path d="m4 12 8 8 8-8-8-8H4v8Z" /><circle cx="8.5" cy="8.5" r="1" /></>,
-    warning: <><path d="m12 4 9 16H3L12 4Z" /><path d="M12 9v4M12 17h.01" /></>,
+    sort: <path d="m8 9 4-4 4 4m-8 6 4 4 4-4" />,
   };
 
   return (
@@ -188,39 +248,34 @@ function Icon({ name, className = '' }: { name: IconName; className?: string }) 
 }
 
 function Metric({
-  icon,
   value,
   label,
   detail,
-  tone = 'blue',
+  className = '',
 }: {
-  icon: IconName;
   value: string;
   label: string;
   detail: string;
-  tone?: 'blue' | 'orange';
+  className?: string;
 }) {
   return (
-    <article className={`metric metric--${tone}`}>
-      <Icon name={icon} className="metric__icon" />
-      <div className="metric__copy">
-        <strong className="metric__value">{value}</strong>
-        <span className="metric__label">{label}</span>
-        <span className="metric__detail">{detail}</span>
-      </div>
-    </article>
+    <div className={`metric ${className}`}>
+      <dt>{label}</dt>
+      <dd>
+        <strong>{value}</strong>
+        <span>{detail}</span>
+      </dd>
+    </div>
   );
 }
 
 function Panel({
   title,
-  icon,
   action,
   children,
   className = '',
 }: {
   title: string;
-  icon?: IconName;
   action?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
@@ -228,7 +283,7 @@ function Panel({
   return (
     <section className={`panel ${className}`}>
       <header className="panel__header">
-        <h2>{icon ? <Icon name={icon} className="panel__title-icon" /> : null}{title}</h2>
+        <h2>{title}</h2>
         {action}
       </header>
       {children}
@@ -242,16 +297,7 @@ function Status({ value }: { value: string }) {
   if (normalized.includes('open')) tone = 'open';
   else if (normalized.includes('arrest') || normalized.includes('citation')) tone = 'resolved';
   else if (normalized.includes('referral')) tone = 'referred';
-  return <span className={`status status--${tone}`}>{value || 'Unknown'}</span>;
-}
-
-function ChartSelect({ value, label }: { value: string; label: string }) {
-  return (
-    <button type="button" className="chart-select" aria-label={label}>
-      {value}
-      <Icon name="chevron-down" className="chart-select__icon" />
-    </button>
-  );
+  return <span className={`status status--${tone}`}>{formatStatus(value)}</span>;
 }
 
 function FilterSelect({
@@ -259,16 +305,14 @@ function FilterSelect({
   value,
   onChange,
   children,
-  className = '',
 }: {
   label: string;
   value: string;
   onChange: (value: string) => void;
   children: React.ReactNode;
-  className?: string;
 }) {
   return (
-    <label className={`filter-select ${className}`}>
+    <label className="filter-select">
       <span>{label}</span>
       <select value={value} onChange={(event) => onChange(event.target.value)}>
         {children}
@@ -278,32 +322,10 @@ function FilterSelect({
   );
 }
 
-function useCountUp(target: number, duration = 650) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setCount(target);
-      return;
-    }
-    let frameId = 0;
-    const startedAt = performance.now();
-    const update = (now: number) => {
-      const progress = Math.min((now - startedAt) / duration, 1);
-      setCount(Math.round(target * (1 - Math.pow(1 - progress, 3))));
-      if (progress < 1) frameId = window.requestAnimationFrame(update);
-    };
-    frameId = window.requestAnimationFrame(update);
-    return () => window.cancelAnimationFrame(frameId);
-  }, [duration, target]);
-
-  return count;
-}
-
 export default function Home() {
   const [data, setData] = useState<CrimeEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState('');
+  const [loadError, setLoadError] = useState(false);
   const [sortKey, setSortKey] = useState<SortKey>('reported');
   const [sortAsc, setSortAsc] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
@@ -313,24 +335,28 @@ export default function Home() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
 
-  const loadData = useCallback(async () => {
+  const loadData = useCallback(async (signal?: AbortSignal) => {
     setLoading(true);
+    setLoadError(false);
     try {
-      const cacheBust = Date.now();
-      const dataResponse = await fetch(`/crime-data.json?ts=${cacheBust}`);
-      if (!dataResponse.ok) throw new Error('Incident data could not be loaded.');
-      const incidentJson = await dataResponse.json();
-      if (Array.isArray(incidentJson)) setData(incidentJson);
-      setLastUpdated(LAST_UPDATED_FORMATTER.format(new Date()));
-    } catch (error) {
-      console.error(error);
+      const timeout = AbortSignal.timeout(5000);
+      const records = await fetchIncidents(PUBLISHED_DATA_URL, signal ? AbortSignal.any([signal, timeout]) : timeout);
+      if (!signal?.aborted) setData(records);
+    } catch {
+      if (signal?.aborted) return;
+      const bundled = await fetchIncidents('/crime-data.json', signal).catch(() => null);
+      if (signal?.aborted) return;
+      if (bundled) setData((previous) => previous.length ? previous : bundled);
+      setLoadError(true);
     } finally {
-      setLoading(false);
+      if (!signal?.aborted) setLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    void loadData();
+    const controller = new AbortController();
+    void loadData(controller.signal);
+    return () => controller.abort();
   }, [loadData]);
 
   const statuses = useMemo(
@@ -375,10 +401,6 @@ export default function Home() {
     });
   }, [activeCategory, activeStatus, data, dateRange, searchTerm, sortedData]);
 
-  useEffect(() => {
-    setPage(1);
-  }, [activeCategory, activeStatus, dateRange, pageSize, searchTerm]);
-
   const totalPages = Math.max(1, Math.ceil(filteredData.length / pageSize));
   const safePage = Math.min(page, totalPages);
   const pageStart = (safePage - 1) * pageSize;
@@ -417,9 +439,8 @@ export default function Home() {
 
   const mostCommon = categoryEntries[0] || ['None', 0];
   const openCasePercent = data.length ? ((openCases / data.length) * 100).toFixed(1) : '0.0';
-  const safetyBrief = data.length
-    ? `${mostCommon[0]} is the most frequently recorded category (${mostCommon[1]} incidents). ${countThisMonth} incidents were reported in the latest month represented, and ${openCases} cases are currently marked open.`
-    : 'Load the incident log to see a summary of the latest available records.';
+  const hasFilters = Boolean(searchTerm) || activeStatus !== 'all' || activeCategory !== 'all' || dateRange !== 'all';
+  const recordCount = (count: number) => count.toLocaleString();
 
   const incidentMix = useMemo(() => ({
     labels: categoryEntries.map(([label]) => label),
@@ -427,10 +448,9 @@ export default function Home() {
       label: 'Incidents',
       data: categoryEntries.map(([, count]) => count),
       backgroundColor: CATEGORY_COLORS,
-      borderColor: '#0a2037',
+      borderColor: '#fcfbf7',
       borderWidth: 2,
-      hoverBorderColor: '#e7f0fa',
-      hoverOffset: 3,
+      hoverOffset: 2,
     }],
   }), [categoryEntries]);
 
@@ -446,71 +466,23 @@ export default function Home() {
     return {
       labels: months.map((key) => {
         const [year, month] = key.split('-').map(Number);
-        return `${MONTH_FORMATTER.format(new Date(year, month - 1))} '${String(year).slice(2)}`;
+        return MONTH_FORMATTER.format(new Date(year, month - 1));
       }),
       datasets: [{
         label: 'Incidents',
         data: months.map((key) => grouped.get(key) || 0),
-        borderColor: '#f45b16',
-        backgroundColor: 'rgba(244, 91, 22, 0.08)',
-        pointBackgroundColor: '#f45b16',
-        pointBorderColor: '#ffe4d5',
-        pointBorderWidth: 1.5,
-        pointHoverRadius: 5,
+        borderColor: '#17483a',
+        borderWidth: 2,
+        backgroundColor: 'rgba(120, 146, 86, 0.22)',
+        pointBackgroundColor: '#17483a',
+        pointBorderWidth: 0,
+        pointHoverRadius: 6,
         pointRadius: 3.5,
-        tension: 0.25,
+        tension: 0,
         fill: true,
       }],
     };
   }, [data]);
-
-  const doughnutOptions: ChartOptions<'doughnut'> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    cutout: '60%',
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        backgroundColor: '#061526',
-        bodyColor: '#dce8f5',
-        borderColor: '#2b4a68',
-        borderWidth: 1,
-        titleColor: '#ffffff',
-      },
-    },
-  };
-
-  const lineOptions: ChartOptions<'line'> = {
-    responsive: true,
-    maintainAspectRatio: false,
-    interaction: { intersect: false, mode: 'index' },
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        backgroundColor: '#061526',
-        bodyColor: '#dce8f5',
-        borderColor: '#2b4a68',
-        borderWidth: 1,
-        titleColor: '#ffffff',
-      },
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        border: { display: false },
-        grid: { color: '#24415d' },
-        ticks: { color: '#91a9bf', font: { size: 11 }, precision: 0 },
-      },
-      x: {
-        border: { display: false },
-        grid: { display: false },
-        ticks: { color: '#91a9bf', font: { size: 11 }, maxRotation: 0 },
-      },
-    },
-  };
-
-  const animatedTotal = useCountUp(data.length);
-  const animatedMonth = useCountUp(countThisMonth);
 
   const toggleSort = (nextKey: SortKey) => {
     if (nextKey === sortKey) setSortAsc((current) => !current);
@@ -521,10 +493,16 @@ export default function Home() {
   };
 
   const clearFilters = () => {
+    setPage(1);
     setSearchTerm('');
     setActiveStatus('all');
     setActiveCategory('all');
     setDateRange('all');
+  };
+
+  const updateSearch = (value: string) => {
+    setSearchTerm(value);
+    setPage(1);
   };
 
   const exportCsv = () => {
@@ -542,156 +520,196 @@ export default function Home() {
   };
 
   return (
-    <main className="dashboard-shell">
-      <header className="topbar">
-        <div className="topbar__brand">
-          <h1>Campus Incident Explorer</h1>
-          <a
-            href="https://www.boisestate.edu/publicsafety-security/campus-crime/campus-crime-log/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Official public crime log
-            <Icon name="external" className="topbar__external" />
-          </a>
-        </div>
-        <div className="topbar__actions">
-          <p className="topbar__updated">
-            <Icon name="clock" className="topbar__clock" />
-            <span>Last updated:</span> {lastUpdated || 'Loading…'}
-          </p>
-          <button className="button button--secondary" type="button" onClick={() => void loadData()} disabled={loading}>
-            <Icon name="refresh" className={loading ? 'is-spinning' : ''} />
-            <span className="button__label">Refresh</span>
-          </button>
-          <button className="button button--primary" type="button" onClick={exportCsv}>
-            <Icon name="download" />
-            <span className="button__label">Export CSV</span>
-          </button>
-        </div>
-      </header>
-
-      <div className="dashboard-canvas">
-        <section className="metrics-rail" aria-label="Incident overview">
-          <Metric icon="document" value={animatedTotal.toLocaleString()} label="Total incidents" detail="All time" />
-          <Metric
-            icon="calendar"
-            value={animatedMonth.toLocaleString()}
-            label="This month"
-            detail={latestDataDate ? latestDataDate.toLocaleString('en-US', { month: 'long', year: 'numeric' }) : '—'}
-          />
-          <Metric icon="warning" value={openCases.toLocaleString()} label="Open cases" detail={`${openCasePercent}% of total`} tone="orange" />
-          <Metric icon="tag" value={String(mostCommon[0])} label="Most common" detail={`${mostCommon[1]} incidents`} />
-        </section>
-
-        <section className="analysis-grid">
-          <Panel title="Safety brief" icon="shield" className="safety-panel">
-            <div className="safety-panel__body">
-              <p>{safetyBrief}</p>
-            </div>
-          </Panel>
-
-          <Panel title="Incident mix" className="mix-panel">
-            <div className="mix-panel__body">
-              <div className="doughnut-wrap">
-                <Doughnut data={incidentMix} options={doughnutOptions} />
-                <div className="doughnut-total"><strong>{data.length}</strong><span>Total</span></div>
+    <div className="dashboard-shell">
+      <a className="skip-link" href="#incident-log">Skip to incident log</a>
+      <main className="dashboard-canvas">
+        <div className="workspace">
+          <div className="overview">
+            <section className="intro" aria-labelledby="page-title">
+              <span className="intro__mark"><Icon name="atlas" /></span>
+              <h1 id="page-title">Campus incident explorer</h1>
+              <p>Public crime log for Boise State University.</p>
+              <div className="intro__actions">
+                <a className="button button--secondary" href={SOURCE_URL} target="_blank" rel="noreferrer">
+                  Official crime log <Icon name="external" />
+                </a>
+                <button
+                  className="button button--secondary"
+                  type="button"
+                  onClick={() => void loadData()}
+                  disabled={loading}
+                  aria-label={loading ? 'Refreshing incident data' : 'Refresh'}
+                >
+                  <Icon name="refresh" className={loading ? 'is-spinning' : ''} /> Refresh
+                </button>
               </div>
-              <ul className="mix-legend">
-                {categoryEntries.slice(0, 6).map(([label, count], index) => (
-                  <li key={label}>
-                    <span className="mix-legend__dot" style={{ backgroundColor: CATEGORY_COLORS[index] }} />
-                    <span className="mix-legend__label" title={label}>{label}</span>
-                    <strong>{count}</strong>
-                    <span>{data.length ? `(${((count / data.length) * 100).toFixed(1)}%)` : '(0.0%)'}</span>
-                  </li>
-                ))}
-              </ul>
+            </section>
+
+            {loadError ? (
+              <p className="load-notice" role="alert">
+                {data.length ? 'Could not check for updates. Showing saved records.' : 'Could not load the incident log. Try Refresh to load it again.'}
+              </p>
+            ) : null}
+
+            <dl className="metrics-rail" aria-label="Incident overview">
+              <Metric value={data.length ? recordCount(data.length) : '—'} label="Total incidents" detail="All records" />
+              <Metric
+                value={latestDataDate ? recordCount(countThisMonth) : '—'}
+                label="Latest month"
+                detail={latestDataDate ? LATEST_MONTH_FORMATTER.format(latestDataDate) : 'No date available'}
+              />
+              <Metric
+                value={data.length ? recordCount(openCases) : '—'}
+                label="Open cases"
+                detail={`${openCasePercent}% of total`}
+              />
+              <Metric
+                value={data.length ? String(mostCommon[0]) : '—'}
+                label="Most common"
+                detail={`${mostCommon[1]} incidents`}
+                className="metric--category"
+              />
+            </dl>
+
+            <section className="safety-brief" aria-labelledby="brief-heading">
+              <h2 id="brief-heading">Safety brief</h2>
+              <p>
+                {data.length ? (
+                  <>
+                    <strong>{mostCommon[0]}</strong> leads the log with {mostCommon[1]} incidents.
+                    {' '}{countThisMonth} {countThisMonth === 1 ? 'incident was' : 'incidents were'} reported in the latest month.
+                    {' '}{openCases} cases are marked open.
+                  </>
+                ) : loading ? 'Loading a summary of the incident log…' : 'No records available to summarize.'}
+              </p>
+            </section>
+          </div>
+
+          <div className="analysis">
+            <Panel
+              title="Campus heatmap"
+              action={
+                <span className="panel__note">
+                  {hasFilters ? `${recordCount(filteredData.length)} matching ${filteredData.length === 1 ? 'incident' : 'incidents'}` : 'All incidents'}
+                </span>
+              }
+              className="locations-panel"
+            >
+              <CampusHeatmap entries={filteredData} loading={loading} />
+            </Panel>
+
+            <div className="analysis-grid">
+              <Panel
+                title="Monthly trend"
+                action={
+                  monthlyTrend.labels.length ? (
+                    <span className="panel__note">
+                      {monthlyTrend.labels[0]}
+                      {monthlyTrend.labels.length > 1 ? ` – ${monthlyTrend.labels.at(-1)}` : ''}
+                    </span>
+                  ) : null
+                }
+                className="trend-panel"
+              >
+                {monthlyTrend.labels.length ? (
+                  <div className="trend-panel__chart">
+                    <Line
+                      data={monthlyTrend}
+                      options={lineOptions}
+                      aria-label={monthlyTrend.labels.map((label, index) => `${label}: ${monthlyTrend.datasets[0].data[index]} incidents`).join(', ')}
+                    />
+                  </div>
+                ) : <p className="chart-empty">{loading ? 'Loading monthly totals…' : 'No dated records to plot.'}</p>}
+              </Panel>
+
+              <Panel title="Incident mix" className="mix-panel">
+                {categoryEntries.length ? (
+                  <div className="mix-panel__body">
+                    <div className="doughnut-wrap">
+                      <Doughnut data={incidentMix} options={doughnutOptions} aria-hidden="true" />
+                      <div className="doughnut-total">
+                        <strong>{recordCount(data.length)}</strong>
+                        <span>incidents</span>
+                      </div>
+                    </div>
+                    <ul className="mix-legend" aria-label="Incidents by category">
+                      {categoryEntries.map(([label, count], index) => (
+                        <li key={label}>
+                          <span className="mix-legend__dot" style={{ backgroundColor: CATEGORY_COLORS[index] }} aria-hidden="true" />
+                          <span className="mix-legend__label">{label}</span>
+                          <strong className="mix-legend__count">{count}</strong>
+                          <span className="mix-legend__percent">{((count / data.length) * 100).toFixed(1)}%</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : <p className="chart-empty">{loading ? 'Loading incident categories…' : 'No categories to plot.'}</p>}
+              </Panel>
             </div>
-          </Panel>
+          </div>
+        </div>
 
-          <Panel
-            title="Monthly trend"
-            action={<ChartSelect value={latestDataDate ? String(latestDataDate.getFullYear()) : 'Year'} label="Change trend year" />}
-            className="trend-panel"
-          >
-            <div className="trend-panel__chart">
-              <Line data={monthlyTrend} options={lineOptions} />
+        <section className="log-panel" id="incident-log" aria-labelledby="log-heading">
+          <header className="panel__header log-panel__heading">
+            <div>
+              <h2 id="log-heading">Incident log</h2>
+              <span className="panel__note" role="status">
+                {recordCount(filteredData.length)} {filteredData.length === 1 ? 'result' : 'results'}
+              </span>
             </div>
-          </Panel>
-        </section>
+            <button className="button button--primary" type="button" onClick={exportCsv} disabled={!filteredData.length}>
+              <Icon name="download" /> Export CSV
+            </button>
+          </header>
 
-        <Panel
-          title="Campus heatmap"
-          action={<span className="map-count">{filteredData.length === data.length ? 'All incidents' : `${filteredData.length} filtered`}</span>}
-          className="locations-panel"
-        >
-          <CampusHeatmap entries={filteredData} />
-        </Panel>
-
-        <section className="log-panel">
           <div className="command-bar">
-            <label className="search-control">
-              <span className="sr-only">Search incidents</span>
+            <div className="search-control">
               <Icon name="search" />
+              <label className="sr-only" htmlFor="incident-search">Search incidents</label>
               <input
+                id="incident-search"
                 type="search"
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="Search location, incident, or case #"
+                onChange={(event) => updateSearch(event.target.value)}
+                placeholder="Search incident, location, or case #"
               />
               {searchTerm ? (
-                <button type="button" onClick={() => setSearchTerm('')} aria-label="Clear search">
+                <button type="button" onClick={() => updateSearch('')} aria-label="Clear search">
                   <Icon name="close" />
                 </button>
               ) : null}
-            </label>
-            <FilterSelect label="Status" value={activeStatus} onChange={setActiveStatus}>
+            </div>
+            <FilterSelect label="Status" value={activeStatus} onChange={(value) => { setActiveStatus(value); setPage(1); }}>
               <option value="all">All statuses</option>
-              {statuses.map((status) => <option key={status} value={status}>{status}</option>)}
+              {statuses.map((status) => <option key={status} value={status}>{formatStatus(status)}</option>)}
             </FilterSelect>
-            <FilterSelect label="Category" value={activeCategory} onChange={setActiveCategory}>
+            <FilterSelect label="Category" value={activeCategory} onChange={(value) => { setActiveCategory(value); setPage(1); }}>
               <option value="all">All categories</option>
               {CATEGORIES.map((category) => <option key={category} value={category}>{category}</option>)}
             </FilterSelect>
-            <FilterSelect label="Date range" value={dateRange} onChange={(value) => setDateRange(value as DateRange)} className="filter-select--date">
+            <FilterSelect label="Date range" value={dateRange} onChange={(value) => { setDateRange(value as DateRange); setPage(1); }}>
               <option value="all">All time</option>
               <option value="30">Last 30 days</option>
               <option value="90">Last 90 days</option>
               <option value="365">Last year</option>
             </FilterSelect>
-            <button type="button" className="clear-button" onClick={clearFilters}>
-              <Icon name="refresh" />
+            <button type="button" className="clear-button" onClick={clearFilters} disabled={!hasFilters}>
               Clear filters
             </button>
           </div>
 
-          <div className="log-panel__heading">
-            <div>
-              <h2>Incident log</h2>
-              <span>{filteredData.length} results</span>
-            </div>
-            <p>
-              Showing {filteredData.length ? pageStart + 1 : 0}–{Math.min(pageStart + pageSize, filteredData.length)} of {filteredData.length}
-            </p>
-          </div>
-
-          <div className="table-scroll" tabIndex={0} aria-label="Scrollable incident records">
+          <div className="table-scroll" tabIndex={0} role="region" aria-label="Scrollable incident records">
             <table>
               <thead>
                 <tr>
                   {TABLE_COLUMNS.map(({ key, label }) => (
-                    <th key={key} scope="col">
-                      <button
-                        type="button"
-                        onClick={() => toggleSort(key)}
-                        aria-label={`Sort by ${label}`}
-                        aria-pressed={sortKey === key}
-                      >
+                    <th key={key} scope="col" aria-sort={sortKey === key ? (sortAsc ? 'ascending' : 'descending') : undefined}>
+                      <button type="button" onClick={() => toggleSort(key)} aria-label={`Sort by ${label}`}>
                         {label}
-                        <span className={`sort-indicator ${sortKey === key ? 'is-active' : ''}`}>
-                          {sortKey === key ? (sortAsc ? '↑' : '↓') : '↕'}
-                        </span>
+                        <Icon
+                          name={sortKey === key ? 'chevron-down' : 'sort'}
+                          className={sortKey === key ? `sort-indicator is-active${sortAsc ? ' is-ascending' : ''}` : 'sort-indicator'}
+                        />
                       </button>
                     </th>
                   ))}
@@ -700,46 +718,52 @@ export default function Home() {
               <tbody>
                 {visibleData.map((entry, index) => (
                   <tr key={`${entry.case_number}-${index}`}>
-                    <td className="cell--reported">{entry.reported || '—'}</td>
-                    <td className="cell--incident" title={entry.nature}>{entry.nature || '—'}</td>
-                    <td className="cell--location" title={entry.location}>{entry.location || '—'}</td>
-                    <td>{entry.start || '—'}</td>
-                    <td>{entry.end || '—'}</td>
+                    <td className="cell--date">{entry.reported || '—'}</td>
+                    <td className="cell--incident">{entry.nature || '—'}</td>
+                    <td className="cell--location">{entry.location || '—'}</td>
+                    <td className="cell--date">{entry.start || '—'}</td>
+                    <td className="cell--date">{entry.end || '—'}</td>
                     <td><Status value={entry.disposition} /></td>
-                    <td><a className="case-link" href={`#case-${entry.case_number}`} aria-label={`Case ${entry.case_number}`}>{entry.case_number || '—'}</a></td>
+                    <td className="cell--case">{entry.case_number || '—'}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            {!visibleData.length ? <p className="empty-state">No incidents match the current filters.</p> : null}
+            {!visibleData.length ? (
+              <p className="empty-state">
+                {loading ? 'Loading incident records…' : loadError && !data.length ? 'Incident records are unavailable.' : hasFilters ? 'No incidents match these filters.' : 'The incident log is empty.'}
+              </p>
+            ) : null}
           </div>
 
           <footer className="table-footer">
-            <p>Showing {filteredData.length ? pageStart + 1 : 0} to {Math.min(pageStart + pageSize, filteredData.length)} of {filteredData.length} incidents</p>
+            <p>{filteredData.length ? `${recordCount(pageStart + 1)}–${recordCount(Math.min(pageStart + pageSize, filteredData.length))} of ${recordCount(filteredData.length)} incidents` : '0 incidents'}</p>
             <nav className="pagination" aria-label="Incident log pages">
-              <button type="button" onClick={() => setPage((current) => Math.max(1, current - 1))} disabled={safePage === 1} aria-label="Previous page">
+              <button type="button" onClick={() => setPage(safePage - 1)} disabled={safePage === 1} aria-label="Previous page">
                 <Icon name="chevron-left" />
               </button>
               <span>Page <strong>{safePage}</strong> of {totalPages}</span>
-              <button type="button" onClick={() => setPage((current) => Math.min(totalPages, current + 1))} disabled={safePage === totalPages} aria-label="Next page">
+              <button type="button" onClick={() => setPage(safePage + 1)} disabled={safePage === totalPages} aria-label="Next page">
                 <Icon name="chevron-right" />
               </button>
             </nav>
             <label className="page-size">
               <span>Rows per page</span>
-              <select value={pageSize} onChange={(event) => setPageSize(Number(event.target.value))}>
+              <select value={pageSize} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}>
                 <option value="10">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
               </select>
+              <Icon name="chevron-down" />
             </label>
           </footer>
         </section>
 
         <footer className="site-footer">
-          Unofficial data explorer. Verify records with campus public safety before making decisions.
+          <span>Unofficial dashboard. Verify records with campus public safety.</span>
+          {latestDataDate ? <span>Latest report {REPORT_DATE_FORMATTER.format(latestDataDate)}</span> : null}
         </footer>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

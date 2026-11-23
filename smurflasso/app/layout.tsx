@@ -14,14 +14,14 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
-  title: 'Campus Incident Explorer',
+  title: 'Campus incident explorer',
   description: 'Independent dashboard for exploring public campus incident records, trends, locations, and case status.',
   keywords: ['campus incidents', 'crime log', 'campus safety', 'public data dashboard'],
   authors: [{ name: 'Cole Kreiling', url: 'https://colekreiling.com' }],
   openGraph: {
-    title: 'Campus Incident Explorer',
+    title: 'Campus incident explorer',
     description: 'Independent public incident dashboard with summaries, filters, charts, and a searchable log.',
-    siteName: 'Campus Incident Explorer',
+    siteName: 'Campus incident explorer',
     locale: 'en_US',
     type: 'website',
   },

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { FeatureCollection, Point } from 'geojson';
-import type { Map as MapLibreMap } from 'maplibre-gl';
+import type { GeoJSONSource, Map as MapLibreMap, Popup } from 'maplibre-gl';
 import { resolveLocationCoordinate } from './location-coordinates';
 
 export interface HeatmapEntry {
@@ -14,35 +14,38 @@ interface HeatmapProperties {
   count: number;
 }
 
-const MAP_STYLE = {
-  version: 8 as const,
-  sources: {
-    openStreetMap: {
-      type: 'raster' as const,
-      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-      tileSize: 256,
-      attribution: '© OpenStreetMap contributors',
-    },
-  },
-  layers: [
-    {
-      id: 'openStreetMap',
-      type: 'raster' as const,
-      source: 'openStreetMap',
-      paint: {
-        'raster-brightness-min': 0,
-        'raster-brightness-max': 0.38,
-        'raster-saturation': -0.72,
-        'raster-contrast': 0.12,
-      },
-    },
-  ],
+const BASEMAP_SOURCE = 'openStreetMap';
+
+const BASEMAP = {
+  type: 'raster' as const,
+  tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+  tileSize: 256,
+  attribution: '© OpenStreetMap contributors',
 };
 
-export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) {
+const BASEMAP_LAYER = {
+  id: BASEMAP_SOURCE,
+  type: 'raster' as const,
+  source: BASEMAP_SOURCE,
+  paint: {
+    'raster-brightness-min': 0,
+    'raster-brightness-max': 1,
+    'raster-saturation': -0.34,
+    'raster-contrast': -0.07,
+  },
+};
+
+const MAP_STYLE = {
+  version: 8 as const,
+  sources: { [BASEMAP_SOURCE]: BASEMAP },
+  layers: [BASEMAP_LAYER],
+};
+
+export default function CampusHeatmap({ entries, loading }: { entries: HeatmapEntry[]; loading: boolean }) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const mapRef = useRef<MapLibreMap | null>(null);
+  const mapRef = useRef<{ map: MapLibreMap; popup: Popup } | null>(null);
   const [mapError, setMapError] = useState(false);
+  const [tileStatus, setTileStatus] = useState<'ready' | 'failed' | 'retrying'>('ready');
 
   const { geoJson, mappedCount } = useMemo(() => {
     const grouped = new Map<string, { coordinates: [number, number]; count: number }>();
@@ -69,8 +72,14 @@ export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) 
     return { geoJson: collection, mappedCount: placed };
   }, [entries]);
 
+  const dataRef = useRef(geoJson);
   useEffect(() => {
-    if (!containerRef.current || mapRef.current || !geoJson.features.length) return;
+    dataRef.current = geoJson;
+    mapRef.current?.popup.remove();
+    mapRef.current?.map.getSource<GeoJSONSource>('incidents')?.setData(geoJson);
+  }, [geoJson]);
+
+  useEffect(() => {
     let cancelled = false;
 
     void import('maplibre-gl').then((module) => {
@@ -84,15 +93,23 @@ export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) 
         minZoom: 12.5,
         maxZoom: 18,
         attributionControl: false,
+        cooperativeGestures: true,
         dragRotate: false,
         pitchWithRotate: false,
       });
 
-      mapRef.current = map;
+      const popup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: true,
+        offset: 10,
+        className: 'heatmap-popup',
+      });
+      mapRef.current = { map, popup };
       map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
-      map.on('load', () => {
-        map.addSource('incidents', { type: 'geojson', data: geoJson });
+      // The inline style is ready before the remote tiles finish loading.
+      map.once('styledata', () => {
+        map.addSource('incidents', { type: 'geojson', data: dataRef.current });
         map.addLayer({
           id: 'incident-heat',
           type: 'heatmap',
@@ -120,12 +137,12 @@ export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) 
             ],
             'heatmap-color': [
               'interpolate', ['linear'], ['heatmap-density'],
-              0, 'rgba(23,105,224,0)',
-              0.1, 'rgba(23,105,224,0.72)',
-              0.28, 'rgba(50,149,255,0.84)',
-              0.48, 'rgba(255,183,71,0.9)',
-              0.68, 'rgba(244,91,22,0.96)',
-              1, 'rgba(255,67,11,1)',
+              0, 'rgba(245,212,138,0)',
+              0.14, 'rgba(245,212,138,0.68)',
+              0.32, 'rgba(244,170,81,0.82)',
+              0.53, 'rgba(222,112,48,0.9)',
+              0.76, 'rgba(177,66,37,0.96)',
+              1, 'rgba(119,44,31,1)',
             ],
             'heatmap-opacity': 0.92,
           },
@@ -141,18 +158,11 @@ export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) 
               1, 3,
               15, 7,
             ],
-            'circle-color': '#f45b16',
+            'circle-color': '#a64324',
             'circle-opacity': 0.72,
             'circle-stroke-color': '#ffe4d5',
             'circle-stroke-width': 1,
           },
-        });
-
-        const popup = new maplibregl.Popup({
-          closeButton: false,
-          closeOnClick: true,
-          offset: 10,
-          className: 'heatmap-popup',
         });
 
         map.on('click', 'incident-points', (event) => {
@@ -171,33 +181,71 @@ export default function CampusHeatmap({ entries }: { entries: HeatmapEntry[] }) 
       });
 
       map.on('error', (event) => {
-        if (event.error) setMapError(true);
+        if ('sourceId' in event && event.sourceId === BASEMAP_SOURCE) {
+          setTileStatus('failed');
+        } else {
+          console.error(event.error);
+          setMapError(true);
+        }
       });
-    }).catch(() => setMapError(true));
+      map.on('idle', () => {
+        setTileStatus((current) => current === 'retrying' ? 'ready' : current);
+      });
+    }).catch((error) => {
+      if (cancelled) return;
+      console.error(error);
+      setMapError(true);
+    });
 
     return () => {
       cancelled = true;
-      mapRef.current?.remove();
+      mapRef.current?.map.remove();
       mapRef.current = null;
     };
-  }, [geoJson]);
+  }, []);
+
+  function retryTiles() {
+    const map = mapRef.current?.map;
+    if (!map) return;
+    setTileStatus('retrying');
+    // Start fresh so MapLibre does not try to draw failed tiles as they reload.
+    map.removeLayer(BASEMAP_SOURCE);
+    map.removeSource(BASEMAP_SOURCE);
+    map.addSource(BASEMAP_SOURCE, BASEMAP);
+    map.addLayer(BASEMAP_LAYER, 'incident-heat');
+  }
 
   return (
     <div className="campus-map-wrap">
       <div
         ref={containerRef}
         className="campus-map"
-        role="img"
-        aria-label={`Interactive campus incident heatmap showing ${mappedCount} mapped records`}
+        role="region"
+        aria-label={`Interactive campus heatmap with ${mappedCount} of ${entries.length} records mapped`}
       />
       {mapError ? (
-        <div className="campus-map__error">The basemap could not be loaded. Incident filters and the log remain available below.</div>
-      ) : null}
-      <div className="heat-legend" aria-label="Heatmap density from lower to higher">
-        <span>Lower</span>
-        <span className="heat-legend__ramp" />
-        <span>Higher</span>
-      </div>
+        <div className="campus-map__error" role="status">The campus map could not load. You can still search the incident log below.</div>
+      ) : (
+        <div className="campus-map__notices">
+          {tileStatus !== 'ready' && (
+            <div className="campus-map__notice">
+              <span role="status">{tileStatus === 'retrying' ? 'Reloading map tiles…' : 'Map tiles failed to load.'}</span>
+              <button type="button" onClick={retryTiles} disabled={tileStatus === 'retrying'}>Retry tiles</button>
+            </div>
+          )}
+          {!loading && mappedCount === 0 && (
+            <div className="campus-map__notice" role="status">No matching incidents have mapped locations.</div>
+          )}
+        </div>
+      )}
+      {mappedCount > 0 && (
+        <div className="heat-legend" role="img" aria-label="Incident density, low to high">
+          <strong>Incident density</strong>
+          <span className="heat-legend__ramp" />
+          <span>Low</span>
+          <span>High</span>
+        </div>
+      )}
       <a
         className="map-attribution"
         href="https://www.openstreetmap.org/copyright"

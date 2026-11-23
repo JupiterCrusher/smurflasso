@@ -27,7 +27,7 @@ Boise State public crime log
                     | charts | map | table |
 ```
 
-The scheduled workflow runs the scraper every 12 hours. The scraper parses the university's public table and commits only when the dataset changes. The browser reads the resulting static JSON, derives categories and summary metrics, and renders the dashboard without a database or private API.
+The scheduled workflow runs the scraper every 12 hours. The scraper parses the university's public table and commits only when the dataset changes. The browser checks the published JSON on GitHub at startup and on Refresh. If GitHub is unreachable, it can show the copy bundled with the app. The dashboard displays the date of the newest report.
 
 ## Technology
 
